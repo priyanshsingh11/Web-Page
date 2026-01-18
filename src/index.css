@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  PRIYANSH SINGH - ULTRA-DARK 3D PORTFOLIO
+  Design System: Cinematic Tech Noir
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Core Dark Theme */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 98%;
+    
+    /* Elevated Surfaces */
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
+    --card-elevated: 0 0% 6%;
+    
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+    
+    /* Neon Accent Colors */
+    --primary: 187 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --primary-glow: 187 100% 50%;
+    
+    --secondary: 263 84% 66%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-glow: 263 100% 70%;
+    
+    --accent: 187 100% 45%;
+    --accent-foreground: 0 0% 0%;
+    
+    /* Utility Colors */
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 55%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* Borders & Inputs */
+    --border: 0 0% 12%;
+    --input: 0 0% 12%;
+    --ring: 187 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    /* Custom Properties */
+    --glow-cyan: 0 200px 400px -100px hsl(187 100% 50% / 0.3);
+    --glow-violet: 0 200px 400px -100px hsl(263 100% 70% / 0.3);
+    --glass-bg: hsl(0 0% 100% / 0.03);
+    --glass-border: hsl(0 0% 100% / 0.08);
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(187 100% 50%), hsl(263 84% 66%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 4%));
+    --gradient-radial: radial-gradient(ellipse at center, hsl(187 100% 50% / 0.1) 0%, transparent 70%);
+    --gradient-hero: radial-gradient(ellipse at 50% 0%, hsl(187 100% 50% / 0.15) 0%, transparent 50%);
+    
+    /* Typography */
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Sidebar (if needed) */
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 187 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 0 0% 12%;
+    --sidebar-ring: 187 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-semibold tracking-tight;
+  }
+  
+  ::selection {
+    background: hsl(var(--primary) / 0.3);
+    color: hsl(var(--foreground));
+  }
+}
+
+@layer components {
+  /* Glassmorphism Card */
+  .glass-card {
+    @apply relative overflow-hidden rounded-2xl;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(20px);
+  }
+  
+  .glass-card::before {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    background: linear-gradient(135deg, hsl(0 0% 100% / 0.05) 0%, transparent 50%);
+  }
+  
+  /* Neon Glow Text */
+  .text-glow {
+    text-shadow: 
+      0 0 20px hsl(var(--primary) / 0.5),
+      0 0 40px hsl(var(--primary) / 0.3),
+      0 0 60px hsl(var(--primary) / 0.2);
+  }
+  
+  .text-glow-violet {
+    text-shadow: 
+      0 0 20px hsl(var(--secondary) / 0.5),
+      0 0 40px hsl(var(--secondary) / 0.3),
+      0 0 60px hsl(var(--secondary) / 0.2);
+  }
+  
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+  
+  /* Neon Border */
+  .neon-border {
+    @apply relative;
+    box-shadow: 
+      0 0 0 1px hsl(var(--primary) / 0.3),
+      0 0 20px -5px hsl(var(--primary) / 0.4),
+      inset 0 0 20px -10px hsl(var(--primary) / 0.2);
+  }
+  
+  .neon-border-violet {
+    @apply relative;
+    box-shadow: 
+      0 0 0 1px hsl(var(--secondary) / 0.3),
+      0 0 20px -5px hsl(var(--secondary) / 0.4),
+      inset 0 0 20px -10px hsl(var(--secondary) / 0.2);
+  }
+  
+  /* Animated Underline */
+  .animated-underline {
+    @apply relative;
+  }
+  
+  .animated-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-[2px] transition-all duration-500;
+    background: var(--gradient-primary);
+  }
+  
+  .animated-underline:hover::after {
+    @apply w-full;
+  }
+  
+  /* Section Container */
+  .section-container {
+    @apply relative w-full min-h-screen flex items-center justify-center px-6 py-24 md:px-12 lg:px-24;
+  }
+  
+  /* Floating Animation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: -3s;
+  }
+  
+  /* Pulse Glow */
+  .pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+  
+  /* Scroll Indicator */
+  .scroll-indicator {
+    animation: scrollBounce 2s ease-in-out infinite;
+  }
+}
+
+@layer utilities {
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Perspective utilities */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  
+  /* Backdrop blur levels */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotateX(0);
+  }
+  50% {
+    transform: translateY(-20px) rotateX(2deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.5;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(30px);
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.5;
+  }
+}
+
+/* Custom scrollbar for when needed */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(0 0% 4%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(0 0% 20%);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}
