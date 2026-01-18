@@ -3,8 +3,8 @@
 This repository contains my personal portfolio showcasing my work in AI/ML, Agentic AI, MLOps, and Full-Stack Development.
 
 ## Live Portfolio
-[https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
-](https://web-page-ruby-five.vercel.app/)
+https://web-page-ruby-five.vercel.app/
+
 ## About
 I am an AI/ML Engineer and Full-Stack Developer focused on building end-to-end, production-ready systems including intelligent agents, APIs, and scalable web applications.
 
