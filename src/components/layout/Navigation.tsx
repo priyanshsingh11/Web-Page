@@ -42,20 +42,12 @@ const Navigation = () => {
           <div className={`flex items-center justify-between ${isScrolled ? 'glass-card px-6 py-3 rounded-full' : ''
             }`}>
             {/* Logo */}
-            <a
-              href="#"
-              className="text-2xl font-display font-bold"
-              onClick={(e) => {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            >
-              {/* <span className="text-gradient">Priyansh</span> */}
-              {/* <img
-                src="/placeholder.svg"
-                alt="Logo"
-                className="h-10 w-auto object-contain hover:scale-105 transition-transform duration-300"
-              /> */}
+            <a href="#hero" className="flex items-center gap-2">
+              <img
+                src="/favicon.ico"
+                alt="PS Logo"
+                className="h-8 w-8 object-contain hover:scale-110 transition-transform duration-300"
+              />
             </a>
 
             {/* Desktop Links */}
