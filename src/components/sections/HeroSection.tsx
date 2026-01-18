@@ -57,8 +57,13 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8"
+          className="mb-8 flex flex-col items-center gap-6"
         >
+          <img
+            src="/favicon.ico"
+            alt="PS Logo"
+            className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-[0_0_15px_rgba(var(--primary),0.3)] hover:scale-110 transition-transform duration-300"
+          />
           <div className="glass-card px-4 py-2 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm text-muted-foreground font-medium">Available for opportunities</span>
