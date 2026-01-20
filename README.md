@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
+# Priyansh Singh – Portfolio
 
-## Project info
+This repository hosts my personal developer portfolio, designed to present my technical skills, projects, and experience in a clear, modern, and production-focused manner.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+The portfolio reflects my work across **AI/ML**, **Agentic AI**, **MLOps**, and **Full-Stack Development**, with an emphasis on real-world system design rather than just isolated demos.
 
-## How can I edit this code?
+## Live Portfolio
+https://web-page-ruby-five.vercel.app/
 
-There are several ways of editing your application.
+## About Me
+I am an AI/ML Engineer and Full-Stack Developer focused on building end-to-end, scalable, and deployment-ready systems. My interests lie in designing intelligent applications that combine machine learning, automation, APIs, and modern web technologies.
 
-**Use Lovable**
+I enjoy working on projects that move beyond theory and experimentation into real production workflows, including model deployment, monitoring, and user-facing applications.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## What This Portfolio Showcases
+- A detailed overview of my skills and technical background  
+- AI/ML projects covering machine learning, deep learning, and intelligent systems  
+- Agentic AI applications involving autonomous decision-making and workflows  
+- Full-stack web applications with clean UI and robust backend integration  
+- MLOps practices such as experiment tracking, model versioning, and deployment pipelines  
+- Clear ways to connect and collaborate with me  
 
-Changes made via Lovable will be committed automatically to this repo.
+## Project Philosophy
+All showcased projects follow a **production-first mindset**, focusing on:
+- Clean and maintainable code structure  
+- Scalability and performance considerations  
+- Real-world use cases instead of toy examples  
+- Proper separation of frontend, backend, and ML components  
 
-**Use your preferred IDE**
+## Tech Stack
+- **Frontend:** Vite, React, TypeScript  
+- **Styling:** Tailwind CSS, shadcn-ui  
+- **Architecture:** Component-based, modular, and scalable design  
+- **Deployment:** Cloud-first approach with modern CI/CD practices  
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Design Approach
+The portfolio is built with a modern dark theme, smooth animations, and a minimal yet expressive UI. The goal is to balance aesthetics with usability, ensuring the content remains the main focus while maintaining a professional and contemporary look.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Purpose of This Repository
+This repository serves as:
+- A central place to showcase my work and skills  
+- A technical profile for internships, full-time roles, and collaborations  
+- A continuously evolving space that grows as I build and learn more  
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Contact
+If you are interested in collaboration, opportunities, or discussions around AI, ML, or full-stack systems, feel free to connect through the contact section of the portfolio.
