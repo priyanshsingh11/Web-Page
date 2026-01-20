@@ -183,32 +183,48 @@ const SkillsSection = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="mt-20 py-8 border-t border-b border-border/50 overflow-hidden"
+          className="mt-20 py-10 border-t border-b border-border/30 overflow-hidden relative group"
         >
-          <div className="flex animate-marquee gap-12 text-muted-foreground/50 text-lg font-display whitespace-nowrap">
-            {['Python', 'C++', 'JavaScript', 'SQL', 'Machine Learning', 'Deep Learning', 'NLP', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Transformers', 'Hugging Face', 'LangChain', 'LangGraph', 'RAG', 'Prompt Engineering', 'Agentic AI', 'Groq API', 'FastAPI', 'Flask', 'REST APIs', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'EDA', 'Feature Engineering', 'PostgreSQL', 'MySQL', 'Docker', 'Git', 'GitHub', 'DVC', 'MLflow', 'CI/CD (Basics)', 'Linux', 'AWS (EC2, S3)', 'Render', 'React', 'HTML', 'CSS', 'Tailwind CSS', 'Data Structures & Algorithms', 'Operating Systems', 'Computer Architecture'].map((tech) => (
-              <span key={tech} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                {tech}
+          {/* Masked edges for cinematic fade */}
+          <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-20 pointer-events-none" />
+          <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-20 pointer-events-none" />
+
+          <div className="flex animate-marquee gap-16 text-muted-foreground/40 text-lg font-display whitespace-nowrap group-hover:pause-animation">
+            {["Let’s collaborate to build impactful products — open to internships, collaborations, and continuous learning"].map((item) => (
+              <span key={item} className="flex items-center gap-4 group-hover:text-primary/70 transition-colors duration-500">
+                <span className="w-2 h-2 rounded-full bg-primary/40 shadow-[0_0_8px_hsl(var(--primary)/0.5)]" />
+                {item}
               </span>
             ))}
-            {['Python', 'C++', 'JavaScript', 'SQL', 'Machine Learning', 'Deep Learning', 'NLP', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'Transformers', 'Hugging Face', 'LangChain', 'LangGraph', 'RAG', 'Prompt Engineering', 'Agentic AI', 'Groq API', 'FastAPI', 'Flask', 'REST APIs', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'EDA', 'Feature Engineering', 'PostgreSQL', 'MySQL', 'Docker', 'Git', 'GitHub', 'DVC', 'MLflow', 'CI/CD (Basics)', 'Linux', 'AWS (EC2, S3)', 'Render', 'React', 'HTML', 'CSS', 'Tailwind CSS', 'Data Structures & Algorithms', 'Operating Systems', 'Computer Architecture'].map((tech) => (
-              <span key={`${tech}-2`} className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary/50" />
-                {tech}
+            {["Let’s collaborate to build impactful products — open to internships, collaborations, and continuous learning"].map((item) => (
+              <span key={`${item}-2`} className="flex items-center gap-4 group-hover:text-primary/70 transition-colors duration-500">
+                <span className="w-2 h-2 rounded-full bg-primary/40 shadow-[0_0_8px_hsl(var(--primary)/0.5)]" />
+                {item}
+              </span>
+            ))}
+            {/* Third copy for smoother loop on larger screens */}
+            {["Let’s collaborate to build impactful products — open to internships, collaborations, and continuous learning"].map((item) => (
+              <span key={`${item}-3`} className="flex items-center gap-4 group-hover:text-primary/70 transition-colors duration-500">
+                <span className="w-2 h-2 rounded-full bg-primary/40 shadow-[0_0_8px_hsl(var(--primary)/0.5)]" />
+                {item}
               </span>
             ))}
           </div>
+
+          <div className="absolute bottom-0 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         </motion.div>
       </div>
 
       <style>{`
         @keyframes marquee {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(-33.33%); }
         }
         .animate-marquee {
-          animation: marquee 30s linear infinite;
+          animation: marquee 40s linear infinite;
+        }
+        .group-hover\:pause-animation:hover {
+          animation-play-state: paused;
         }
       `}</style>
     </section>
