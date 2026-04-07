@@ -125,11 +125,12 @@ const AboutSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-24"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-24"
         >
           {[
             { value: '3+', label: 'Years Experience' },
             { value: '20+', label: 'Projects Completed' },
+            { value: '500+', label: 'Solved DSA Questions' },
             { value: '15+', label: 'Technologies Mastered' },
             { value: '10+', label: 'Hackathons Participated' },
           ].map((stat, index) => (
