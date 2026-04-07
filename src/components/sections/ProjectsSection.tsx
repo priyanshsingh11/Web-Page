@@ -4,6 +4,17 @@ import { Github, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
+    id: 'agentforge',
+    title: 'AgentForge',
+    subtitle: 'Autonomous Multi-Agent Platform',
+    description: 'A high-performance orchestration system bridging LLM inference with deterministic state management. Features a self-correcting multi-agent loop and 3-tier memory architecture.',
+    impact: 'Self-healing workflows • 3-layer memory tiering • Real-time telemetry',
+    tags: ['FastAPI', 'Next.js', 'LangGraph', 'Redis', 'PostgreSQL'],
+    color: '#FF6B00',
+    github: 'https://github.com/priyanshsingh11/AgentForge',
+    demo: '#',
+  },
+  {
     id: 'netra',
     title: 'Netra',
     subtitle: 'CV & NLP Analytics Platform',
