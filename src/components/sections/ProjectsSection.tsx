@@ -37,12 +37,6 @@ const projects = [
     description: 'AI-powered virtual assistant designed for intelligent conversations, contextual responses, and real-time interaction.',
     tech: ['PYTHON', 'LLMS', 'LANGCHAIN', 'FASTAPI', 'STREAMLIT']
   },
-  {
-    id: 'compliance-monitor',
-    title: 'AI_COMPLIANCE_MONITORING_AGENT',
-    description: 'AI-powered monitoring agent for detecting compliance risks, policy violations, and automated regulatory analysis.',
-    tech: ['LANGCHAIN', 'LLMS', 'FASTAPI', 'PYTHON', 'RAG']
-  }
 ];
 
 const ProjectsSection = () => {
