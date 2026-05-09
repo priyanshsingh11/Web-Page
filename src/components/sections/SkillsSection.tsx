@@ -10,7 +10,6 @@ const skillCategories = [
       'JAVASCRIPT',
       'TYPESCRIPT',
       'HTML5',
-      'CSS3',
       'SQL',
     ],
   },
