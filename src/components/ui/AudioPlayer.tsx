@@ -42,36 +42,16 @@ const AudioPlayer = () => {
     };
 
     return (
-        <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1 }}
-            className="fixed bottom-6 left-6 z-50"
+        <button
+            onClick={togglePlay}
+            className={`flex items-center gap-2 px-4 py-2 text-[10px] sm:text-xs font-pixel tracking-widest transition-all ${isPlaying
+                    ? 'bg-[#853A17] text-white shadow-[4px_4px_0_0_#000] border-[2px] border-dashed border-black/50'
+                    : 'text-white/70 hover:text-white hover:bg-white/5 border-[2px] border-transparent'
+                }`}
         >
-            <div className="relative group">
-                {/* Main Button */}
-                <button
-                    onClick={togglePlay}
-                    className={`relative w-12 h-12 rounded-full flex items-center justify-center glass-card border border-primary/20 transition-all duration-300 ${isPlaying ? 'shadow-[0_0_20px_rgba(var(--primary),0.3)]' : ''
-                        }`}
-                >
-                    {/* Visualizer Pulse */}
-                    {isPlaying && (
-                        <div className="absolute inset-0 rounded-full bg-primary/10 animate-pulse" />
-                    )}
-
-                    {/* Icon */}
-                    <div className="relative z-10 text-primary">
-                        {isPlaying ? (
-                            <Music className="w-5 h-5 animate-spin-slow" />
-                        ) : (
-                            <Music className="w-5 h-5 opacity-50 transition-opacity" />
-                        )}
-                    </div>
-
-                </button>
-            </div>
-        </motion.div>
+            <Music className={`w-3 h-3 ${isPlaying ? 'animate-spin-slow' : 'opacity-70'}`} />
+            <span>{isPlaying ? 'PLAYING' : 'MUSIC'}</span>
+        </button>
     );
 };
 

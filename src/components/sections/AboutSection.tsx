@@ -1,150 +1,94 @@
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { User } from 'lucide-react';
 
-const milestones = [
-  {
-    year: '2022',
-    title: 'AI/ML Engineer',
-    description: 'Dove deep into machine learning, neural networks & intelligent systems',
-    color: 'secondary'
-  },
-  {
-    year: '2023',
-    title: 'Full-Stack Developer',
-    description: 'Built end-to-end applications, mastering modern web technologies',
-    color: 'primary'
-  },
-  {
-    year: '2024',
-    title: 'Data Analyst',
-    description: 'Started exploring data, building insights from raw information',
-    color: 'primary'
-  },
-  {
-    year: '2025',
-    title: 'Agentic AI',
-    description: 'Building autonomous AI systems that think, act, and adapt',
-    color: 'primary'
-  },
-  {
-    year: '2026',
-    title: 'MLOps Engineer',
-    description: 'Bridging ML and DevOps for scalable product deployment',
-    color: 'secondary'
-  },
+const stats = [
+  { value: '02+', label: 'YEARS (EXP)' },
+  { value: '30+', label: 'BUILDS' },
+  { value: '02', label: 'STARTUPS' },
+  { value: '20+', label: 'SKILLS' },
 ];
 
 const AboutSection = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"]
-  });
-
-  const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
   return (
     <section
       id="about"
-      ref={containerRef}
-      className="relative min-h-screen py-32 px-6 md:px-12 lg:px-24 overflow-hidden"
+      className="relative p-4 md:p-8 bg-transparent"
     >
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/4 right-0 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-[200px]" />
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[150px]" />
-      </div>
+      {/* Optional subtle blur layer */}
+      <div className="absolute inset-0 backdrop-blur-[1px]"></div>
 
-      <div className="max-w-6xl mx-auto relative z-10">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <span className="text-primary text-sm font-medium uppercase tracking-widest">About Me</span>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mt-4 mb-6">
-            The Journey of <span className="text-gradient">Innovation</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
-            I transform complex problems into elegant solutions. From analyzing terabytes of data
-            to building autonomous AI agents, my journey has been driven by one question:
-            <span className="text-foreground font-medium"> "How can technology make this better?"</span>
-          </p>
-        </motion.div>
+      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#853A17] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000]">
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Animated Line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-border">
-            <motion.div
-              style={{ scaleY: pathLength }}
-              className="absolute inset-0 w-full bg-gradient-to-b from-primary via-secondary to-primary origin-top"
-            />
+        {/* Header */}
+        <div className="border-b-[2px] border-[#853A17] bg-black/90 text-white p-2 flex justify-between items-center">
+          <div className="flex gap-2 items-center font-pixel text-xs tracking-widest px-2">
+            <User size={14} className="text-[#853A17]" />
+            <span>CHARACTER_BIO.TXT</span>
           </div>
-
-          {/* Milestones */}
-          <div className="relative space-y-16">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
-                className={`relative flex items-center gap-8 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-              >
-                {/* Timeline Node */}
-                <div className="absolute left-6 md:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-background border-2 border-primary shadow-glow z-10" />
-
-                {/* Content Card */}
-                <div className={`ml-16 md:ml-0 md:w-[calc(50%-3rem)] ${index % 2 === 0 ? 'md:text-right md:pr-8' : 'md:text-left md:pl-8'}`}>
-                  <div className="glass-card p-6 md:p-8 hover:border-primary/30 transition-all duration-500 group">
-                    <span className={`text-sm font-bold ${milestone.color === 'primary' ? 'text-primary' : 'text-secondary'}`}>
-                      {milestone.year}
-                    </span>
-                    <h3 className="text-2xl font-display font-semibold mt-2 mb-3 group-hover:text-gradient transition-all duration-300">
-                      {milestone.title}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {milestone.description}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="flex gap-1 pr-2">
+            <div className="w-2 h-2 border border-[#853A17]"></div>
+            <div className="w-2 h-2 border border-[#853A17]"></div>
           </div>
         </div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-24"
-        >
-          {[
-            { value: '3+', label: 'Years Experience' },
-            { value: '20+', label: 'Projects Completed' },
-            { value: '500+', label: 'Solved DSA Questions' },
-            { value: '15+', label: 'Technologies Mastered' },
-            { value: '10+', label: 'Hackathons Participated' },
-          ].map((stat, index) => (
-            <div
-              key={stat.label}
-              className="glass-card p-6 text-center group hover:border-primary/30 transition-all duration-300"
-            >
-              <span className="text-4xl md:text-5xl font-display font-bold text-gradient group-hover:text-glow">
-                {stat.value}
-              </span>
-              <p className="text-sm text-muted-foreground mt-2">{stat.label}</p>
+        {/* Content */}
+        <div className="flex flex-col md:flex-row gap-8 p-6 md:p-10">
+
+          {/* Left Side */}
+          <div className="md:w-1/2 flex flex-col gap-6">
+
+            <h2 className="font-extended text-3xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 text-white">
+              Player Info
+            </h2>
+
+            <div className="border-[1px] border-[#853A17] p-5 bg-white/5 backdrop-blur-sm">
+              <p className="font-body text-xl md:text-xl leading-relaxed text-white">
+                I transform complex problems into scalable AI solutions — building autonomous agents, full-stack applications, and reliable MLOps systems for real-world impact.
+              </p>
             </div>
-          ))}
-        </motion.div>
+
+            <div className="border-[1px] border-[#853A17] p-5 bg-white/5 backdrop-blur-sm">
+              <h3 className="font-pixel text-lg uppercase mb-3 text-[#853A17]">
+                Technical Mindset
+              </h3>
+
+              <p className="font-body text-lg leading-relaxed text-white/90">
+                My approach is AI-driven, scalable, and user-focused. I believe great technology should feel seamless — combining intelligent systems, efficient engineering, and clean user experiences to solve meaningful real-world problems.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Side */}
+          <div className="md:w-1/2 border-[1px] border-[#853A17] bg-white/5 backdrop-blur-md p-6 text-white flex flex-col">
+
+            <h3 className="font-pixel text-xl mb-8 text-center text-[#853A17] tracking-widest">
+              CHARACTER STATS
+            </h3>
+
+            <div className="grid grid-cols-2 gap-5 flex-grow">
+              {stats.map((stat) => (
+                <motion.div
+                  key={stat.label}
+                  whileHover={{ scale: 1.02 }}
+                  className="border-[1px] border-[#853A17] p-5 text-center bg-black/40 hover:bg-[#853A17] hover:text-white transition-all duration-300 cursor-default group flex flex-col items-center justify-center min-h-[120px]"
+                >
+                  <div className="font-extended text-3xl md:text-4xl mb-2 text-[#853A17] group-hover:text-white transition-colors">
+                    {stat.value}
+                  </div>
+
+                  <div className="font-pixel text-[10px] tracking-widest opacity-80 group-hover:opacity-100">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="mt-10 font-mono text-[10px] tracking-widest text-center text-white/40 uppercase">
+              Engineering Intelligence // Since 2022
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   );

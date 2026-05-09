@@ -1,10 +1,14 @@
 import { useEffect, useRef } from 'react';
 import Lenis from 'lenis';
+
 import Navigation from '../components/layout/Navigation';
 import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
+import FAQSection from '../components/sections/FAQSection';
 import SkillsSection from '../components/sections/SkillsSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
+import ExperienceSection from '../components/sections/ExperienceSection';
+import CertificationSection from '../components/sections/CertificationSection';
 import ContactSection from '../components/sections/ContactSection';
 import Footer from '../components/layout/Footer';
 
@@ -35,36 +39,50 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-background overflow-x-hidden">
-      {/* Global Background Effects */}
-      <div className="fixed inset-0 pointer-events-none z-0">
-        {/* Noise Texture Overlay */}
-        <div 
-          className="absolute inset-0 opacity-[0.015]"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
-          }}
+    <div className="relative min-h-screen overflow-hidden bg-transparent selection:bg-blue-700 selection:text-white">
+      {/* Global CRT Scanlines */}
+      <div className="scanlines"></div>
+
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="fixed inset-0 w-full h-full object-cover -z-10"
+      >
+        <source
+          src="/hollow-knight-moewalls-com.mp4"
+          type="video/mp4"
         />
-        
-        {/* Gradient Orbs */}
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[200px] animate-pulse" style={{ animationDuration: '8s' }} />
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/5 rounded-full blur-[180px] animate-pulse" style={{ animationDuration: '10s', animationDelay: '2s' }} />
+      </video>
+
+      {/* Dark Overlay for Video */}
+      <div className="fixed inset-0 bg-black/60 -z-10 pointer-events-none"></div>
+
+      {/* Website Content */}
+      <div className="relative z-10">
+
+        {/* Fixed Navigation */}
+        <Navigation />
+
+        {/* Main Content */}
+        <main className="relative">
+          <HeroSection />
+          <AboutSection />
+          <FAQSection />
+          <SkillsSection />
+          <ExperienceSection />
+          <ProjectsSection />
+          <CertificationSection />
+          <ContactSection />
+        </main>
+
+        {/* Footer */}
+        <Footer />
+
       </div>
-
-      {/* Navigation */}
-      <Navigation />
-
-      {/* Main Content */}
-      <main className="relative z-10">
-        <HeroSection />
-        <AboutSection />
-        <SkillsSection />
-        <ProjectsSection />
-        <ContactSection />
-      </main>
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };

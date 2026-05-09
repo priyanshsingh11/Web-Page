@@ -1,148 +1,72 @@
-import { useRef, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import HeroScene from '../3d/HeroScene';
-import { ChevronDown } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Globe, Terminal } from 'lucide-react';
 
 const HeroSection = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const mouse = useRef({ x: 0, y: 0 });
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.5], [0, 100]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      mouse.current = {
-        x: (e.clientX / window.innerWidth) * 2 - 1,
-        y: -(e.clientY / window.innerHeight) * 2 + 1
-      };
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about');
-    aboutSection?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section
-      ref={containerRef}
-      className="relative h-screen w-full overflow-hidden"
+      id="hero"
+      className="relative h-[calc(100vh-24px)] w-full overflow-hidden p-4 md:p-8 flex flex-col justify-center items-center"
     >
-      {/* 3D Background */}
-      <HeroScene mouse={mouse} />
 
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-primary/5 rounded-full blur-[150px] opacity-50" />
-      </div>
 
-      {/* Content */}
       <motion.div
-        style={{ opacity, y, scale }}
-        className="absolute inset-0 z-20 flex flex-col items-center justify-center px-6"
+        initial={{ scale: 0.9, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        className="w-full max-w-7xl mx-auto flex flex-col md:flex-row p-4 gap-8 md:p-8 justify-between items-center z-10"
       >
-        {/* Status Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8 flex flex-col items-center gap-6"
-        >
-          <img
-            src="/favicon.ico"
-            alt="PS Logo"
-            className="w-16 h-16 md:w-20 md:h-20 object-contain drop-shadow-[0_0_15px_rgba(var(--primary),0.3)] hover:scale-110 transition-transform duration-300"
-          />
-          <div className="glass-card px-4 py-2 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground font-medium">Available for opportunities</span>
+
+        {/* Left Side: Text Content */}
+        <div className="w-full md:w-1/2 flex flex-col justify-center space-y-6">
+          <h1 className="font-extended font-bold text-3xl md:text-4xl lg:text-4xl leading-tight text-white drop-shadow-md normal-case whitespace-nowrap">
+            Hi, I'm Priyansh!
+          </h1>
+
+          <p className="font-body text-xl md:text-2xl leading-relaxed text-white max-w-xl drop-shadow-md">
+            I build intelligent systems that solve real-world problems through AI, full-stack engineering, and data-driven design. From architecting autonomous AI agents and high-performance RAG pipelines to developing scalable web applications and analytics platforms, I focus on creating technology that is practical, efficient, and impactful.
+          </p>
+
+          <div className="pt-4 flex flex-wrap gap-4">
+            {['AI ENGINEER', 'FULL-STACK ENGINEER', 'MLOPS ENGINEER'].map((role) => (
+              <div
+                key={role}
+                className="border-[3px] border-black bg-white text-black px-4 py-2 font-pixel text-xs uppercase shadow-[4px_4px_0_0_#000] hover:-translate-y-1 hover:shadow-[6px_6px_0_0_#000] transition-all cursor-default"
+              >
+                {role}
+              </div>
+            ))}
           </div>
-        </motion.div>
-
-        {/* Name */}
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="text-6xl md:text-8xl lg:text-9xl font-display font-bold tracking-tight text-center mb-6"
-        >
-          <span className="text-foreground">Priyansh</span>{' '}
-          <span className="text-gradient">Singh</span>
-        </motion.h1>
-
-        {/* Tagline */}
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.6 }}
-          className="text-xl md:text-2xl lg:text-3xl text-muted-foreground text-center font-light max-w-3xl mb-4"
-        >
-          Engineering Intelligence into Reality
-        </motion.p>
-
-        {/* Roles */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-12"
-        >
-          {['AI Engineer', 'Full-Stack Developer', 'Data Analyst', 'Software Engineer'].map((role, index) => (
-            <span
-              key={role}
-              className="px-4 py-2 glass-card text-sm md:text-base font-medium text-foreground/80 hover:text-primary transition-colors duration-300"
-            >
-              {role}
-            </span>
-          ))}
-        </motion.div>
-
-        {/* CTA Buttons */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="flex flex-col sm:flex-row gap-4"
-        >
-          <a
-            href="#projects"
-            className="group relative px-8 py-4 rounded-full bg-gradient-primary text-primary-foreground font-semibold text-lg overflow-hidden transition-all duration-300 hover:shadow-glow-lg"
-          >
-            <span className="relative z-10">View Projects</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </a>
-          <a
-            href="#contact"
-            className="px-8 py-4 rounded-full border border-border text-foreground font-semibold text-lg hover:border-primary hover:text-primary transition-all duration-300"
-          >
-            Get in Touch
-          </a>
-        </motion.div>
-      </motion.div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 cursor-pointer"
-        onClick={scrollToAbout}
-      >
-        <div className="flex flex-col items-center gap-2 scroll-indicator">
-          <span className="text-xs text-muted-foreground uppercase tracking-widest">Scroll</span>
-          <ChevronDown className="w-5 h-5 text-primary" />
         </div>
+
+        {/* Right Side: Quick Stats Box */}
+        <div className="w-full md:w-[35%] flex flex-col border-[2px] border-[#853A17] bg-black/75 backdrop-blur-md text-white p-6 gap-6 shadow-[8px_8px_0_0_#000]">
+
+          {/* Box Header */}
+          <div className="flex flex-col">
+            <div className="font-extended text-[#853A17] text-sm md:text-base leading-tight mb-1">PRIYANSH SINGH</div>
+            <div className="font-mono text-sm text-white/90">Quick Stats</div>
+          </div>
+
+          {/* Box Content */}
+          <div className="flex flex-col gap-3 font-extended text-[10px] md:text-xs uppercase tracking-wide">
+            <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+              <span className="leading-relaxed">Total<br />Experience</span>
+              <span className="text-[#853A17] group-hover/stat:text-white text-right leading-relaxed transition-colors">24<br />months</span>
+            </div>
+            <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+              <span>Projects Built</span>
+              <span className="text-[#853A17] group-hover/stat:text-white transition-colors">20+</span>
+            </div>
+            <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+              <span>HACKATHONS</span>
+              <span className="text-[#853A17] group-hover/stat:text-white transition-colors">15+</span>
+            </div>
+            <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+              <span>Tech Stack</span>
+              <span className="text-[#853A17] group-hover/stat:text-white text-right transition-colors">AI/FULL<br />STACK</span>
+            </div>
+          </div>
+        </div>
+
       </motion.div>
     </section>
   );
