@@ -27,7 +27,7 @@ const HeroSection = () => {
             {['AI ENGINEER', 'FULL-STACK ENGINEER', 'SOFTWARE ENGINEER', 'MLOPS'].map((role) => (
               <div
                 key={role}
-                className="border-[2px] md:border-[3px] border-black bg-white text-black px-3 py-1.5 md:px-4 md:py-2 font-pixel text-[10px] md:text-xs uppercase shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:-translate-y-1 hover:shadow-[5px_5px_0_0_#000] transition-all cursor-default"
+                className="border-[2px] border-[#853A17] bg-black/40 text-[#853A17] px-3 py-1.5 md:px-4 md:py-2 font-pixel text-[10px] md:text-xs uppercase shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:bg-[#853A17] hover:text-white transition-all cursor-default"
               >
                 {role}
               </div>
