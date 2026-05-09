@@ -88,13 +88,13 @@ const Navigation = () => {
         </div>
       </div>
       {/* Full width dashed line with animation */}
-      <div className="w-full relative h-[3px] md:h-[4px] overflow-hidden opacity-90">
+      <div className="w-full relative h-[1.5px] md:h-[2px] overflow-hidden opacity-90">
         <div
           className="absolute inset-0 w-[200%] h-full"
           style={{
-            backgroundImage: `linear-gradient(90deg, #853A17 2px, transparent 2px)`,
-            backgroundSize: '8px 100%',
-            animation: 'dash-scroll 2s linear infinite'
+            backgroundImage: `linear-gradient(to right, #853A17 50%, transparent 50%)`,
+            backgroundSize: '15px 100%',
+            animation: 'dash-scroll 1.5s linear infinite'
           }}
         />
         <div className="absolute inset-0 shadow-[0_0_15px_rgba(133,58,23,0.4)]"></div>
