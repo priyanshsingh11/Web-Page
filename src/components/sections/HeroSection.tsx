@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-[calc(100vh-24px)] w-full overflow-hidden p-4 md:p-8 flex flex-col justify-center items-center"
+      className="relative min-h-[calc(100vh-24px)] w-full overflow-hidden pt-24 pb-8 px-4 md:p-8 flex flex-col justify-center items-center"
     >
 
 
