@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+
 import { Shield } from 'lucide-react';
 
 const skillCategories = [
@@ -136,29 +136,22 @@ const SkillsSection = () => {
                 key={category.id}
                 className="border-[1px] border-[#853A17] p-6 bg-white/5 hover:bg-white/[0.08] transition-colors cursor-default group flex flex-col relative overflow-hidden"
               >
-                {/* Subtle scanning line on hover */}
-                <div className="absolute top-0 left-0 w-full h-[1px] bg-[#853A17] opacity-0 group-hover:animate-scan-fast pointer-events-none"></div>
 
                 <div className="border-b-[1px] border-[#853A17]/30 pb-3 mb-5 flex justify-between items-center">
                   <h3 className="font-pixel text-base tracking-widest text-[#853A17] group-hover:text-white transition-colors">
                     {category.title}
                   </h3>
-                  <div className="w-2 h-2 bg-[#853A17]/20 group-hover:bg-[#853A17] group-hover:animate-pulse transition-colors"></div>
+                  <div className="w-2 h-2 bg-[#853A17]/20 group-hover:bg-[#853A17] transition-colors"></div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2">
                   {category.skills.map((skill) => (
-                    <motion.span
+                    <span
                       key={skill}
-                      whileHover={{
-                        scale: 1.05,
-                        backgroundColor: '#853A17',
-                        color: '#ffffff'
-                      }}
-                      className="px-2 py-2 text-[10px] md:text-xs border-[1px] border-[#853A17]/40 bg-black/40 font-pixel tracking-widest uppercase transition-all duration-200 flex items-center justify-center text-center cursor-crosshair"
+                      className="px-2 py-2 text-[10px] md:text-xs border-[1px] border-[#853A17]/40 bg-black/40 font-pixel tracking-widest uppercase transition-all duration-200 flex items-center justify-center text-center cursor-crosshair hover:bg-[#853A17] hover:text-white"
                     >
                       {skill}
-                    </motion.span>
+                    </span>
                   ))}
                 </div>
               </div>
@@ -191,14 +184,7 @@ const SkillsSection = () => {
           animation: marquee 30s linear infinite;
         }
 
-        @keyframes scan-fast {
-          0% { top: 0; opacity: 1; }
-          100% { top: 100%; opacity: 0.5; }
-        }
 
-        .group-hover\\:animate-scan-fast {
-          animation: scan-fast 0.6s linear infinite;
-        }
       `}</style>
     </section>
   );
