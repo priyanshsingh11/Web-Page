@@ -39,7 +39,7 @@ const HeroSection = () => {
         <div className="w-full md:w-[40%] flex flex-col gap-6">
 
           {/* Quick Stats Box */}
-          <div className="flex flex-col border-[2px] border-[#853A17] bg-black/75 backdrop-blur-md text-white p-4 md:p-5 gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000]">
+          <div className="flex flex-col border-[2px] border-[#853A17] bg-black/75 backdrop-blur-md text-white p-3 md:p-4 gap-3 shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000]">
             {/* Box Header */}
             <div className="flex flex-col">
               <div className="font-extended text-[#853A17] text-xs md:text-base leading-tight mb-1 uppercase">PRIYANSH SINGH</div>
@@ -47,20 +47,20 @@ const HeroSection = () => {
             </div>
 
             {/* Box Content */}
-            <div className="flex flex-col gap-3 font-extended text-[9px] md:text-xs uppercase tracking-wide">
-              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2.5 md:p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+            <div className="flex flex-col gap-2.5 font-extended text-[9px] md:text-xs uppercase tracking-wide">
+              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
                 <span className="leading-relaxed">Total<br />Experience</span>
                 <span className="text-[#853A17] group-hover/stat:text-white text-right leading-relaxed transition-colors">24<br />months</span>
               </div>
-              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2.5 md:p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
                 <span>Projects Built</span>
                 <span className="text-[#853A17] group-hover/stat:text-white transition-colors">20+</span>
               </div>
-              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2.5 md:p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
                 <span>HACKATHONS</span>
                 <span className="text-[#853A17] group-hover/stat:text-white transition-colors">15+</span>
               </div>
-              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2.5 md:p-3 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
+              <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
                 <span>Tech Stack</span>
                 <span className="text-[#853A17] group-hover/stat:text-white text-right transition-colors">touch grass<br /></span>
               </div>
