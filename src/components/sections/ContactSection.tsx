@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { toast } from 'sonner';
 import {
   Send,
   Terminal,
@@ -8,13 +9,14 @@ import {
   Linkedin,
   FileText,
   Code2,
+  Loader2
 } from 'lucide-react';
 
 const socialLinks = [
-  { icon: FileText, label: 'RESUME', href: '#' },
+  { icon: FileText, label: 'RESUME', href: 'https://drive.google.com/file/d/15UHoMdkaeQBKOwC2MqH4lOLiaJ183iPI/view?usp=drive_link' },
   { icon: Github, label: 'GITHUB', href: 'https://github.com/priyanshsingh11' },
   { icon: Linkedin, label: 'LINKEDIN', href: 'https://www.linkedin.com/in/priyansh-singh-575a57289/' },
-  { icon: Code2, label: 'LEETCODE', href: '#' },
+  { icon: Code2, label: 'LEETCODE', href: 'https://leetcode.com/u/priyanshsingh11/' },
 ];
 
 const promptLines = [
@@ -26,12 +28,42 @@ const promptLines = [
 
 const ContactSection = () => {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 5000);
+    
+    if (status === 'sending') return;
+    
+    setStatus('sending');
+    
+    try {
+      const response = await fetch('/api/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formState),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
+
+      setStatus('success');
+      toast.success('Packet transmitted successfully!');
+      setFormState({ name: '', email: '', message: '' });
+      
+      // Reset status after 5 seconds
+      setTimeout(() => setStatus('idle'), 5000);
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+      toast.error('Transmission failed. Please check your connection.');
+      setTimeout(() => setStatus('idle'), 5000);
+    }
   };
 
   return (
@@ -143,11 +175,17 @@ const ContactSection = () => {
 
                 <button
                   type="submit"
-                  disabled={sent}
+                  disabled={status === 'sending'}
                   className="w-full bg-[#853A17] text-white p-3.5 md:p-4 font-pixel text-[10px] md:text-xs tracking-[0.2em] md:tracking-[0.3em] uppercase hover:bg-white hover:text-[#853A17] transition-all disabled:opacity-50 flex items-center justify-center gap-3 shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000] active:shadow-none active:translate-x-[3px] active:translate-y-[3px]"
                 >
-                  {sent ? (
+                  {status === 'sending' ? (
+                    <div className="flex items-center gap-2">
+                      ENCRYPTING... <Loader2 size={14} className="animate-spin" />
+                    </div>
+                  ) : status === 'success' ? (
                     "✓ PACKET_SENT"
+                  ) : status === 'error' ? (
+                    "⚠ RETRY_LATER"
                   ) : (
                     <>
                       TRANSMIT_DATA <Send size={14} />
