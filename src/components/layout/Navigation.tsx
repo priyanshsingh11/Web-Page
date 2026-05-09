@@ -2,12 +2,12 @@ import { useState, useEffect } from 'react';
 import AudioPlayer from '../ui/AudioPlayer';
 
 const navItems = [
-  { label: 'WELCOME', href: '#hero' },
+  { label: 'HI', href: '#hero' },
   { label: 'ABOUT', href: '#about' },
   { label: 'SKILLS', href: '#skills' },
   { label: 'EXPERIENCE', href: '#experience' },
   { label: 'PROJECTS', href: '#projects' },
-  { label: 'CERTIFICATIONS', href: '#certifications' },
+  { label: 'CERTS', href: '#certifications' },
   { label: 'CONTACT', href: '#contact' },
 ];
 
@@ -39,33 +39,44 @@ const Navigation = () => {
   const handleNavClick = (e: React.MouseEvent, href: string) => {
     e.preventDefault();
     const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: 'smooth' });
+    if (el) {
+      const offset = 80;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/90 md:bg-black border-b-[3px] border-dashed border-[#853A17]/30">
-      <div className="flex items-center px-4 md:px-16 py-3 pointer-events-auto gap-2 overflow-x-auto no-scrollbar">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/90 backdrop-blur-md border-b-[2px] border-dashed border-[#853A17]/30">
+      <div className="flex items-center px-3 md:px-16 py-2 md:py-3 pointer-events-auto gap-1 md:gap-2 overflow-x-auto no-scrollbar">
         {navItems.map((item) => (
           <a
             key={item.href}
             href={item.href}
             onClick={(e) => handleNavClick(e, item.href)}
-            className={`flex items-center gap-1 px-4 py-2 text-[10px] sm:text-xs font-pixel tracking-widest transition-all ${
+            className={`flex-shrink-0 flex items-center gap-1 px-3 py-2 md:px-4 md:py-2 text-[9px] md:text-xs font-pixel tracking-widest transition-all ${
               activeSection === item.href
-                ? 'bg-[#853A17] text-white shadow-[4px_4px_0_0_#000] border-[2px] border-dashed border-black/50'
-                : 'text-white/70 hover:text-white hover:bg-white/5 border-[2px] border-transparent'
+                ? 'bg-[#853A17] text-white shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
+                : 'text-white/70 hover:text-white hover:bg-white/5 border-[1px] md:border-[2px] border-transparent'
             }`}
           >
             {item.label}
           </a>
         ))}
 
-        <div className="flex items-center ml-2 border-l border-white/10 pl-4">
+        <div className="flex items-center ml-auto border-l border-white/10 pl-3 md:pl-4">
           <AudioPlayer />
         </div>
       </div>
       {/* Full width dashed line with animation */}
-      <div className="w-full relative h-[4px] overflow-hidden opacity-90">
+      <div className="w-full relative h-[3px] md:h-[4px] overflow-hidden opacity-90">
         <div 
           className="absolute inset-0 w-[200%] h-full"
           style={{
@@ -74,7 +85,7 @@ const Navigation = () => {
             animation: 'dash-scroll 2s linear infinite'
           }}
         />
-        <div className="absolute inset-0 shadow-[0_0_15px_rgba(133,58,23,0.6)]"></div>
+        <div className="absolute inset-0 shadow-[0_0_15px_rgba(133,58,23,0.4)]"></div>
       </div>
     </nav>
   );

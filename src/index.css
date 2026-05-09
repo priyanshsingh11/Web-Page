@@ -71,6 +71,9 @@
     overflow-x: hidden;
     /* Massive outer border representing the framing */
     border: 12px solid black;
+    @media (max-width: 768px) {
+      border-width: 6px;
+    }
     min-height: 100vh;
   }
 
@@ -108,6 +111,9 @@
   /* Large Heading */
   .heading-xl {
     @apply text-6xl md:text-8xl lg:text-[10rem] leading-[0.8] font-bold;
+    @media (max-width: 640px) {
+      @apply text-4xl leading-tight;
+    }
   }
 
   /* Minimal Button */

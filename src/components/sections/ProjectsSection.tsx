@@ -41,41 +41,41 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 px-4 md:px-16 bg-transparent">
+    <section id="projects" className="py-12 md:py-20 px-4 md:px-16 bg-transparent">
       <div className="max-w-7xl mx-auto">
 
-        <h2 className="font-extended text-3xl md:text-4xl text-center mb-16 text-[#853A17] tracking-tight uppercase">
+        <h2 className="font-extended text-xl md:text-3xl text-center mb-10 md:mb-16 text-[#853A17] tracking-tight uppercase">
           WHERE DID MY SKILLS GO?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {projects.map((project) => (
             <motion.div
               key={project.id}
-              className="border-[1px] border-[#853A17] p-8 bg-black/85 md flex flex-col items-center text-center group transition-all shadow-[6px_6px_0_0_#000]"
+              className="border-[1px] border-[#853A17] p-6 md:p-8 bg-black/85 flex flex-col items-center text-center group transition-all shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]"
             >
-              <h3 className="font-extended text-lg md:text-xl text-[#853A17] mb-6 leading-tight group-hover:text-white transition-colors">
+              <h3 className="font-extended text-base md:text-xl text-[#853A17] mb-4 md:mb-6 leading-tight group-hover:text-white transition-colors">
                 {project.title}
               </h3>
 
-              <p className="font-pixel text-xs md:text-sm text-white/60 mb-8 leading-relaxed line-clamp-3">
+              <p className="font-pixel text-[10px] md:text-sm text-white/60 mb-6 md:mb-8 leading-relaxed line-clamp-3">
                 {project.description}
               </p>
 
-              <div className="flex flex-wrap justify-center gap-2 mb-8">
+              <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 mb-6 md:mb-8">
                 {project.tech.map(t => (
-                  <span key={t} className="text-[9px] font-pixel text-[#853A17]/70 border-[1px] border-[#853A17]/30 px-2 py-0.5 group-hover:border-[#853A17] group-hover:text-[#853A17] transition-colors">
+                  <span key={t} className="text-[8px] md:text-[9px] font-pixel text-[#853A17]/70 border-[1px] border-[#853A17]/30 px-1.5 py-0.5 group-hover:border-[#853A17] group-hover:text-[#853A17] transition-colors">
                     {t}
                   </span>
                 ))}
               </div>
 
-              <div className="mt-auto">
+              <div className="mt-auto w-full">
                 <a
                   href={`https://github.com/priyanshsingh11/${project.id === 'trustgraph' ? 'AI-for-bharat' : project.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-5 py-2 bg-[#853A17] text-white font-pixel text-[10px] tracking-widest hover:bg-white hover:text-black transition-all shadow-[4px_4px_0_0_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px]"
+                  className="inline-block w-full sm:w-auto px-5 py-2 bg-[#853A17] text-white font-pixel text-[9px] md:text-[10px] tracking-widest hover:bg-white hover:text-black transition-all shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] active:shadow-none active:translate-x-[3px] active:translate-y-[3px]"
                 >
                   VIEW DETAILS
                 </a>
@@ -84,12 +84,12 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-12 md:mt-16 text-center">
           <a
             href="https://github.com/priyanshsingh11"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-8 py-3 bg-[#1a1a1a] border-[1px] border-[#853A17] font-pixel text-[10px] tracking-widest text-white/70 hover:bg-[#853A17] hover:text-white transition-all shadow-[6px_6px_0_0_#000]"
+            className="inline-block w-full sm:w-auto px-8 py-3 bg-[#1a1a1a] border-[1px] border-[#853A17] font-pixel text-[9px] md:text-[10px] tracking-widest text-white/70 hover:bg-[#853A17] hover:text-white transition-all shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]"
           >
             SHOW ALL PROJECTS (12)
           </a>

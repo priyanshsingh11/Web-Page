@@ -18,28 +18,30 @@ const VisionSection = () => {
     <section
       ref={ref}
       id="vision"
-      className="relative min-h-screen w-full overflow-hidden border-t border-black"
+      className="relative min-h-screen w-full overflow-hidden border-t border-black bg-transparent"
     >
-      {/* Floating Chrome Letters */}
-      {floatingLetters.map((letter, i) => (
-        <motion.div
-          key={i}
-          initial={{ opacity: 0, y: 60 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: letter.delay + 0.2 }}
-          className={`absolute ${letter.size} font-extended font-bold select-none pointer-events-none`}
-          style={{
-            top: letter.top,
-            left: letter.left,
-            right: (letter as any).right,
-            transform: `rotate(${letter.rotate}deg)`,
-            color: 'transparent',
-            WebkitTextStroke: '2px rgba(0,0,0,0.15)',
-          }}
-        >
-          {letter.char}
-        </motion.div>
-      ))}
+      {/* Floating Chrome Letters - Only on large screens for better performance and readability */}
+      <div className="hidden md:block">
+        {floatingLetters.map((letter, i) => (
+          <motion.div
+            key={i}
+            initial={{ opacity: 0, y: 60 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.8, delay: letter.delay + 0.2 }}
+            className={`absolute ${letter.size} font-extended font-bold select-none pointer-events-none`}
+            style={{
+              top: letter.top,
+              left: letter.left,
+              right: (letter as any).right,
+              transform: `rotate(${letter.rotate}deg)`,
+              color: 'transparent',
+              WebkitTextStroke: '2px rgba(255,255,255,0.08)',
+            }}
+          >
+            {letter.char}
+          </motion.div>
+        ))}
+      </div>
 
       {/* Blue accent squares */}
       {[
@@ -53,7 +55,7 @@ const VisionSection = () => {
           initial={{ opacity: 0, scale: 0 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.4, delay: 0.6 + i * 0.1 }}
-          className="absolute w-3 h-3 bg-blue-700"
+          className="absolute w-2 h-2 md:w-3 md:h-3 bg-blue-700 opacity-30 md:opacity-100"
           style={pos}
         />
       ))}
@@ -63,58 +65,58 @@ const VisionSection = () => {
         initial={{ opacity: 0, y: 80 }}
         animate={isInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="absolute bottom-0 right-0 w-full md:w-[55%] lg:w-[45%]"
+        className="absolute bottom-0 right-0 w-full md:w-[65%] lg:w-[45%]"
       >
         {/* Card Header */}
-        <div className="text-white p-8 md:p-10">
+        <div className="text-white p-6 md:p-10 bg-black/40 backdrop-blur-sm md:bg-transparent">
 
-          <div className="flex justify-between items-start mb-6">
+          <div className="flex justify-between items-start mb-6 gap-4">
 
             <div>
-              <h2 className="font-extended font-bold text-3xl md:text-5xl leading-none tracking-tighter">
+              <h2 className="font-extended font-bold text-2xl md:text-5xl leading-none tracking-tighter">
                 A VISION
-                <span className="text-blue-400 text-lg align-super ml-1">
+                <span className="text-blue-400 text-sm md:text-lg align-super ml-1">
                   ©
                 </span>
               </h2>
             </div>
 
-            <div className="text-right font-pixel text-[10px] tracking-widest text-white/50 leading-relaxed">
+            <div className="text-right font-pixel text-[8px] md:text-[10px] tracking-widest text-white/50 leading-relaxed uppercase">
               A VISION
               <br />
               A TARGET
             </div>
           </div>
 
-          <div className="flex gap-8">
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8">
 
             {/* Left column */}
             <div className="flex-1">
-              <p className="font-pixel text-[10px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider">
+              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider">
                 MY OBJECTIVE IS TO BRING TOGETHER
-                <br />
+                <br className="hidden md:block" />
                 THE BRIGHTEST TALENTS, FOSTER
-                <br />
+                <br className="hidden md:block" />
                 A SPIRIT OF COLLABORATION AND
-                <br />
+                <br className="hidden md:block" />
                 INNOVATION, AND CREATE AI SOLUTIONS
-                <br />
+                <br className="hidden md:block" />
                 THAT ARE NOT ONLY EFFECTIVE,
-                <br />
+                <br className="hidden md:block" />
                 BUT ALSO REVOLUTIONARY.
               </p>
             </div>
 
             {/* Right column */}
             <div className="flex-1">
-              <p className="font-pixel text-[10px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider mb-4">
+              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider mb-4">
                 ENGINEERING INTELLIGENCE, A SYNERGY
                 BETWEEN CODE AND CREATIVITY,
                 AND THE DYNAMIC ENERGY OF
                 FULL-STACK DEVELOPMENT.
               </p>
 
-              <p className="font-pixel text-[10px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider">
+              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider">
                 THIS IS NOT JUST A PORTFOLIO.
                 IT'S AN ECOSYSTEM. DESIGNED TO
                 BRING TOGETHER THE BEST OF
@@ -128,12 +130,12 @@ const VisionSection = () => {
 
             <div className="flex gap-3">
 
-              <div className="w-8 h-8 border border-white/20 flex items-center justify-center">
-                <div className="w-4 h-4 border border-white/40 rounded-full" />
+              <div className="w-7 h-7 md:w-8 md:h-8 border border-white/20 flex items-center justify-center">
+                <div className="w-3 h-3 md:w-4 md:h-4 border border-white/40 rounded-full" />
               </div>
 
-              <div className="w-8 h-8 border border-white/20 flex items-center justify-center">
-                <div className="w-4 h-4 grid grid-cols-2 grid-rows-2 gap-[1px]">
+              <div className="w-7 h-7 md:w-8 md:h-8 border border-white/20 flex items-center justify-center">
+                <div className="w-3 h-3 md:w-4 md:h-4 grid grid-cols-2 grid-rows-2 gap-[1px]">
                   <div className="bg-white/40" />
                   <div className="bg-white/40" />
                   <div className="bg-white/40" />
@@ -146,10 +148,10 @@ const VisionSection = () => {
             {/* Striped decoration */}
             <div className="flex gap-[2px]">
 
-              {Array.from({ length: 12 }).map((_, i) => (
+              {Array.from({ length: 8 }).map((_, i) => (
                 <div
                   key={i}
-                  className="w-[3px] h-6"
+                  className="w-[2px] md:w-[3px] h-4 md:h-6"
                   style={{
                     background:
                       i % 2 === 0
@@ -161,7 +163,7 @@ const VisionSection = () => {
 
             </div>
 
-            <div className="font-pixel text-white/30 text-lg">
+            <div className="font-pixel text-white/30 text-base md:text-lg">
               ✳
             </div>
 
@@ -170,7 +172,7 @@ const VisionSection = () => {
       </motion.div>
 
       {/* Section label */}
-      <div className="absolute top-8 left-8 font-pixel text-[10px] tracking-widest text-black/30 uppercase">
+      <div className="absolute top-6 left-6 md:top-8 md:left-8 font-pixel text-[8px] md:text-[10px] tracking-widest text-white/30 uppercase">
         02 // VISION
       </div>
     </section>

@@ -27,14 +27,14 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-black py-16 px-4">
+    <footer className="w-full bg-black py-10 md:py-16 px-4">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         {/* Top Border */}
-        <div className="w-full h-[1px] bg-[#853A17] mb-16 opacity-50 shadow-[0_0_10px_#853A17]"></div>
+        <div className="w-full h-[1px] bg-[#853A17] mb-10 md:mb-16 opacity-50 shadow-[0_0_10px_#853A17]"></div>
 
         {/* Links Grid */}
-        <div className="flex flex-wrap justify-center gap-x-8 gap-y-10 mb-16">
+        <div className="flex flex-wrap justify-center gap-x-6 md:gap-x-8 gap-y-6 md:gap-y-10 mb-10 md:mb-16">
           {footerLinks.map((link, i) => (
             <motion.a
               key={link.label}
@@ -45,10 +45,10 @@ const Footer = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.05 }}
               viewport={{ once: true }}
-              className="flex items-center gap-2.5 text-white/60 hover:text-white transition-all group"
+              className="flex items-center gap-2 text-white/60 hover:text-white transition-all group"
             >
-              <link.icon size={16} className="text-[#853A17]/70 group-hover:text-[#853A17] transition-colors" />
-              <span className="font-pixel text-[11px] tracking-widest uppercase">{link.label}</span>
+              <link.icon size={14} className="text-[#853A17]/70 group-hover:text-[#853A17] transition-colors" />
+              <span className="font-pixel text-[9px] md:text-[11px] tracking-widest uppercase">{link.label}</span>
             </motion.a>
           ))}
         </div>
@@ -57,7 +57,7 @@ const Footer = () => {
         <div className="w-full max-w-4xl h-[1px] bg-white/10 mb-8"></div>
 
         {/* Copyright */}
-        <p className="font-pixel text-[10px] text-white/30 tracking-[0.2em] text-center uppercase">
+        <p className="font-pixel text-[8px] md:text-[10px] text-white/30 tracking-[0.2em] text-center uppercase leading-relaxed">
           © {currentYear} Priyansh Singh. Built with React & lots of Creativity + Tokens.
         </p>
       </div>
