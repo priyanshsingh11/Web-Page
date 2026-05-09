@@ -7,7 +7,7 @@ const faqs = [
   },
   {
     q: "What I do?",
-    a: "I build AI-powered products, scalable full-stack applications, autonomous agents, and production-ready ML systems."
+    a: "I build AI-powered products, scalable full-stack applications, autonomous agents, and production-ready software systems."
   },
   {
     q: "Prove your obsession with tech?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "What I care about?",
-    a: "Building meaningful technology, continuous growth, and creating things that genuinely stand out."
+    a: "Building meaningful technology, continuous growth, and creating things that genuinely stand out and bring impact."
   },
   {
     q: "My coding philosophy?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: "My weakness?",
-    a: "Turning 'small side projects' into full-scale systems."
+    a: "I don’t really have weaknesses, just an unhealthy attachment to optimizing things."
   },
   {
     q: "How I code?",
@@ -39,7 +39,7 @@ const faqs = [
   },
   {
     q: "Special stuff?",
-    a: "Fast learner, research-driven mindset, strong execution, and the ability to adapt quickly across AI, full-stack, and MLOps."
+    a: "Funny enough to survive awkward situations, smart enough to escape them."
   }
 ];
 
@@ -89,8 +89,8 @@ const FAQSection = () => {
 
         {/* Footer Accent */}
         <div className="mt-24 border-t border-[#853A17]/30 pt-8 flex justify-between items-center opacity-40">
-           <div className="font-mono text-[10px] tracking-widest text-white">SYSTEM_STATUS: STABLE</div>
-           <div className="font-mono text-[10px] tracking-widest text-white">ACCESS_LVL: ADMINISTRATOR</div>
+          <div className="font-mono text-[10px] tracking-widest text-white">SYSTEM_STATUS: STABLE</div>
+          <div className="font-mono text-[10px] tracking-widest text-white">ACCESS_LVL: ADMINISTRATOR</div>
         </div>
       </div>
     </section>

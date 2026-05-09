@@ -175,7 +175,7 @@ const ContactSection = () => {
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-[#853A17] text-white p-4 md:p-5 font-pixel text-xs md:text-base tracking-[0.3em] md:tracking-[0.4em] uppercase hover:bg-white hover:text-[#853A17] transition-all disabled:opacity-50 flex items-center justify-center gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[10px_10px_0_0_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] font-bold"
+                  className="w-full bg-[#853A17] text-white p-2.5 md:p-3 font-pixel text-xs md:text-base tracking-[0.3em] md:tracking-[0.4em] uppercase hover:bg-white hover:text-[#853A17] transition-all disabled:opacity-50 flex items-center justify-center gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[10px_10px_0_0_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] font-bold"
                 >
                   {status === 'sending' ? (
                     <div className="flex items-center gap-3">

@@ -33,7 +33,6 @@ const skillCategories = [
       'EXPRESS.JS',
       'FASTAPI',
       'WEBSOCKETS',
-      'JWT',
     ],
   },
   {

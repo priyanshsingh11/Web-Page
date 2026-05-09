@@ -25,7 +25,7 @@ const HeroSection = () => {
             I build intelligent systems that solve real-world problems through AI, full-stack engineering, and data-driven design. From architecting autonomous AI agents and high-performance RAG pipelines to developing scalable web applications and analytics platforms, I focus on creating technology that is practical, efficient, and impactful.
           </p>
 
-          <div className="pt-5 flex flex-wrap gap-1 md:gap-1">
+          <div className="pt-1 flex flex-wrap gap-1 md:gap-1">
             {['AI ENGINEER', 'FULL-STACK ENGINEER', 'SOFTWARE ENGINEER', 'MLOPS'].map((role) => (
               <div
                 key={role}
