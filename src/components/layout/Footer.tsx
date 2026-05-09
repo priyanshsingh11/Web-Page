@@ -21,12 +21,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-black py-6 md:py-8 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col items-center">
+    <footer className="w-full bg-black py-6 md:py-8">
+      {/* Full Width Top Border */}
+      <div className="w-full h-[1px] bg-[#853A17] mb-6 md:mb-8 opacity-70 shadow-[0_0_10px_#853A17]"></div>
 
-        {/* Top Decorative Border */}
-        <div className="w-full h-[1px] bg-[#853A17] mb-6 md:mb-8 opacity-70 shadow-[0_0_10px_#853A17]"></div>
-
+      <div className="max-w-7xl mx-auto flex flex-col items-center px-4">
         {/* Links Row */}
         <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-12 gap-y-4 mb-6 px-4">
           {footerLinks.map((link, i) => (
