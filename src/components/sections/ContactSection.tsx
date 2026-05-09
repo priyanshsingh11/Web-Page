@@ -37,6 +37,17 @@ const ContactSection = () => {
     
     setStatus('sending');
     
+    // Local Development Mock
+    if (import.meta.env.DEV) {
+      console.log('DEV_MODE: Simulating Resend API call...', formState);
+      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network lag
+      setStatus('success');
+      toast.success('DEV_MODE: Packet simulated successfully!');
+      setFormState({ name: '', email: '', message: '' });
+      setTimeout(() => setStatus('idle'), 5000);
+      return;
+    }
+    
     try {
       const response = await fetch('/api/send', {
         method: 'POST',
@@ -56,12 +67,11 @@ const ContactSection = () => {
       toast.success('Packet transmitted successfully!');
       setFormState({ name: '', email: '', message: '' });
       
-      // Reset status after 5 seconds
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       console.error('Submission error:', error);
       setStatus('error');
-      toast.error('Transmission failed. Please check your connection.');
+      toast.error('Transmission failed. Check API key/deployment.');
       setTimeout(() => setStatus('idle'), 5000);
     }
   };
