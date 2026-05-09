@@ -32,11 +32,11 @@ const ContactSection = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (status === 'sending') return;
-    
+
     setStatus('sending');
-    
+
     try {
       const response = await fetch('/api/send', {
         method: 'POST',
@@ -55,7 +55,7 @@ const ContactSection = () => {
       setStatus('success');
       toast.success('Packet transmitted successfully!');
       setFormState({ name: '', email: '', message: '' });
-      
+
       setTimeout(() => setStatus('idle'), 5000);
     } catch (error) {
       console.error('Submission error:', error);
@@ -112,7 +112,7 @@ const ContactSection = () => {
               </div>
 
               <div className="mt-auto pt-6 md:pt-8 border-t-[2px] border-[#853A17]/30">
-                <p className="font-pixel text-[10px] md:text-xs text-[#853A17] mb-4 md:mb-6 tracking-[0.3em] uppercase font-bold">DIRECT_COMMS_CHANNELS</p>
+                <p className="font-pixel text-[10px] md:text-xs text-[#853A17] mb-4 md:mb-6 tracking-[0.3em] uppercase font-bold">Communication Channels</p>
                 <div className="flex flex-wrap gap-4 md:gap-6">
                   {socialLinks.map((social) => (
                     <a
@@ -137,7 +137,7 @@ const ContactSection = () => {
             <div className="lg:w-1/2">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">IDENTIFICATION_ID</label>
+                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">YOUR NAME</label>
                   <input
                     type="text"
                     required
@@ -149,7 +149,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">ENCRYPTED_EMAIL</label>
+                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">YOUR EMAIL</label>
                   <input
                     type="email"
                     required
@@ -161,7 +161,7 @@ const ContactSection = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">DATA_PACKET_CONTENT</label>
+                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">YOUR WISH</label>
                   <textarea
                     required
                     rows={3}
@@ -187,7 +187,7 @@ const ContactSection = () => {
                     "⚠ RETRY_LATER"
                   ) : (
                     <>
-                      TRANSMIT_DATA <Send size={18} />
+                      TRANSMIT_DATA <Send size={12} />
                     </>
                   )}
                 </button>

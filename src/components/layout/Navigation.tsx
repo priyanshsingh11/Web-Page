@@ -54,7 +54,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/90 backdrop-blur-md border-b-[2px] border-dashed border-[#853A17]/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/90 backdrop-blur-md border-b-[2px] border-[#853A17]/30">
       <div className="flex items-center px-3 md:px-16 py-2 md:py-3 pointer-events-auto gap-1 md:gap-2 overflow-x-auto no-scrollbar">
         {navItems.map((item) => (
           <a
@@ -92,8 +92,8 @@ const Navigation = () => {
         <div
           className="absolute inset-0 w-[200%] h-full"
           style={{
-            backgroundImage: `radial-gradient(circle, #853A17 2px, transparent 2px)`,
-            backgroundSize: '12px 100%',
+            backgroundImage: `linear-gradient(90deg, #853A17 2px, transparent 2px)`,
+            backgroundSize: '8px 100%',
             animation: 'dash-scroll 2s linear infinite'
           }}
         />
