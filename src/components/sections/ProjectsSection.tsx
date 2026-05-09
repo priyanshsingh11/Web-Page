@@ -91,7 +91,7 @@ const ProjectsSection = () => {
             rel="noopener noreferrer"
             className="inline-block w-full sm:w-auto px-8 py-3 bg-[#1a1a1a] border-[1px] border-[#853A17] font-pixel text-[9px] md:text-[10px] tracking-widest text-white/70 hover:bg-[#853A17] hover:text-white transition-all shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]"
           >
-            SHOW ALL PROJECTS (12)
+            SHOW ALL PROJECTS (30+)
           </a>
         </div>
       </div>
