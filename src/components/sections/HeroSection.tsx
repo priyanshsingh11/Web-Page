@@ -37,9 +37,9 @@ const HeroSection = () => {
 
         {/* Right Side: Stats & Activity */}
         <div className="w-full md:w-[40%] flex flex-col gap-6">
-          
+
           {/* Quick Stats Box */}
-          <div className="flex flex-col border-[2px] border-[#853A17] bg-black/75 backdrop-blur-md text-white p-5 md:p-6 gap-6 shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000]">
+          <div className="flex flex-col border-[2px] border-[#853A17] bg-black/75 backdrop-blur-md text-white p-4 md:p-5 gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000]">
             {/* Box Header */}
             <div className="flex flex-col">
               <div className="font-extended text-[#853A17] text-xs md:text-base leading-tight mb-1 uppercase">PRIYANSH SINGH</div>
@@ -74,11 +74,11 @@ const HeroSection = () => {
               <span className="font-pixel text-[9px] md:text-[10px] text-[#853A17] tracking-widest uppercase">CONTRIBUTION_LOG.SYS</span>
             </div>
             <div className="bg-white/5 border border-[#853A17]/20 p-2 overflow-hidden">
-              <img 
-                src="https://ghchart.rshah.org/853A17/priyanshsingh11" 
-                alt="Priyansh's GitHub Contributions" 
+              <img
+                src="https://ghchart.rshah.org/853A17/priyanshsingh11"
+                alt="Priyansh's GitHub Contributions"
                 className="w-full opacity-90 hover:opacity-100 transition-opacity"
-                style={{ 
+                style={{
                   imageRendering: 'pixelated',
                   filter: 'invert(1) hue-rotate(180deg) brightness(1.2) contrast(1.2)'
                 }}
