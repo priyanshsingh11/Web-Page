@@ -37,17 +37,6 @@ const ContactSection = () => {
     
     setStatus('sending');
     
-    // Local Development Mock
-    if (import.meta.env.DEV) {
-      console.log('DEV_MODE: Simulating Resend API call...', formState);
-      await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network lag
-      setStatus('success');
-      toast.success('DEV_MODE: Packet simulated successfully!');
-      setFormState({ name: '', email: '', message: '' });
-      setTimeout(() => setStatus('idle'), 5000);
-      return;
-    }
-    
     try {
       const response = await fetch('/api/send', {
         method: 'POST',
