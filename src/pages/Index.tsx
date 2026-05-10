@@ -3,6 +3,7 @@ import Lenis from 'lenis';
 
 import Navigation from '../components/layout/Navigation';
 import HeroSection from '../components/sections/HeroSection';
+import CustomCursor from '../components/ui/CustomCursor';
 import AboutSection from '../components/sections/AboutSection';
 import FAQSection from '../components/sections/FAQSection';
 import SkillsSection from '../components/sections/SkillsSection';
@@ -65,6 +66,7 @@ const Index = () => {
       <div className="relative z-10">
 
         {/* Fixed Navigation */}
+        <CustomCursor />
         <Navigation />
 
         {/* Main Content */}
