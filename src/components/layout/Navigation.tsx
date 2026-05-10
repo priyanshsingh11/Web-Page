@@ -89,7 +89,7 @@ const Navigation = () => {
         <div className="flex items-center ml-auto gap-3 md:gap-8">
           {/* Highlighted Resume Link */}
           <a
-            href="https://drive.google.com/file/d/15UHoMdkaeQBKOwC2MqH4lOLiaJ183iPI/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1g-4e0RoOUg_5DOmHbzMTQMOrAGe8tEGZ/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 flex items-center gap-1 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 text-[8px] md:text-xs font-pixel tracking-widest text-[#853A17] border-[1px] md:border-[2px] border-[#853A17] hover:bg-[#853A17] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"

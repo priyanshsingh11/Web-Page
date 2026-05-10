@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 
 const socialLinks = [
-  { icon: FileText, label: 'RESUME', href: 'https://drive.google.com/file/d/15UHoMdkaeQBKOwC2MqH4lOLiaJ183iPI/view?usp=drive_link' },
+  { icon: FileText, label: 'RESUME', href: 'https://drive.google.com/file/d/1g-4e0RoOUg_5DOmHbzMTQMOrAGe8tEGZ/view?usp=drive_link' },
   { icon: Github, label: 'GITHUB', href: 'https://github.com/priyanshsingh11' },
   { icon: Linkedin, label: 'LINKEDIN', href: 'https://www.linkedin.com/in/priyansh-singh-575a57289/' },
   { icon: Code2, label: 'LEETCODE', href: 'https://leetcode.com/u/priyanshsingh11/' },
