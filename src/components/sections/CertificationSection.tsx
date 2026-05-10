@@ -3,10 +3,10 @@ import { Award, FileText } from 'lucide-react';
 
 const certifications = [
   {
-    title: 'AWS CERTIFIED MACHINE LEARNING ENGINEER',
+    title: 'AWS CERTIFIED MACHINE LEARNING - ASSOCIATE',
     issuer: 'AMAZON WEB SERVICES',
     date: '2026',
-    type: 'CERTIFICATION',
+    type: 'ASSOCIATE',
   },
   {
     title: 'MACHINE LEARNING SPECIALIZATION',
@@ -18,7 +18,7 @@ const certifications = [
     title: 'ADVANCED LEARNING ALGORITHMS',
     issuer: 'STANFORD ONLINE // COURSERA',
     date: '2024',
-    type: 'COURSE',
+    type: 'SPECIALIZATION',
   }
 ];
 
@@ -39,8 +39,8 @@ const CertificationSection = () => {
           </div>
         </div>
 
-        <div className="p-6 md:p-12">
-          <h2 className="font-extended text-2xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 mb-10 text-white uppercase tracking-tight">
+        <div className="p-4 md:p-12">
+          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 mb-8 md:mb-10 text-white uppercase tracking-tight">
             Certifications
           </h2>
 

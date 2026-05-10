@@ -70,12 +70,12 @@ const ProjectsSection = () => {
                 ))}
               </div>
 
-              <div className="mt-auto w-full">
+              <div className="mt-auto w-full flex justify-center">
                 <a
                   href={`https://github.com/priyanshsingh11/${project.id === 'trustgraph' ? 'AI-for-bharat' : project.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block w-full sm:w-auto px-5 py-2 bg-[#853A17] text-white font-pixel text-[9px] md:text-[10px] tracking-widest hover:bg-white hover:text-black transition-all shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] active:shadow-none active:translate-x-[3px] active:translate-y-[3px]"
+                  className="inline-block w-full px-4 py-2.5 bg-[#853A17] text-white font-pixel text-[9px] md:text-[10px] tracking-widest hover:bg-white hover:text-black transition-all shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] active:shadow-none active:translate-x-[3px] active:translate-y-[3px] text-center"
                 >
                   VIEW DETAILS
                 </a>

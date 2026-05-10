@@ -56,29 +56,29 @@ const ExperienceSection = () => {
                 className="flex flex-col md:flex-row gap-6 md:gap-16 relative group"
               >
                 {/* Level Indicator & Timeline Node */}
-                <div className="flex flex-row md:flex-col items-center md:w-32 flex-shrink-0 relative z-10 gap-4 md:gap-0">
-                  <div className="w-8 h-8 md:w-10 md:h-10 border-2 border-[#853A17] bg-black flex items-center justify-center md:mb-4 group-hover:scale-110 transition-transform">
+                <div className="flex flex-row md:flex-col items-center md:w-32 flex-shrink-0 relative z-20 gap-3 md:gap-0">
+                  <div className="w-7 h-7 md:w-10 md:h-10 border-2 border-[#853A17] bg-black flex items-center justify-center md:mb-4 group-hover:scale-110 transition-transform">
                     <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-[#853A17]"></div>
                   </div>
 
-                  <div className="bg-black border-[1px] border-[#853A17] px-3 py-1.5 md:px-4 md:py-2 text-[#853A17] font-pixel text-[10px] md:text-xs tracking-widest shadow-[4px_4px_0_0_#853A17] md:shadow-[6px_6px_0_0_#853A17] group-hover:bg-[#853A17] group-hover:text-white transition-all whitespace-nowrap">
+                  <div className="bg-black border-[1px] border-[#853A17] px-2 py-1 md:px-4 md:py-2 text-[#853A17] font-pixel text-[9px] md:text-xs tracking-widest shadow-[3px_3px_0_0_#853A17] md:shadow-[6px_6px_0_0_#853A17] group-hover:bg-[#853A17] group-hover:text-white transition-all whitespace-nowrap">
                     {exp.level}
                   </div>
                 </div>
 
                 {/* Content Card */}
-                <div className="flex-1 border-[1px] border-[#853A17] bg-black/85 backdrop-blur-md p-5 md:p-8 shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000] relative overflow-hidden ml-10 md:ml-0">
+                <div className="flex-1 border-[1px] border-[#853A17] bg-black/85 backdrop-blur-md p-5 md:p-8 shadow-[4px_4px_0_0_#000] md:shadow-[8px_8px_0_0_#000] relative overflow-hidden ml-10 md:ml-0">
                   
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-5 md:mb-6 gap-3">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 md:mb-6 gap-2">
                     <div>
-                      <h3 className="font-extended text-lg md:text-2xl text-white mb-2 leading-tight">
+                      <h3 className="font-extended text-base md:text-2xl text-white mb-1.5 leading-tight">
                         {exp.role}
                       </h3>
-                      <p className="font-pixel text-xs md:text-sm text-[#853A17] tracking-widest">
+                      <p className="font-pixel text-[10px] md:text-sm text-[#853A17] tracking-widest uppercase">
                         @ {exp.company}
                       </p>
                     </div>
-                    <div className="font-pixel text-[9px] md:text-[10px] tracking-widest text-[#853A17]/60">
+                    <div className="font-pixel text-[8px] md:text-[10px] tracking-widest text-[#853A17]/60">
                       {exp.date}
                     </div>
                   </div>

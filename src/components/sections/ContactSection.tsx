@@ -93,7 +93,7 @@ const ContactSection = () => {
               backgroundSize: '100% 4px, 3px 100%'
             }}></div>
 
-          <div className="p-6 md:p-10 relative z-20 flex flex-col lg:flex-row gap-8 md:gap-16">
+          <div className="p-4 md:p-10 relative z-20 flex flex-col lg:flex-row gap-6 md:gap-16">
 
             {/* Left Column: Prompts & Socials */}
             <div className="lg:w-1/2 flex flex-col">
@@ -113,21 +113,21 @@ const ContactSection = () => {
 
               <div className="mt-auto pt-6 md:pt-8 border-t-[2px] border-[#853A17]/30">
                 <p className="font-pixel text-[10px] md:text-xs text-[#853A17] mb-4 md:mb-6 tracking-[0.3em] uppercase font-bold">Communication Channels</p>
-                <div className="flex flex-wrap gap-4 md:gap-6">
+                <div className="flex flex-wrap gap-3 md:gap-6">
                   {socialLinks.map((social) => (
                     <a
                       key={social.label}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2.5 md:p-3 border-[2px] border-[#853A17]/40 hover:border-[#853A17] hover:bg-[#853A17]/20 transition-all group shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
+                      className="p-2 md:p-3 border-[2px] border-[#853A17]/40 hover:border-[#853A17] hover:bg-[#853A17]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
                       title={social.label}
                     >
-                      <social.icon size={20} className="text-[#853A17] group-hover:scale-110 transition-transform" />
+                      <social.icon size={18} className="text-[#853A17] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
                     </a>
                   ))}
-                  <a href="mailto:priyanshsingh855@gmail.com" className="p-2.5 md:p-3 border-[2px] border-[#853A17]/40 hover:border-[#853A17] hover:bg-[#853A17]/20 transition-all group shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]" title="EMAIL">
-                    <Mail size={20} className="text-[#853A17] group-hover:scale-110 transition-transform" />
+                  <a href="mailto:priyanshsingh855@gmail.com" className="p-2 md:p-3 border-[2px] border-[#853A17]/40 hover:border-[#853A17] hover:bg-[#853A17]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]" title="EMAIL">
+                    <Mail size={18} className="text-[#853A17] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
                   </a>
                 </div>
               </div>

@@ -120,7 +120,7 @@ const SkillsSection = () => {
           </div>
         </div>
 
-        <div className="p-5 md:p-12">
+        <div className="p-4 md:p-12">
 
           <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 mb-8 md:mb-10 text-white uppercase tracking-tight">
             Inventory Deck

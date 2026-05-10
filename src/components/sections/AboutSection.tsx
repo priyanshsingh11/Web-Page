@@ -42,17 +42,17 @@ const AboutSection = () => {
             </h2>
 
             <div className="border-[1px] border-[#853A17] p-4 md:p-5 bg-white/5 backdrop-blur-sm">
-              <p className="font-body text-lg md:text-xl leading-relaxed text-white">
+              <p className="font-body text-base md:text-xl leading-relaxed text-white">
                 I transform complex problems into scalable AI solutions — building autonomous agents, full-stack applications, and reliable MLOps systems for real-world impact.
               </p>
             </div>
 
             <div className="border-[1px] border-[#853A17] p-4 md:p-5 bg-white/5 backdrop-blur-sm">
-              <h3 className="font-pixel text-base md:text-lg uppercase mb-3 text-[#853A17]">
+              <h3 className="font-pixel text-sm md:text-lg uppercase mb-3 text-[#853A17]">
                 Technical Mindset
               </h3>
 
-              <p className="font-body text-base md:text-lg leading-relaxed text-white/90">
+              <p className="font-body text-sm md:text-lg leading-relaxed text-white/90">
                 My approach is AI-driven, scalable, and user-focused. I believe great technology should feel seamless — combining intelligent systems, efficient engineering, and clean user experiences to solve meaningful real-world problems.
               </p>
             </div>
@@ -70,13 +70,13 @@ const AboutSection = () => {
                 <motion.div
                   key={stat.label}
                   whileHover={{ scale: 1.02 }}
-                  className="border-[1px] border-[#853A17] p-4 md:p-5 text-center bg-black/40 hover:bg-[#853A17] hover:text-white transition-all duration-300 cursor-default group flex flex-col items-center justify-center min-h-[100px] md:min-h-[120px]"
+                  className="border-[1px] border-[#853A17] p-3 md:p-5 text-center bg-black/40 hover:bg-[#853A17] hover:text-white transition-all duration-300 cursor-default group flex flex-col items-center justify-center min-h-[80px] md:min-h-[120px]"
                 >
-                  <div className="font-extended text-2xl md:text-4xl mb-1 md:mb-2 text-[#853A17] group-hover:text-white transition-colors">
+                  <div className="font-extended text-xl md:text-4xl mb-1 md:mb-2 text-[#853A17] group-hover:text-white transition-colors">
                     {stat.value}
                   </div>
 
-                  <div className="font-pixel text-[8px] md:text-[10px] tracking-widest opacity-80 group-hover:opacity-100">
+                  <div className="font-pixel text-[7px] md:text-[10px] tracking-widest opacity-80 group-hover:opacity-100">
                     {stat.label}
                   </div>
                 </motion.div>

@@ -54,35 +54,37 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/90 backdrop-blur-md">
-      <div className="flex items-center px-3 md:px-16 py-2 md:py-3 pointer-events-auto gap-1 md:gap-2 overflow-x-auto no-scrollbar">
-        {navItems.map((item) => (
-          <a
-            key={item.href}
-            href={item.href}
-            onClick={(e) => handleNavClick(e, item.href)}
-            className={`flex-shrink-0 flex items-center gap-1 px-3 py-2 md:px-4 md:py-2 text-[9px] md:text-xs font-pixel tracking-widest transition-all ${activeSection === item.href
-              ? 'bg-[#853A17] text-white shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
-              : 'text-white/70 hover:text-white hover:bg-white/5 border-[1px] md:border-[2px] border-transparent'
-              }`}
-          >
-            {item.label}
-          </a>
-        ))}
+    <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/95 backdrop-blur-md">
+      <div className="flex items-center px-3 md:px-16 py-1.5 md:py-3 pointer-events-auto gap-1 md:gap-4 overflow-x-auto no-scrollbar">
+        <div className="flex items-center gap-1 md:gap-2">
+          {navItems.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              onClick={(e) => handleNavClick(e, item.href)}
+              className={`flex-shrink-0 flex items-center gap-1 px-2.5 py-1.5 md:px-4 md:py-2 text-[8px] md:text-xs font-pixel tracking-widest transition-all ${activeSection === item.href
+                ? 'bg-[#853A17] text-white shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
+                : 'text-white/70 hover:text-white hover:bg-white/5 border-[1px] md:border-[2px] border-transparent'
+                }`}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
 
-        <div className="flex items-center ml-auto gap-8">
+        <div className="flex items-center ml-auto gap-3 md:gap-8">
           {/* Highlighted Resume Link */}
           <a
             href="https://drive.google.com/file/d/15UHoMdkaeQBKOwC2MqH4lOLiaJ183iPI/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 flex items-center gap-2 px-3 py-2 md:px-4 md:py-2 text-[9px] md:text-xs font-pixel tracking-widest text-[#853A17] border-[1px] md:border-[2px] border-[#853A17] hover:bg-[#853A17] hover:text-white transition-all shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"
+            className="flex-shrink-0 flex items-center gap-1 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 text-[8px] md:text-xs font-pixel tracking-widest text-[#853A17] border-[1px] md:border-[2px] border-[#853A17] hover:bg-[#853A17] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"
           >
-            <FileText size={12} className="hidden sm:block" />
+            <FileText size={10} className="hidden sm:block" />
             RESUME
           </a>
 
-          <div className="flex items-center border-l border-white/10 pl-3 md:pl-4">
+          <div className="flex items-center border-l border-white/10 pl-2 md:pl-4">
             <AudioPlayer />
           </div>
         </div>
