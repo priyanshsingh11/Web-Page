@@ -5,7 +5,7 @@ const projects = [
     id: 'rag',
     title: 'ADVANCED RAG',
     description: 'Advanced Retrieval-Augmented Generation system with intelligent retrieval pipelines and optimized contextual response generation.',
-    tech: ['LANGCHAIN', 'RAG', 'VECTOR_DB', 'LLMS', 'PYTHON']
+    tech: ['LANGCHAIN', 'OLLAMA', 'RAGAS', 'FASTAPI', 'QDRANT']
   },
   {
     id: 'trustgraph',
@@ -33,9 +33,9 @@ const projects = [
   },
   {
     id: 'virtual-pandit',
-    title: 'VIRTUAL_PANDIT',
+    title: 'VIRTUAL PANDIT',
     description: 'AI-powered virtual assistant designed for intelligent conversations, contextual responses, and real-time interaction.',
-    tech: ['PYTHON', 'LLMS', 'LANGCHAIN', 'FASTAPI', 'STREAMLIT']
+    tech: ['NEXTJS', 'TYPESCRIPT', 'LANGCHAIN', 'FASTAPI']
   },
 ];
 
