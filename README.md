@@ -6,7 +6,7 @@
 A high-performance, cinematic developer portfolio built with a **Tech Noir** aesthetic. This repository showcases my work at the intersection of **AI/ML**, **Agentic AI Systems**, and **Full-Stack Engineering**.
 
 ## Live Experience
-**[Explore Portfolio →](https://web-page-ruby-five.vercel.app/)**
+**[Portfolio](https://web-page-ruby-five.vercel.app/)**
 
 ---
 
@@ -39,7 +39,7 @@ npm run build
 
 ---
 
-## 📬 Collaborate
+## Collaborate
 I’m always open to internships, collaborations, and discussions on high-impact AI products.
 
 - **Portfolio:** [Contact Section](https://web-page-ruby-five.vercel.app/#contact)
