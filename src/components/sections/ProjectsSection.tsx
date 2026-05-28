@@ -20,10 +20,10 @@ const projects = [
     tech: ['LANGGRAPH', 'NEXTJS', 'FASTAPI', 'REDIS']
   },
   {
-    id: 'trailflow',
-    title: 'TRAILFLOW',
-    description: 'Autonomous AI system streamlining clinical trial workflows and optimizing patient recruitment processes.',
-    tech: ['LANGCHAIN', 'GROQ', 'RAG', 'HEALTHCARE_AI']
+    id: 'Lumen AI',
+    title: 'LUMEN AI',
+    description: 'AI customer support orchestration system using LLMs, RAG, SUPABASE, ChromaDB, and deterministic workflow routing.',
+    tech: ['LLMS', 'RAG', 'SUPABASE', 'HITL', 'OLLAMA']
   },
   {
     id: 'winkwear',
