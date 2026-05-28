@@ -3,6 +3,22 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
+    level: 'LEVEL 3',
+    role: 'AI ENGINEER',
+    company: 'AJAIA LLC',
+    date: 'JUN 2026 - PRESENT',
+    description: [
+      'Applying creative expertise to help organizations "win the AI moment" through innovative AI solutions.',
+      'Collaborating with engineering leadership to build and deploy advanced AI models and workflows.'
+    ],
+    tech: [
+      'AI AGENTS',
+      'LLM',
+      'MACHINE LEARNING',
+      'PYTHON'
+    ]
+  },
+  {
     level: 'LEVEL 2',
     role: 'CO-FOUNDER & FULL-STACK ENGINEER',
     company: 'TUNED SOCIETY',
@@ -68,7 +84,7 @@ const ExperienceSection = () => {
 
                 {/* Content Card */}
                 <div className="flex-1 border-[1px] border-[#853A17] bg-black/85 backdrop-blur-md p-5 md:p-8 shadow-[4px_4px_0_0_#000] md:shadow-[8px_8px_0_0_#000] relative overflow-hidden ml-10 md:ml-0">
-                  
+
                   <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 md:mb-6 gap-2">
                     <div>
                       <h3 className="font-extended text-base md:text-2xl text-white mb-1.5 leading-tight">
