@@ -3,8 +3,8 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    level: 'LEVEL 3',
-    role: 'AI ENGINEER',
+    level: 'LEVEL 4',
+    role: 'FULL STACK AI ENGINEER',
     company: 'AJAIA LLC',
     date: 'JUN 2026 - PRESENT',
     description: [
@@ -14,8 +14,24 @@ const experiences = [
     tech: [
       'AI AGENTS',
       'LLM',
-      'MACHINE LEARNING',
-      'PYTHON'
+      'FULL STACK',
+      'PYTHON',
+      'AUTOMATIONS'
+    ]
+  },
+  {
+    level: 'LEVEL 3',
+    role: 'AI WEB DEVELOPER',
+    company: 'LEARN WITH FRATERNITY PVT. LTD',
+    date: 'MAY 2026 - JUN 2026',
+    description: [
+      'Developed and integrated AI-driven features into web applications.',
+      'Collaborated on modern web development practices and workflows.'
+    ],
+    tech: [
+      'WEB DEVELOPMENT',
+      'AI INTEGRATION',
+      'INTERNSHIP'
     ]
   },
   {
