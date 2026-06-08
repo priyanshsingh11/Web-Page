@@ -5,7 +5,7 @@ const experiences = [
   {
     level: 'LEVEL 4',
     role: 'FULL STACK AI ENGINEER',
-    company: 'AJAIA LLC',
+    company: 'AJAIA AI',
     date: 'JUN 2026 - PRESENT',
     description: [
       'Applying creative expertise to help organizations "win the AI moment" through innovative AI solutions.',
