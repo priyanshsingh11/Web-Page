@@ -49,11 +49,11 @@ const HeroSection = () => {
             <div className="flex flex-col gap-2.5 font-extended text-[9px] md:text-xs uppercase tracking-wide text-left">
               <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
                 <span className="leading-relaxed">Total<br />Experience</span>
-                <span className="text-[#853A17] group-hover/stat:text-white text-right leading-relaxed transition-colors">24<br />months</span>
+                <span className="text-[#853A17] group-hover/stat:text-white text-right leading-relaxed transition-colors">2+<br />years</span>
               </div>
               <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
                 <span>Projects Built</span>
-                <span className="text-[#853A17] group-hover/stat:text-white transition-colors">20+</span>
+                <span className="text-[#853A17] group-hover/stat:text-white transition-colors">30+</span>
               </div>
               <div className="flex justify-between items-center border-[1px] border-[#853A17] bg-white/5 p-2 hover:bg-[#853A17] hover:text-white transition-colors cursor-default group/stat">
                 <span>HACKATHONS</span>
