@@ -10,7 +10,7 @@ const HeroSection = () => {
       <motion.div
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
-        className="w-full max-w-5xl mx-auto flex flex-col md:flex-row p-2 md:p-8 gap-10 md:gap-8 justify-between items-center z-10"
+        className="w-full max-w-7xl mx-auto flex flex-col md:flex-row p-2 md:p-8 gap-10 md:gap-8 justify-between items-center z-10"
       >
 
         {/* Left Side: Text Content */}
