@@ -57,26 +57,26 @@ const FAQSection = () => {
 
   return (
     <section id="about" className="py-12 md:py-20 px-3 md:px-16 bg-transparent">
-      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#CF492C] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
+      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#FF5A2E] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
 
         {/* Header */}
-        <div className="border-b-[2px] border-[#CF492C] bg-black/90 p-2 flex justify-between items-center">
+        <div className="border-b-[2px] border-[#FF5A2E] bg-black/90 p-2 flex justify-between items-center">
           <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
-            <User size={14} className="text-[#CF492C]" />
+            <User size={14} className="text-[#FF5A2E]" />
             <span>SYS.PROFILE // [DEV_PRIYANSH]</span>
           </div>
           <div className="flex gap-1 pr-2">
-            <div className="w-2 h-2 border border-[#CF492C]"></div>
-            <div className="w-2 h-2 border border-[#CF492C]"></div>
+            <div className="w-2 h-2 border border-[#FF5A2E]"></div>
+            <div className="w-2 h-2 border border-[#FF5A2E]"></div>
           </div>
         </div>
 
         <div className="p-4 md:p-10">
-          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#CF492C] pb-4 mb-8 text-white uppercase tracking-tight">
+          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#FF5A2E] pb-4 mb-8 text-white uppercase tracking-tight">
             Player Info
           </h2>
 
-          <p className="font-pixel text-xs md:text-sm tracking-widest text-[#CF492C] mb-8 uppercase">
+          <p className="font-pixel text-xs md:text-sm tracking-widest text-[#FF5A2E] mb-8 uppercase">
             {mainTitle.q}
           </p>
 
@@ -88,16 +88,16 @@ const FAQSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.04 }}
                 viewport={{ once: true }}
-                className="group flex gap-4 md:gap-6 items-start border-[1px] border-[#CF492C]/40 bg-white/5 p-3 md:p-5 hover:border-[#CF492C] transition-colors"
+                className="group flex gap-4 md:gap-6 items-start border-[1px] border-[#FF5A2E]/40 bg-white/5 p-3 md:p-5 hover:border-[#FF5A2E] transition-colors"
               >
-                <span className="font-pixel text-lg md:text-2xl text-[#CF492C] leading-none pt-1">
+                <span className="font-pixel text-lg md:text-2xl text-[#FF5A2E] leading-none pt-1">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div>
-                  <h3 className="font-pixel text-xs md:text-base text-[#CF492C] uppercase tracking-widest mb-1.5">
+                  <h3 className="font-pixel text-xs md:text-base text-[#FF5A2E] uppercase tracking-widest mb-1.5">
                     {faq.q}
                   </h3>
-                  <p className="font-body text-base md:text-xl leading-relaxed text-white/80 group-hover:text-white transition-colors">
+                  <p className="font-body text-base md:text-xl leading-relaxed text-white/95 group-hover:text-white transition-colors">
                     {faq.a}
                   </p>
                 </div>
@@ -106,24 +106,25 @@ const FAQSection = () => {
           </div>
 
           {/* Find me on */}
-          <div className="mt-10 border-t-[2px] border-[#CF492C] pt-6 flex flex-col md:flex-row md:items-stretch gap-3 md:gap-4">
-            <div className="font-pixel text-[10px] md:text-xs tracking-widest text-white/60 whitespace-nowrap md:flex md:items-center">
+          <div className="mt-10 border-t-[2px] border-[#FF5A2E] pt-5 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+            <div className="flex items-center gap-2 flex-shrink-0 font-pixel text-sm md:text-base tracking-widest text-[#FF5A2E]">
+              <span className="w-2.5 h-2.5 bg-[#FF5A2E]"></span>
               FIND ME ON:
             </div>
-            <div className="flex flex-wrap md:flex-nowrap flex-1 gap-3">
+            <nav aria-label="Social links" className="flex flex-wrap md:flex-nowrap flex-1 gap-3 md:gap-5">
               {socials.map(({ icon: Icon, label, href }) => (
                 <a
                   key={label}
                   href={href}
                   target={href.startsWith('mailto:') ? undefined : '_blank'}
                   rel="noopener noreferrer"
-                  className="flex-1 basis-[calc(50%-0.375rem)] md:basis-0 flex items-center justify-center gap-2 px-3 py-3 border-[2px] border-[#CF492C] bg-black/40 font-pixel text-[10px] md:text-xs tracking-widest text-[#CF492C] shadow-[3px_3px_0_0_#000] hover:bg-[#CF492C] hover:text-white transition-colors"
+                  className="flex-1 basis-[calc(50%-0.375rem)] md:basis-auto flex items-center justify-center gap-2.5 px-3 py-2.5 border-[2px] border-[#FF5A2E] bg-[#0D0B0A] text-white font-pixel text-xs md:text-sm tracking-widest uppercase shadow-[3px_3px_0_0_#000] hover:bg-[#FF5A2E] transition-colors"
                 >
-                  <Icon size={14} />
-                  {label.toUpperCase()}
+                  <Icon size={18} strokeWidth={1.75} />
+                  {label}
                 </a>
               ))}
-            </div>
+            </nav>
           </div>
         </div>
       </div>

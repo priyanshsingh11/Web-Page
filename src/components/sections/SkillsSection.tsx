@@ -156,26 +156,26 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="py-12 md:py-20 px-3 md:px-16 bg-transparent">
-      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#CF492C] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
+      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#FF5A2E] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
 
         {/* Header */}
-        <div className="border-b-[2px] border-[#CF492C] bg-black/90 text-white p-2 flex justify-between items-center">
+        <div className="border-b-[2px] border-[#FF5A2E] bg-black/90 text-white p-2 flex justify-between items-center">
           <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
-            <Shield size={14} className="text-[#CF492C]" />
+            <Shield size={14} className="text-[#FF5A2E]" />
             <span>INVENTORY_DECK.DAT</span>
           </div>
           <div className="flex gap-1 pr-2">
-            <div className="w-2 h-2 border border-[#CF492C]"></div>
-            <div className="w-2 h-2 border border-[#CF492C]"></div>
+            <div className="w-2 h-2 border border-[#FF5A2E]"></div>
+            <div className="w-2 h-2 border border-[#FF5A2E]"></div>
           </div>
         </div>
 
         <div className="p-4 md:p-12">
 
-          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#CF492C] pb-4 mb-2 text-white uppercase tracking-tight">
+          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#FF5A2E] pb-4 mb-2 text-white uppercase tracking-tight">
             Inventory Deck
           </h2>
-          <p className="font-pixel text-[9px] md:text-xs tracking-widest text-white/60 mb-8 md:mb-10">
+          <p className="font-pixel text-[9px] md:text-xs tracking-widest text-white/80 mb-8 md:mb-10">
             CLICK A CARD TO FLIP IT AND REVEAL ITS SKILLS
           </p>
 
@@ -184,7 +184,7 @@ const SkillsSection = () => {
               const Icon = card.icon;
               const isFlipped = flipped.has(card.id);
               const isRed = card.suit === '♥' || card.suit === '♦';
-              const cornerColor = isRed ? 'text-[#ff7a5c]' : 'text-white';
+              const cornerColor = isRed ? 'text-[#ff8a66]' : 'text-white';
               return (
                 <motion.div
                   key={card.id}
@@ -211,18 +211,18 @@ const SkillsSection = () => {
                     className="absolute inset-0"
                   >
                     {/* Front */}
-                    <div className="absolute inset-0 [backface-visibility:hidden] bg-[#4a1a10] border-[2px] border-[#CF492C] text-white p-2 md:p-3 flex flex-col justify-between shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
+                    <div className="absolute inset-0 [backface-visibility:hidden] bg-[#4a1a10] border-[2px] border-[#FF5A2E] text-white p-2 md:p-3 flex flex-col justify-between shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
                       <div className={`font-pixel leading-none text-xs md:text-base ${cornerColor}`}>
                         <div>{card.rank}</div>
                         <div>{card.suit}</div>
                       </div>
 
                       <div className="flex flex-col items-center gap-2 md:gap-3">
-                        <Icon className="w-8 h-8 md:w-14 md:h-14 text-[#e8694a]" strokeWidth={1.5} />
+                        <Icon className="w-8 h-8 md:w-14 md:h-14 text-[#ff7d57]" strokeWidth={1.5} />
                         <span className="font-pixel text-[9px] md:text-xs tracking-widest text-center leading-tight">
                           {card.title}
                         </span>
-                        <span className="font-pixel text-[8px] md:text-[10px] tracking-widest text-white/50">
+                        <span className="font-pixel text-[8px] md:text-[10px] tracking-widest text-white/70">
                           {card.skills.length} SKILLS
                         </span>
                       </div>
@@ -234,7 +234,7 @@ const SkillsSection = () => {
                     </div>
 
                     {/* Back */}
-                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#CF492C] border-[2px] border-white text-white p-2 md:p-3 flex flex-col shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#FF5A2E] border-[2px] border-white text-white p-2 md:p-3 flex flex-col shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
                       <div className="flex items-center gap-1.5 border-b border-white/40 pb-1.5 mb-2">
                         <Icon className="w-3 h-3 md:w-4 md:h-4 shrink-0" />
                         <span className="font-pixel text-[9px] md:text-xs tracking-widest truncate">
@@ -265,10 +265,10 @@ const SkillsSection = () => {
         </div>
 
         {/* Marquee */}
-        <div className="mt-4 border-t-[2px] border-[#CF492C] bg-[#CF492C]/5 py-4 overflow-hidden">
+        <div className="mt-4 border-t-[2px] border-[#FF5A2E] bg-[#FF5A2E]/5 py-4 overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap">
             {[1, 2, 3, 4].map((i) => (
-              <span key={i} className="font-pixel text-[10px] md:text-sm tracking-[0.2em] text-[#CF492C] mx-6 md:mx-10 flex items-center gap-4">
+              <span key={i} className="font-pixel text-[10px] md:text-sm tracking-[0.2em] text-[#FF5A2E] mx-6 md:mx-10 flex items-center gap-4">
                 <span className="opacity-50">•</span>
                 OPEN TO INTERNSHIPS, COLLABORATIONS, AND CONTINUOUS LEARNING
                 <span className="opacity-50">•</span>

@@ -9,7 +9,6 @@ import SkillsSection from '../components/sections/SkillsSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
 import ExperienceSection from '../components/sections/ExperienceSection';
 import CertificationSection from '../components/sections/CertificationSection';
-import ContactSection from '../components/sections/ContactSection';
 import Footer from '../components/layout/Footer';
 
 const Index = () => {
@@ -39,7 +38,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-transparent selection:bg-[#CF492C] selection:text-white">
+    <div className="relative min-h-screen overflow-hidden bg-transparent selection:bg-[#FF5A2E] selection:text-white">
       {/* Global CRT Scanlines */}
       <div className="scanlines"></div>
 
@@ -76,7 +75,6 @@ const Index = () => {
           <SkillsSection />
           <ProjectsSection />
           <CertificationSection />
-          <ContactSection />
         </main>
 
         {/* Footer */}

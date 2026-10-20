@@ -17,17 +17,17 @@ const AboutSection = () => {
       {/* Optional subtle blur layer */}
       <div className="absolute inset-0 backdrop-blur-[1px]"></div>
 
-      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#CF492C] bg-black/85 backdrop-blur-md text-white shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000]">
+      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#FF5A2E] bg-black/85 backdrop-blur-md text-white shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000]">
 
         {/* Header */}
-        <div className="border-b-[2px] border-[#CF492C] bg-black/90 text-white p-2 flex justify-between items-center">
+        <div className="border-b-[2px] border-[#FF5A2E] bg-black/90 text-white p-2 flex justify-between items-center">
           <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
-            <User size={14} className="text-[#CF492C]" />
+            <User size={14} className="text-[#FF5A2E]" />
             <span>CHARACTER_BIO.TXT</span>
           </div>
           <div className="flex gap-1 pr-2">
-            <div className="w-2 h-2 border border-[#CF492C]"></div>
-            <div className="w-2 h-2 border border-[#CF492C]"></div>
+            <div className="w-2 h-2 border border-[#FF5A2E]"></div>
+            <div className="w-2 h-2 border border-[#FF5A2E]"></div>
           </div>
         </div>
 
@@ -37,31 +37,31 @@ const AboutSection = () => {
           {/* Left Side */}
           <div className="w-full md:w-1/2 flex flex-col gap-5 md:gap-6">
 
-            <h2 className="font-extended text-xl md:text-2xl border-b-[2px] border-[#CF492C] pb-3 md:pb-4 text-white">
+            <h2 className="font-extended text-xl md:text-2xl border-b-[2px] border-[#FF5A2E] pb-3 md:pb-4 text-white">
               Player Info
             </h2>
 
-            <div className="border-[1px] border-[#CF492C] p-4 md:p-5 bg-white/5 backdrop-blur-sm">
+            <div className="border-[1px] border-[#FF5A2E] p-4 md:p-5 bg-white/5 backdrop-blur-sm">
               <p className="font-body text-base md:text-xl leading-relaxed text-white">
                 I transform complex problems into scalable AI solutions — building autonomous agents, full-stack applications, and reliable MLOps systems for real-world impact.
               </p>
             </div>
 
-            <div className="border-[1px] border-[#CF492C] p-4 md:p-5 bg-white/5 backdrop-blur-sm">
-              <h3 className="font-pixel text-sm md:text-lg uppercase mb-3 text-[#CF492C]">
+            <div className="border-[1px] border-[#FF5A2E] p-4 md:p-5 bg-white/5 backdrop-blur-sm">
+              <h3 className="font-pixel text-sm md:text-lg uppercase mb-3 text-[#FF5A2E]">
                 Technical Mindset
               </h3>
 
-              <p className="font-body text-sm md:text-lg leading-relaxed text-white/90">
+              <p className="font-body text-sm md:text-lg leading-relaxed text-white">
                 My approach is AI-driven, scalable, and user-focused. I believe great technology should feel seamless — combining intelligent systems, efficient engineering, and clean user experiences to solve meaningful real-world problems.
               </p>
             </div>
           </div>
 
           {/* Right Side */}
-          <div className="w-full md:w-1/2 border-[1px] border-[#CF492C] bg-white/5 backdrop-blur-md p-5 md:p-6 text-white flex flex-col">
+          <div className="w-full md:w-1/2 border-[1px] border-[#FF5A2E] bg-white/5 backdrop-blur-md p-5 md:p-6 text-white flex flex-col">
 
-            <h3 className="font-pixel text-base md:text-xl mb-6 md:mb-8 text-center text-[#CF492C] tracking-widest">
+            <h3 className="font-pixel text-base md:text-xl mb-6 md:mb-8 text-center text-[#FF5A2E] tracking-widest">
               CHARACTER STATS
             </h3>
 
@@ -70,9 +70,9 @@ const AboutSection = () => {
                 <motion.div
                   key={stat.label}
                   whileHover={{ scale: 1.02 }}
-                  className="border-[1px] border-[#CF492C] p-3 md:p-5 text-center bg-black/40 hover:bg-[#CF492C] hover:text-white transition-all duration-300 cursor-default group flex flex-col items-center justify-center min-h-[80px] md:min-h-[120px]"
+                  className="border-[1px] border-[#FF5A2E] p-3 md:p-5 text-center bg-black/40 hover:bg-[#FF5A2E] hover:text-white transition-all duration-300 cursor-default group flex flex-col items-center justify-center min-h-[80px] md:min-h-[120px]"
                 >
-                  <div className="font-extended text-xl md:text-4xl mb-1 md:mb-2 text-[#CF492C] group-hover:text-white transition-colors">
+                  <div className="font-extended text-xl md:text-4xl mb-1 md:mb-2 text-[#FF5A2E] group-hover:text-white transition-colors">
                     {stat.value}
                   </div>
 
@@ -83,7 +83,7 @@ const AboutSection = () => {
               ))}
             </div>
 
-            <div className="mt-8 md:mt-10 font-mono text-[9px] md:text-[10px] tracking-widest text-center text-white/40 uppercase">
+            <div className="mt-8 md:mt-10 font-mono text-[9px] md:text-[10px] tracking-widest text-center text-white/60 uppercase">
               Engineering Intelligence // Since 2022
             </div>
           </div>

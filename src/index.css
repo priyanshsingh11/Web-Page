@@ -161,8 +161,8 @@
   .scanlines {
     background: linear-gradient(
       to bottom,
-      rgba(207, 73, 44, 0) 50%,
-      rgba(207, 73, 44, 0.08) 50%
+      rgba(255, 90, 46, 0) 50%,
+      rgba(255, 90, 46, 0.08) 50%
     );
     background-size: 100% 2px;
     position: fixed;

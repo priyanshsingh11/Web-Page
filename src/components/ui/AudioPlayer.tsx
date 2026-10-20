@@ -45,8 +45,8 @@ const AudioPlayer = () => {
         <button
             onClick={togglePlay}
             className={`flex items-center gap-1.5 md:gap-2 px-3 py-2 md:px-5 md:py-3 text-[8px] md:text-xs font-pixel tracking-widest transition-all ${isPlaying
-                    ? 'bg-[#CF492C] text-white shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
-                    : 'text-white/70 hover:text-white hover:bg-white/5 border-[1px] md:border-[2px] border-transparent'
+                    ? 'bg-[#FF5A2E] text-white shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
+                    : 'text-white/90 hover:text-white hover:bg-white/5 border-[1px] md:border-[2px] border-transparent'
                 }`}
         >
             <Music className={`w-2.5 h-2.5 md:w-3 md:h-3 ${isPlaying ? 'animate-spin-slow' : 'opacity-70'}`} />

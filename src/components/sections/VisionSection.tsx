@@ -81,7 +81,7 @@ const VisionSection = () => {
               </h2>
             </div>
 
-            <div className="text-right font-pixel text-[8px] md:text-[10px] tracking-widest text-white/50 leading-relaxed uppercase">
+            <div className="text-right font-pixel text-[8px] md:text-[10px] tracking-widest text-white/70 leading-relaxed uppercase">
               A VISION
               <br />
               A TARGET
@@ -92,7 +92,7 @@ const VisionSection = () => {
 
             {/* Left column */}
             <div className="flex-1">
-              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider">
+              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/80 uppercase tracking-wider">
                 MY OBJECTIVE IS TO BRING TOGETHER
                 <br className="hidden md:block" />
                 THE BRIGHTEST TALENTS, FOSTER
@@ -109,14 +109,14 @@ const VisionSection = () => {
 
             {/* Right column */}
             <div className="flex-1">
-              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider mb-4">
+              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/80 uppercase tracking-wider mb-4">
                 ENGINEERING INTELLIGENCE, A SYNERGY
                 BETWEEN CODE AND CREATIVITY,
                 AND THE DYNAMIC ENERGY OF
                 FULL-STACK DEVELOPMENT.
               </p>
 
-              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/60 uppercase tracking-wider">
+              <p className="font-pixel text-[9px] md:text-xs leading-relaxed text-white/80 uppercase tracking-wider">
                 THIS IS NOT JUST A PORTFOLIO.
                 IT'S AN ECOSYSTEM. DESIGNED TO
                 BRING TOGETHER THE BEST OF
@@ -163,7 +163,7 @@ const VisionSection = () => {
 
             </div>
 
-            <div className="font-pixel text-white/30 text-base md:text-lg">
+            <div className="font-pixel text-white/50 text-base md:text-lg">
               ✳
             </div>
 
@@ -172,7 +172,7 @@ const VisionSection = () => {
       </motion.div>
 
       {/* Section label */}
-      <div className="absolute top-6 left-6 md:top-8 md:left-8 font-pixel text-[8px] md:text-[10px] tracking-widest text-white/30 uppercase">
+      <div className="absolute top-6 left-6 md:top-8 md:left-8 font-pixel text-[8px] md:text-[10px] tracking-widest text-white/50 uppercase">
         02 // VISION
       </div>
     </section>
