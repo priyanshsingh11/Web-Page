@@ -23,9 +23,9 @@ const Footer = () => {
   return (
     <footer className="w-full bg-black py-6 md:py-8">
       {/* Full Width Top Border */}
-      <div className="w-full h-[1px] bg-[#853A17] mb-6 md:mb-8 opacity-70 shadow-[0_0_10px_#853A17]"></div>
+      <div className="w-full h-[1px] bg-[#CF492C] mb-6 md:mb-8 opacity-70 shadow-[0_0_10px_#CF492C]"></div>
 
-      <div className="max-w-7xl mx-auto flex flex-col items-center px-4">
+      <div className="max-w-5xl mx-auto flex flex-col items-center px-4">
         {/* Links Row */}
         <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-12 gap-y-4 mb-6 px-4">
           {footerLinks.map((link, i) => (
@@ -39,9 +39,9 @@ const Footer = () => {
               transition={{ delay: i * 0.03 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-3 px-3 py-1 border-[1px] border-transparent hover:border-[#853A17] text-white/60 hover:text-[#853A17] transition-all duration-300 group"
+              className="flex items-center gap-3 px-3 py-1 border-[1px] border-transparent hover:border-[#CF492C] text-white/60 hover:text-[#CF492C] transition-all duration-300 group"
             >
-              <link.icon size={18} className="text-[#853A17]/70 group-hover:text-[#853A17] transition-colors" />
+              <link.icon size={18} className="text-[#CF492C]/70 group-hover:text-[#CF492C] transition-colors" />
               <span className="font-pixel text-[11px] md:text-[13px] tracking-widest uppercase">{link.label}</span>
             </motion.a>
           ))}

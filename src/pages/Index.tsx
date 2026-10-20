@@ -39,7 +39,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-transparent selection:bg-blue-700 selection:text-white">
+    <div className="relative min-h-screen overflow-hidden bg-transparent selection:bg-[#CF492C] selection:text-white">
       {/* Global CRT Scanlines */}
       <div className="scanlines"></div>
 

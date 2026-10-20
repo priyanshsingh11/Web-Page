@@ -66,8 +66,8 @@ const CustomCursor = () => {
                 <path d="M20 14H24V22H20V14Z" fill="white" />
                 <path d="M8 14H12V22H8V14Z" fill="white" />
                 <path d="M12 22H20V26H12V22Z" fill="white" />
-                <path d="M10 4H14V8H10V4Z" fill="#853A17" />
-                <path d="M14 8H18V20H14V8Z" fill="#853A17" />
+                <path d="M10 4H14V8H10V4Z" fill="#CF492C" />
+                <path d="M14 8H18V20H14V8Z" fill="#CF492C" />
               </svg>
             </div>
           ) : (
@@ -80,7 +80,7 @@ const CustomCursor = () => {
                 <path d="M8 8H10V10H8V8Z" fill="white" />
                 <path d="M10 10H12V12H10V10Z" fill="white" />
                 <path d="M2 4V22H4V20H6V18H8V16H10V14H12V12L2 4Z" fill="white" />
-                <path d="M4 6V18H6V16H8V14H10V12H12V10L4 6Z" fill="#853A17" />
+                <path d="M4 6V18H6V16H8V14H10V12H12V10L4 6Z" fill="#CF492C" />
                 <path d="M4 4H2V6H4V4Z" fill="black" />
                 <path d="M6 6H4V8H6V6Z" fill="black" />
               </svg>

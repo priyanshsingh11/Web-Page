@@ -67,29 +67,29 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-12 md:py-16 px-4 md:px-16 bg-transparent">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
 
         {/* Terminal Header */}
-        <div className="bg-[#1a1a1a] border-x-[2px] border-t-[2px] border-[#853A17] p-3 flex flex-col sm:flex-row justify-between items-center rounded-t-sm shadow-[4px_0_0_0_#000] md:shadow-[6px_0_0_0_#000] gap-2">
+        <div className="bg-[#1a1a1a] border-x-[2px] border-t-[2px] border-[#CF492C] p-3 flex flex-col sm:flex-row justify-between items-center rounded-t-sm shadow-[4px_0_0_0_#000] md:shadow-[6px_0_0_0_#000] gap-2">
           <div className="flex items-center gap-4">
-            <Terminal size={18} className="text-[#853A17]" />
-            <span className="font-pixel text-[11px] md:text-xs tracking-[0.3em] text-[#853A17] uppercase font-bold">
+            <Terminal size={18} className="text-[#CF492C]" />
+            <span className="font-pixel text-[11px] md:text-xs tracking-[0.3em] text-[#CF492C] uppercase font-bold">
               {">_"} CONTACT_TERMINAL.EXE
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-[#853A17] rounded-full animate-pulse shadow-[0_0_12px_#853A17]"></div>
-            <span className="font-pixel text-[9px] md:text-[11px] text-[#853A17] tracking-[0.2em] uppercase font-bold">ENCRYPTED_CONNECTION</span>
+            <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-[#CF492C] rounded-full animate-pulse shadow-[0_0_12px_#CF492C]"></div>
+            <span className="font-pixel text-[9px] md:text-[11px] text-[#CF492C] tracking-[0.2em] uppercase font-bold">ENCRYPTED_CONNECTION</span>
           </div>
         </div>
 
         {/* Terminal Body */}
-        <div className="bg-black/95 backdrop-blur-xl border-[2px] border-[#853A17] min-h-[400px] md:min-h-[450px] shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000] relative overflow-hidden flex flex-col group transition-all duration-500 hover:shadow-[12px_12px_0_0_#853A17/10]">
+        <div className="bg-black/95 backdrop-blur-xl border-[2px] border-[#CF492C] min-h-[400px] md:min-h-[450px] shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000] relative overflow-hidden flex flex-col group transition-all duration-500 hover:shadow-[12px_12px_0_0_#CF492C/10]">
 
           {/* Scanline Effect */}
           <div className="absolute inset-0 pointer-events-none z-10 opacity-30"
             style={{
-              background: 'linear-gradient(rgba(133, 58, 23, 0) 50%, rgba(133, 58, 23, 0.1) 50%), linear-gradient(90deg, rgba(133, 58, 23, 0.05), rgba(133, 58, 23, 0.02), rgba(133, 58, 23, 0.05))',
+              background: 'linear-gradient(rgba(207, 73, 44, 0) 50%, rgba(207, 73, 44, 0.1) 50%), linear-gradient(90deg, rgba(207, 73, 44, 0.05), rgba(207, 73, 44, 0.02), rgba(207, 73, 44, 0.05))',
               backgroundSize: '100% 4px, 3px 100%'
             }}></div>
 
@@ -104,15 +104,15 @@ const ContactSection = () => {
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className={`font-pixel text-xs md:text-base tracking-widest ${line.type === 'action' ? 'text-white' : 'text-[#853A17]/80'} flex gap-3 leading-relaxed`}
+                    className={`font-pixel text-xs md:text-base tracking-widest ${line.type === 'action' ? 'text-white' : 'text-[#CF492C]/80'} flex gap-3 leading-relaxed`}
                   >
                     <span className="font-bold">{line.text}</span>
                   </motion.div>
                 ))}
               </div>
 
-              <div className="mt-auto pt-6 md:pt-8 border-t-[2px] border-[#853A17]/30">
-                <p className="font-pixel text-[10px] md:text-xs text-[#853A17] mb-4 md:mb-6 tracking-[0.3em] uppercase font-bold">Communication Channels</p>
+              <div className="mt-auto pt-6 md:pt-8 border-t-[2px] border-[#CF492C]/30">
+                <p className="font-pixel text-[10px] md:text-xs text-[#CF492C] mb-4 md:mb-6 tracking-[0.3em] uppercase font-bold">Communication Channels</p>
                 <div className="flex flex-wrap gap-3 md:gap-6">
                   {socialLinks.map((social) => (
                     <a
@@ -120,14 +120,14 @@ const ContactSection = () => {
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-2 md:p-3 border-[2px] border-[#853A17]/40 hover:border-[#853A17] hover:bg-[#853A17]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
+                      className="p-2 md:p-3 border-[2px] border-[#CF492C]/40 hover:border-[#CF492C] hover:bg-[#CF492C]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]"
                       title={social.label}
                     >
-                      <social.icon size={18} className="text-[#853A17] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
+                      <social.icon size={18} className="text-[#CF492C] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
                     </a>
                   ))}
-                  <a href="mailto:priyanshsingh855@gmail.com" className="p-2 md:p-3 border-[2px] border-[#853A17]/40 hover:border-[#853A17] hover:bg-[#853A17]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]" title="EMAIL">
-                    <Mail size={18} className="text-[#853A17] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
+                  <a href="mailto:priyanshsingh855@gmail.com" className="p-2 md:p-3 border-[2px] border-[#CF492C]/40 hover:border-[#CF492C] hover:bg-[#CF492C]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]" title="EMAIL">
+                    <Mail size={18} className="text-[#CF492C] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
                   </a>
                 </div>
               </div>
@@ -137,45 +137,45 @@ const ContactSection = () => {
             <div className="lg:w-1/2">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">YOUR NAME</label>
+                  <label className="font-pixel text-[10px] md:text-xs text-[#CF492C] uppercase tracking-[0.2em] font-bold">YOUR NAME</label>
                   <input
                     type="text"
                     required
                     placeholder="ENTER NAME..."
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    className="w-full bg-transparent border-b-[2px] border-[#853A17]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#853A17] transition-all placeholder:text-white/20 focus:bg-white/5"
+                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">YOUR EMAIL</label>
+                  <label className="font-pixel text-[10px] md:text-xs text-[#CF492C] uppercase tracking-[0.2em] font-bold">YOUR EMAIL</label>
                   <input
                     type="email"
                     required
                     placeholder="ENTER EMAIL..."
                     value={formState.email}
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                    className="w-full bg-transparent border-b-[2px] border-[#853A17]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#853A17] transition-all placeholder:text-white/20 focus:bg-white/5"
+                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#853A17] uppercase tracking-[0.2em] font-bold">YOUR WISH</label>
+                  <label className="font-pixel text-[10px] md:text-xs text-[#CF492C] uppercase tracking-[0.2em] font-bold">YOUR WISH</label>
                   <textarea
                     required
                     rows={3}
                     placeholder="COMPOSE MESSAGE..."
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    className="w-full bg-transparent border-b-[2px] border-[#853A17]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#853A17] transition-all placeholder:text-white/20 focus:bg-white/5 resize-none"
+                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-[#853A17] text-white p-2.5 md:p-3 font-pixel text-xs md:text-base tracking-[0.3em] md:tracking-[0.4em] uppercase hover:bg-white hover:text-[#853A17] transition-all disabled:opacity-50 flex items-center justify-center gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[10px_10px_0_0_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] font-bold"
+                  className="w-full bg-[#CF492C] text-white p-2.5 md:p-3 font-pixel text-xs md:text-base tracking-[0.3em] md:tracking-[0.4em] uppercase hover:bg-white hover:text-[#CF492C] transition-all disabled:opacity-50 flex items-center justify-center gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[10px_10px_0_0_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] font-bold"
                 >
                   {status === 'sending' ? (
                     <div className="flex items-center gap-3">
@@ -195,8 +195,8 @@ const ContactSection = () => {
             </div>
           </div>
 
-          <div className="mt-auto p-4 border-t-[2px] border-[#853A17]/20 bg-black/60 text-center">
-            <p className="font-pixel text-[8px] md:text-[10px] text-[#853A17]/50 tracking-[0.4em] md:tracking-[0.6em] uppercase font-bold">
+          <div className="mt-auto p-4 border-t-[2px] border-[#CF492C]/20 bg-black/60 text-center">
+            <p className="font-pixel text-[8px] md:text-[10px] text-[#CF492C]/50 tracking-[0.4em] md:tracking-[0.6em] uppercase font-bold">
               SECURE_TRANSMISSION_PROTOCOL_V4.2.0 // ENCRYPTION_ACTIVE
             </p>
           </div>

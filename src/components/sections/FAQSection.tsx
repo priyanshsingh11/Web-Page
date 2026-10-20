@@ -57,26 +57,26 @@ const FAQSection = () => {
 
   return (
     <section id="about" className="py-12 md:py-20 px-3 md:px-16 bg-transparent">
-      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#853A17] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
+      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#CF492C] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
 
         {/* Header */}
-        <div className="border-b-[2px] border-[#853A17] bg-black/90 p-2 flex justify-between items-center">
+        <div className="border-b-[2px] border-[#CF492C] bg-black/90 p-2 flex justify-between items-center">
           <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
-            <User size={14} className="text-[#853A17]" />
+            <User size={14} className="text-[#CF492C]" />
             <span>SYS.PROFILE // [DEV_PRIYANSH]</span>
           </div>
           <div className="flex gap-1 pr-2">
-            <div className="w-2 h-2 border border-[#853A17]"></div>
-            <div className="w-2 h-2 border border-[#853A17]"></div>
+            <div className="w-2 h-2 border border-[#CF492C]"></div>
+            <div className="w-2 h-2 border border-[#CF492C]"></div>
           </div>
         </div>
 
         <div className="p-4 md:p-10">
-          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 mb-8 text-white uppercase tracking-tight">
+          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#CF492C] pb-4 mb-8 text-white uppercase tracking-tight">
             Player Info
           </h2>
 
-          <p className="font-pixel text-xs md:text-sm tracking-widest text-[#853A17] mb-8 uppercase">
+          <p className="font-pixel text-xs md:text-sm tracking-widest text-[#CF492C] mb-8 uppercase">
             {mainTitle.q}
           </p>
 
@@ -88,13 +88,13 @@ const FAQSection = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.04 }}
                 viewport={{ once: true }}
-                className="group flex gap-4 md:gap-6 items-start border-[1px] border-[#853A17]/40 bg-white/5 p-3 md:p-5 hover:border-[#853A17] transition-colors"
+                className="group flex gap-4 md:gap-6 items-start border-[1px] border-[#CF492C]/40 bg-white/5 p-3 md:p-5 hover:border-[#CF492C] transition-colors"
               >
-                <span className="font-pixel text-lg md:text-2xl text-[#853A17] leading-none pt-1">
+                <span className="font-pixel text-lg md:text-2xl text-[#CF492C] leading-none pt-1">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div>
-                  <h3 className="font-pixel text-xs md:text-base text-[#853A17] uppercase tracking-widest mb-1.5">
+                  <h3 className="font-pixel text-xs md:text-base text-[#CF492C] uppercase tracking-widest mb-1.5">
                     {faq.q}
                   </h3>
                   <p className="font-body text-base md:text-xl leading-relaxed text-white/80 group-hover:text-white transition-colors">
@@ -106,7 +106,7 @@ const FAQSection = () => {
           </div>
 
           {/* Find me on */}
-          <div className="mt-10 border-t-[2px] border-[#853A17] pt-6 flex flex-col md:flex-row md:items-stretch gap-3 md:gap-4">
+          <div className="mt-10 border-t-[2px] border-[#CF492C] pt-6 flex flex-col md:flex-row md:items-stretch gap-3 md:gap-4">
             <div className="font-pixel text-[10px] md:text-xs tracking-widest text-white/60 whitespace-nowrap md:flex md:items-center">
               FIND ME ON:
             </div>
@@ -117,7 +117,7 @@ const FAQSection = () => {
                   href={href}
                   target={href.startsWith('mailto:') ? undefined : '_blank'}
                   rel="noopener noreferrer"
-                  className="flex-1 basis-[calc(50%-0.375rem)] md:basis-0 flex items-center justify-center gap-2 px-3 py-3 border-[2px] border-[#853A17] bg-black/40 font-pixel text-[10px] md:text-xs tracking-widest text-[#853A17] shadow-[3px_3px_0_0_#000] hover:bg-[#853A17] hover:text-white transition-colors"
+                  className="flex-1 basis-[calc(50%-0.375rem)] md:basis-0 flex items-center justify-center gap-2 px-3 py-3 border-[2px] border-[#CF492C] bg-black/40 font-pixel text-[10px] md:text-xs tracking-widest text-[#CF492C] shadow-[3px_3px_0_0_#000] hover:bg-[#CF492C] hover:text-white transition-colors"
                 >
                   <Icon size={14} />
                   {label.toUpperCase()}

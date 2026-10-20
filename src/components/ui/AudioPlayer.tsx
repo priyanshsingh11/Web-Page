@@ -45,7 +45,7 @@ const AudioPlayer = () => {
         <button
             onClick={togglePlay}
             className={`flex items-center gap-1.5 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 text-[8px] md:text-xs font-pixel tracking-widest transition-all ${isPlaying
-                    ? 'bg-[#853A17] text-white shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
+                    ? 'bg-[#CF492C] text-white shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
                     : 'text-white/70 hover:text-white hover:bg-white/5 border-[1px] md:border-[2px] border-transparent'
                 }`}
         >
