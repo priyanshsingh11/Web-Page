@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="w-full bg-[#121110] border-t-[3px] border-[#CF492C] pt-12 md:pt-[68px] pb-8 md:pb-10"
+      className="w-full bg-[#0D0B0A] border-t-[3px] border-[#CF492C] pt-10 md:pt-[56px] pb-8 md:pb-10"
       style={{ fontFamily: monoStack }}
     >
       {/* Links row */}
@@ -46,9 +46,9 @@ const Footer = () => {
       </nav>
 
       {/* Divider + copyright */}
-      <div className="w-[82%] max-w-[1200px] mx-auto mt-10 md:mt-[52px] border-t border-white/15 pt-6 md:pt-8">
+      <div className="w-[82%] max-w-[1200px] mx-auto mt-8 md:mt-[42px] border-t border-white/15 pt-5 md:pt-6">
         <p className="text-center text-[12px] md:text-[13px] text-white/35 tracking-wide">
-          © {currentYear} Priyansh Singh. Built with React &amp; Tokens.
+          © {currentYear} Priyansh Singh. Code with Skills (Claude) &amp; Pumped with Tokens.
         </p>
       </div>
     </footer>
