@@ -218,7 +218,7 @@ const SkillsSection = () => {
                         <span className="text-xs md:text-base text-white/70">{card.skills.length} skills</span>
                       </div>
 
-                      <div className="w-full flex-1 min-h-0 border border-[#FF5A2E]/60 bg-[#1d0d08] flex items-center justify-center p-1.5 md:p-2">
+                      <div className="w-full flex-1 min-h-0 border border-[#FF5A2E]/60 flex items-center justify-center p-9 md:p-14">
                         <PixelCardArt rank={card.rank} suit={card.suit} className="w-full h-full" />
                       </div>
 

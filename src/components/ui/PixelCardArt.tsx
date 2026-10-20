@@ -1,11 +1,11 @@
 // Card illustrations for the skills deck. Every rank in use has its own picture;
 // all aces share the spade.
 const IMAGES: Record<string, string> = {
-  K: '/cards/king.png?v=3',
-  Q: '/cards/queen.png?v=3',
-  J: '/cards/jack.png?v=3',
-  A: '/cards/ace.png?v=3',
-  Joker: '/cards/joker.png?v=3',
+  K: '/cards/king.png?v=5',
+  Q: '/cards/queen.png?v=5',
+  J: '/cards/jack.png?v=5',
+  A: '/cards/ace.png?v=5',
+  Joker: '/cards/joker.png?v=5',
 };
 
 interface Props {
