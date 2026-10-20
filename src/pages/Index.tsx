@@ -4,7 +4,6 @@ import Lenis from 'lenis';
 import Navigation from '../components/layout/Navigation';
 import HeroSection from '../components/sections/HeroSection';
 import CustomCursor from '../components/ui/CustomCursor';
-import AboutSection from '../components/sections/AboutSection';
 import FAQSection from '../components/sections/FAQSection';
 import SkillsSection from '../components/sections/SkillsSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
@@ -72,10 +71,9 @@ const Index = () => {
         {/* Main Content */}
         <main className="relative">
           <HeroSection />
-          <AboutSection />
           <FAQSection />
-          <SkillsSection />
           <ExperienceSection />
+          <SkillsSection />
           <ProjectsSection />
           <CertificationSection />
           <ContactSection />

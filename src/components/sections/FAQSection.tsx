@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MessageSquare } from 'lucide-react';
+import { Code2, FileText, Github, Linkedin, Mail, User } from 'lucide-react';
 
 const faqs = [
   {
@@ -43,54 +43,88 @@ const faqs = [
   }
 ];
 
+const socials = [
+  { icon: Github, label: 'GitHub', href: 'https://github.com/priyanshsingh11' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/priyansh-singh-575a57289/' },
+  { icon: Code2, label: 'LeetCode', href: 'https://leetcode.com/u/priyanshsingh11/' },
+  { icon: FileText, label: 'Resume', href: 'https://drive.google.com/file/d/1TFWOIzQZNMV5Rt3KieD7KKLbTaGf-P66/view?usp=drive_link' },
+  { icon: Mail, label: 'Email', href: 'mailto:priyanshsingh855@gmail.com' },
+];
+
 const FAQSection = () => {
   const mainTitle = faqs[0];
   const remainingFaqs = faqs.slice(1);
 
   return (
-    <section id="lore" className="py-20 px-4 md:px-16 border-t border-b border-[#853A17]/20">
-      <div className="max-w-6xl mx-auto">
+    <section id="about" className="py-12 md:py-20 px-3 md:px-16 bg-transparent">
+      <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#853A17] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
 
-        {/* Section Metadata */}
-        <div className="flex items-center gap-4 mb-12 opacity-60">
-          <div className="h-[1px] flex-grow bg-[#853A17]"></div>
-          <div className="font-pixel text-[10px] tracking-[0.3em] text-[#853A17] whitespace-nowrap">
-            DIALOGUE_LOG.TXT // LORE & FAQ
+        {/* Header */}
+        <div className="border-b-[2px] border-[#853A17] bg-black/90 p-2 flex justify-between items-center">
+          <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
+            <User size={14} className="text-[#853A17]" />
+            <span>SYS.PROFILE // [DEV_PRIYANSH]</span>
           </div>
-          <div className="h-[1px] flex-grow bg-[#853A17]"></div>
+          <div className="flex gap-1 pr-2">
+            <div className="w-2 h-2 border border-[#853A17]"></div>
+            <div className="w-2 h-2 border border-[#853A17]"></div>
+          </div>
         </div>
 
-        {/* Hero Title for Section */}
-        <div className="mb-20 text-center md:text-left">
-          <h2 className="font-extended text-2xl md:text-3xl leading-tight text-[#853A17] uppercase">
-            {mainTitle.q}
+        <div className="p-4 md:p-10">
+          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 mb-8 text-white uppercase tracking-tight">
+            Player Info
           </h2>
-        </div>
 
-        {/* Dialogue List */}
-        <div className="grid grid-cols-1 gap-10 max-w-6xl">
-          {remainingFaqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.05 }}
-              viewport={{ once: true }}
-              className="group flex gap-6 items-start"
-            >
-              <div className="mt-1 text-[#853A17] font-bold text-xl">•</div>
-              <p className="font-body text-xl md:text-2xl leading-relaxed text-white/70 group-hover:text-white transition-colors">
-                <span className="font-pixel text-sm md:text-base text-[#853A17] mr-3 uppercase">{faq.q}:</span>
-                {faq.a}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+          <p className="font-pixel text-xs md:text-sm tracking-widest text-[#853A17] mb-8 uppercase">
+            {mainTitle.q}
+          </p>
 
-        {/* Footer Accent */}
-        <div className="mt-24 border-t border-[#853A17]/30 pt-8 flex justify-between items-center opacity-40">
-          <div className="font-mono text-[10px] tracking-widest text-white">SYSTEM_STATUS: STABLE</div>
-          <div className="font-mono text-[10px] tracking-widest text-white">ACCESS_LVL: ADMINISTRATOR</div>
+          <div className="flex flex-col gap-4 md:gap-5">
+            {remainingFaqs.map((faq, index) => (
+              <motion.div
+                key={faq.q}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.04 }}
+                viewport={{ once: true }}
+                className="group flex gap-4 md:gap-6 items-start border-[1px] border-[#853A17]/40 bg-white/5 p-3 md:p-5 hover:border-[#853A17] transition-colors"
+              >
+                <span className="font-pixel text-lg md:text-2xl text-[#853A17] leading-none pt-1">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <h3 className="font-pixel text-xs md:text-base text-[#853A17] uppercase tracking-widest mb-1.5">
+                    {faq.q}
+                  </h3>
+                  <p className="font-body text-base md:text-xl leading-relaxed text-white/80 group-hover:text-white transition-colors">
+                    {faq.a}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Find me on */}
+          <div className="mt-10 border-t-[2px] border-[#853A17] pt-6 flex flex-col md:flex-row md:items-stretch gap-3 md:gap-4">
+            <div className="font-pixel text-[10px] md:text-xs tracking-widest text-white/60 whitespace-nowrap md:flex md:items-center">
+              FIND ME ON:
+            </div>
+            <div className="flex flex-wrap md:flex-nowrap flex-1 gap-3">
+              {socials.map(({ icon: Icon, label, href }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target={href.startsWith('mailto:') ? undefined : '_blank'}
+                  rel="noopener noreferrer"
+                  className="flex-1 basis-[calc(50%-0.375rem)] md:basis-0 flex items-center justify-center gap-2 px-3 py-3 border-[2px] border-[#853A17] bg-black/40 font-pixel text-[10px] md:text-xs tracking-widest text-[#853A17] shadow-[3px_3px_0_0_#000] hover:bg-[#853A17] hover:text-white transition-colors"
+                >
+                  <Icon size={14} />
+                  {label.toUpperCase()}
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
