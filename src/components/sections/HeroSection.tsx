@@ -24,10 +24,10 @@ const HeroSection = () => {
           </p>
 
           <div className="pt-1 flex flex-wrap gap-1 md:gap-1">
-            {['AI & MLOPS ENGINEER', 'FULL-STACK WEB & MOBILE DEVELOPER'].map((role) => (
+            {['AI & MLOps Engineer', 'Full-Stack Web & Mobile Developer'].map((role) => (
               <div
                 key={role}
-                className="border-[2px] border-[#FF5A2E] bg-black/40 text-[#FF5A2E] px-3 py-1.5 md:px-4 md:py-2 font-pixel text-[10px] md:text-xs uppercase shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:bg-[#FF5A2E] hover:text-white transition-all cursor-default"
+                className="border-[2px] border-[#FF5A2E] bg-black/40 text-[#FF5A2E] px-3 py-1.5 md:px-4 md:py-2 font-body text-sm md:text-lg shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:bg-[#FF5A2E] hover:text-white transition-all cursor-default"
               >
                 {role}
               </div>
@@ -41,12 +41,12 @@ const HeroSection = () => {
           <div className="flex flex-col border-[2px] border-[#FF5A2E] bg-black/75 backdrop-blur-md text-white p-3 md:p-4 gap-3 shadow-[6px_6px_0_0_#000] md:shadow-[8px_8px_0_0_#000]">
             {/* Box Header */}
             <div className="flex flex-col text-left">
-              <div className="font-extended text-[#FF5A2E] text-xs md:text-base leading-tight mb-1 uppercase">PRIYANSH SINGH</div>
+              <div className="font-extended text-[#FF5A2E] text-xs md:text-base leading-tight mb-1">PRIYANSH SINGH</div>
               <div className="font-mono text-xs md:text-sm text-white">Quick Stats</div>
             </div>
 
             {/* Box Content */}
-            <div className="flex flex-col gap-2.5 font-extended text-[9px] md:text-xs uppercase tracking-wide text-left">
+            <div className="flex flex-col gap-2.5 font-extended text-[9px] md:text-xs tracking-wide text-left">
               <div className="flex justify-between items-center border-[1px] border-[#FF5A2E] bg-white/5 p-2 hover:bg-[#FF5A2E] hover:text-white transition-colors cursor-default group/stat">
                 <span className="leading-relaxed">Total<br />Experience</span>
                 <span className="text-[#FF5A2E] group-hover/stat:text-white text-right leading-relaxed transition-colors">2+<br />years</span>
@@ -56,7 +56,7 @@ const HeroSection = () => {
                 <span className="text-[#FF5A2E] group-hover/stat:text-white transition-colors">30+</span>
               </div>
               <div className="flex justify-between items-center border-[1px] border-[#FF5A2E] bg-white/5 p-2 hover:bg-[#FF5A2E] hover:text-white transition-colors cursor-default group/stat">
-                <span>HACKATHONS</span>
+                <span>Hackathons</span>
                 <span className="text-[#FF5A2E] group-hover/stat:text-white transition-colors">15+</span>
               </div>
               <div className="flex justify-between items-center border-[1px] border-[#FF5A2E] bg-white/5 p-2 hover:bg-[#FF5A2E] hover:text-white transition-colors cursor-default group/stat">

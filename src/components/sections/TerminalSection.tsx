@@ -172,9 +172,9 @@ const TerminalSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto border-[2px] border-[#FF5A2E] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
 
         <div className="border-b-[2px] border-[#FF5A2E] bg-black/90 p-2 flex justify-between items-center">
-          <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
+          <div className="flex gap-2 items-center font-body text-sm md:text-lg tracking-wide px-2">
             <TerminalIcon size={14} className="text-[#FF5A2E]" />
-            <span>ASK_ME_ANYTHING.EXE</span>
+            <span>ask_me_anything.exe</span>
           </div>
           <div className="flex gap-1 pr-2">
             <div className="w-2 h-2 border border-[#FF5A2E]"></div>
@@ -183,7 +183,7 @@ const TerminalSection = () => {
         </div>
 
         <div className="p-4 md:p-8">
-          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#FF5A2E] pb-4 mb-6 text-white tracking-tight">
+          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#FF5A2E] pb-4 mb-6 text-white uppercase tracking-tight">
             Ask My Terminal
           </h2>
 
@@ -211,7 +211,7 @@ const TerminalSection = () => {
             style={{ fontFamily: mono }}
             onClick={() => inputRef.current?.focus({ preventScroll: true })}
           >
-            <div ref={bodyRef} data-lenis-prevent className="overscroll-contain h-72 md:h-80 overflow-y-auto p-4 text-[13px] md:text-[14px] leading-relaxed">
+            <div ref={bodyRef} data-lenis-prevent className="overscroll-contain min-h-[80px] max-h-72 md:max-h-80 overflow-y-auto p-4 text-[13px] md:text-[14px] leading-relaxed">
               {lines.map((l, i) => (
                 <div key={i} className={`whitespace-pre-wrap break-words ${l.kind === 'in' ? 'text-white' : 'text-white/80'}`}>
                   {l.kind === 'in' && <span className="text-[#FF5A2E]">$ </span>}

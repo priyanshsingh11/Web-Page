@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import PixelCardArt from '@/components/ui/PixelCardArt';
 import {
   Shield,
   Globe,
@@ -29,117 +30,117 @@ interface SkillCard {
 const skillCards: SkillCard[] = [
   {
     id: 'web',
-    title: 'WEB',
+    title: 'Web',
     rank: 'A',
     suit: '♠',
     icon: Globe,
-    skills: ['REACT.JS', 'NEXT.JS (SSR, ISR)', 'VITE', 'FRAMER MOTION', 'TAILWIND CSS', 'EJS', 'HTML5'],
-  },
-  {
-    id: 'mobile',
-    title: 'MOBILE',
-    rank: 'Q',
-    suit: '♥',
-    icon: Smartphone,
-    skills: ['REACT NATIVE', 'EXPO', 'FLUTTER', 'DART', 'FIREBASE', 'ANDROID STUDIO'],
-  },
-  {
-    id: 'backend',
-    title: 'BACKEND',
-    rank: 'K',
-    suit: '♦',
-    icon: Server,
-    skills: [
-      'NODE.JS', 'EXPRESS.JS', 'FLASK', 'FASTAPI',
-      'REST APIS', 'WEBSOCKETS', 'JWT', 'RBAC',
-    ],
-  },
-  {
-    id: 'databases',
-    title: 'DATABASES',
-    rank: 'K',
-    suit: '♣',
-    icon: Database,
-    skills: [
-      'MONGODB', 'POSTGRESQL', 'MYSQL', 'SQLITE', 'SUPABASE', 'REDIS',
-      'CHROMADB', 'DB INDEXING', 'AGGREGATION PIPELINES',
-    ],
+    skills: ['React.js', 'Next.js (SSR, ISR)', 'Vite', 'Framer Motion', 'Tailwind CSS', 'EJS', 'HTML5'],
   },
   {
     id: 'ai',
     title: 'AI & ML',
     rank: 'A',
-    suit: '♥',
+    suit: '♠',
     icon: Brain,
-    skills: ['PYTORCH', 'TENSORFLOW', 'KERAS', 'SCIKIT-LEARN', 'TRANSFORMERS', 'HUGGING FACE'],
+    skills: ['PyTorch', 'TensorFlow', 'Keras', 'Scikit-learn', 'Transformers', 'Hugging Face'],
   },
   {
     id: 'genai',
-    title: 'GENERATIVE AI',
+    title: 'Generative AI',
     rank: 'A',
-    suit: '♦',
+    suit: '♠',
     icon: Sparkles,
     skills: [
-      'LLM APPLICATIONS', 'RAG', 'LANGCHAIN', 'OLLAMA',
-      'LLM EVALUATION', 'PROMPT-INJECTION DEFENSE',
+      'LLM Applications', 'RAG', 'LangChain', 'Ollama',
+      'LLM Evaluation', 'Prompt-Injection Defense',
     ],
   },
   {
     id: 'agentic',
-    title: 'AGENTIC AI',
+    title: 'Agentic AI',
     rank: 'A',
     suit: '♠',
     icon: Bot,
-    skills: ['AI AGENTS', 'LANGGRAPH', 'MCP', 'N8N'],
+    skills: ['AI Agents', 'LangGraph', 'MCP', 'N8N'],
   },
   {
-    id: 'data',
-    title: 'DATA',
-    rank: 'J',
-    suit: '♣',
-    icon: BarChart3,
-    skills: ['NUMPY', 'PANDAS', 'MATPLOTLIB', 'POWER BI', 'EXCEL', 'TABLEAU'],
-  },
-  {
-    id: 'cloud',
-    title: 'CLOUD & DEVOPS',
+    id: 'backend',
+    title: 'Backend',
     rank: 'K',
-    suit: '♠',
-    icon: Cloud,
+    suit: '♦',
+    icon: Server,
     skills: [
-      'DOCKER', 'AWS', 'GCP (CLOUD RUN)', 'GITHUB ACTIONS', 'CI/CD',
-      'VERCEL', 'STREAMLIT', 'MLFLOW', 'DVC',
+      'Node.js', 'Express.js', 'Flask', 'FastAPI',
+      'REST APIs', 'WebSockets', 'JWT', 'RBAC',
     ],
   },
   {
-    id: 'tools',
-    title: 'AUTOMATION & TOOLS',
-    rank: 'A',
+    id: 'databases',
+    title: 'Databases',
+    rank: 'K',
     suit: '♣',
-    icon: Workflow,
+    icon: Database,
     skills: [
-      'PLAYWRIGHT', 'PUPPETEER', 'SELENIUM', 'SCRAPY', 'BEAUTIFULSOUP', 'N8N',
-      'CRON JOBS', 'GIT', 'GITHUB', 'POSTMAN',
-    ],
-  },
-  {
-    id: 'languages',
-    title: 'LANGUAGES & CS',
-    rank: 'JOKER',
-    suit: '★',
-    icon: Code2,
-    skills: [
-      'PYTHON', 'JAVASCRIPT', 'TYPESCRIPT', 'C++', 'SQL', 'DART',
-      'OOP', 'DSA', 'SYSTEM DESIGN', 'DBMS', 'OPERATING SYSTEMS',
+      'MongoDB', 'PostgreSQL', 'MySQL', 'SQLite', 'Supabase', 'Redis',
+      'ChromaDB', 'DB Indexing', 'Aggregation Pipelines',
     ],
   },
   {
     id: 'soft',
-    title: 'SOFT SKILLS',
+    title: 'Soft Skills',
+    rank: 'K',
+    suit: '♥',
+    icon: Users,
+    skills: ['Ownership', 'Requirements Analysis', 'Stakeholder Communication', 'Problem Solving'],
+  },
+  {
+    id: 'tools',
+    title: 'Automation & Tools',
+    rank: 'K',
+    suit: '♠',
+    icon: Workflow,
+    skills: [
+      'Playwright', 'Puppeteer', 'Selenium', 'Scrapy', 'BeautifulSoup', 'N8N',
+      'Cron Jobs', 'Git', 'GitHub', 'Postman',
+    ],
+  },
+  {
+    id: 'mobile',
+    title: 'Mobile',
+    rank: 'Q',
+    suit: '♥',
+    icon: Smartphone,
+    skills: ['React Native', 'Expo', 'Flutter', 'Dart', 'Firebase', 'Android Studio'],
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud & DevOps',
+    rank: 'Q',
+    suit: '♠',
+    icon: Cloud,
+    skills: [
+      'Docker', 'AWS', 'GCP (Cloud Run)', 'GitHub Actions', 'CI/CD',
+      'Vercel', 'Streamlit', 'MLflow', 'DVC',
+    ],
+  },
+  {
+    id: 'languages',
+    title: 'Languages & CS',
+    rank: 'J',
+    suit: '♣',
+    icon: Code2,
+    skills: [
+      'Python', 'JavaScript', 'TypeScript', 'C++', 'SQL', 'Dart',
+      'OOP', 'DSA', 'System Design', 'DBMS', 'Operating Systems',
+    ],
+  },
+  {
+    id: 'data',
+    title: 'Data',
     rank: 'J',
     suit: '♦',
-    icon: Users,
-    skills: ['OWNERSHIP', 'REQUIREMENTS ANALYSIS', 'STAKEHOLDER COMMUNICATION', 'PROBLEM SOLVING'],
+    icon: BarChart3,
+    skills: ['NumPy', 'Pandas', 'Matplotlib', 'Power BI', 'Excel', 'Tableau'],
   },
 ];
 
@@ -160,9 +161,9 @@ const SkillsSection = () => {
 
         {/* Header */}
         <div className="border-b-[2px] border-[#FF5A2E] bg-black/90 text-white p-2 flex justify-between items-center">
-          <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
+          <div className="flex gap-2 items-center font-body text-sm md:text-lg tracking-wide px-2">
             <Shield size={14} className="text-[#FF5A2E]" />
-            <span>INVENTORY_DECK.DAT</span>
+            <span>inventory_deck.dat</span>
           </div>
           <div className="flex gap-1 pr-2">
             <div className="w-2 h-2 border border-[#FF5A2E]"></div>
@@ -175,8 +176,8 @@ const SkillsSection = () => {
           <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#FF5A2E] pb-4 mb-2 text-white uppercase tracking-tight">
             Inventory Deck
           </h2>
-          <p className="font-pixel text-[9px] md:text-xs tracking-widest text-white/80 mb-8 md:mb-10">
-            CLICK A CARD TO FLIP IT AND REVEAL ITS SKILLS
+          <p className="font-body text-sm md:text-lg tracking-wide text-white/80 mb-8 md:mb-10">
+            Click a card to flip it and reveal its skills
           </p>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 max-w-lg lg:max-w-none mx-auto gap-4 md:gap-6">
@@ -211,25 +212,19 @@ const SkillsSection = () => {
                     className="absolute inset-0"
                   >
                     {/* Front */}
-                    <div className="absolute inset-0 [backface-visibility:hidden] bg-[#4a1a10] border-[2px] border-[#FF5A2E] text-white p-2 md:p-3 flex flex-col justify-between shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
-                      <div className={`font-pixel leading-none text-xs md:text-base ${cornerColor}`}>
-                        <div>{card.rank}</div>
-                        <div>{card.suit}</div>
+                    <div className="absolute inset-0 [backface-visibility:hidden] bg-[#140a07] border-[2px] border-[#FF5A2E] text-white p-2 md:p-3 flex flex-col shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
+                      <div className={`flex items-center justify-between font-body leading-none text-base md:text-2xl mb-1.5 md:mb-2 ${cornerColor}`}>
+                        <span>{card.rank}{card.suit}</span>
+                        <span className="text-xs md:text-base text-white/70">{card.skills.length} skills</span>
                       </div>
 
-                      <div className="flex flex-col items-center gap-2 md:gap-3">
-                        <Icon className="w-8 h-8 md:w-14 md:h-14 text-[#ff7d57]" strokeWidth={1.5} />
-                        <span className="font-pixel text-[9px] md:text-xs tracking-widest text-center leading-tight">
-                          {card.title}
-                        </span>
-                        <span className="font-pixel text-[8px] md:text-[10px] tracking-widest text-white/70">
-                          {card.skills.length} SKILLS
-                        </span>
+                      <div className="w-full flex-1 min-h-0 border border-[#FF5A2E]/60 bg-[#1d0d08] flex items-center justify-center p-1.5 md:p-2">
+                        <PixelCardArt rank={card.rank} suit={card.suit} className="w-full h-full" />
                       </div>
 
-                      <div className={`self-end rotate-180 font-pixel leading-none text-xs md:text-base ${cornerColor}`}>
-                        <div>{card.rank}</div>
-                        <div>{card.suit}</div>
+                      <div className={`flex items-center justify-between mt-1.5 md:mt-2 font-body leading-none ${cornerColor}`}>
+                        <span className="text-sm md:text-xl tracking-wide text-white leading-tight">{card.title}</span>
+                        <span className="rotate-180 text-base md:text-2xl">{card.rank}{card.suit}</span>
                       </div>
                     </div>
 
@@ -237,18 +232,24 @@ const SkillsSection = () => {
                     <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#FF5A2E] border-[2px] border-white text-white p-2 md:p-3 flex flex-col shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
                       <div className="flex items-center gap-1.5 border-b border-white/40 pb-1.5 mb-2">
                         <Icon className="w-3 h-3 md:w-4 md:h-4 shrink-0" />
-                        <span className="font-pixel text-[9px] md:text-xs tracking-widest truncate">
+                        <span className="font-body text-sm md:text-lg tracking-wide truncate">
                           {card.title}
                         </span>
-                        <span className="ml-auto font-pixel text-[8px] md:text-[10px]">
+                        <span className="ml-auto font-body text-xs md:text-base">
                           {card.rank}{card.suit}
                         </span>
                       </div>
-                      <div className={`flex-1 min-h-0 grid auto-rows-fr gap-1.5 ${card.skills.length <= 4 ? 'grid-cols-1' : 'grid-cols-2'}`}>
+                      <div className={`flex-1 min-h-0 grid auto-rows-[minmax(0,1fr)] gap-1.5 ${card.skills.length <= 4 ? 'grid-cols-1' : 'grid-cols-2'}`}>
                         {card.skills.map((skill, i) => (
                           <span
                             key={skill}
-                            className={`px-1 flex items-center justify-center text-center leading-tight break-words text-[9px] md:text-[11px] border border-white/50 bg-black/30 font-pixel tracking-wider uppercase ${
+                            className={`min-h-0 min-w-0 overflow-hidden px-1 flex items-center justify-center text-center leading-[1.05] break-words border border-white/50 bg-black/30 font-body tracking-wide ${
+                              card.skills.length >= 10
+                                ? 'text-[13px] md:text-[15px]'
+                                : card.skills.length >= 7
+                                  ? 'text-sm md:text-[17px]'
+                                  : 'text-base md:text-xl'
+                            } ${
                               card.skills.length > 4 && card.skills.length % 2 === 1 && i === card.skills.length - 1 ? 'col-span-2' : ''
                             }`}
                           >
@@ -268,9 +269,9 @@ const SkillsSection = () => {
         <div className="mt-4 border-t-[2px] border-[#FF5A2E] bg-[#FF5A2E]/5 py-4 overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap">
             {[1, 2, 3, 4].map((i) => (
-              <span key={i} className="font-pixel text-[10px] md:text-sm tracking-[0.2em] text-[#FF5A2E] mx-6 md:mx-10 flex items-center gap-4">
+              <span key={i} className="font-body text-sm md:text-xl tracking-wide text-[#FF5A2E] mx-6 md:mx-10 flex items-center gap-4">
                 <span className="opacity-50">•</span>
-                OPEN TO INTERNSHIPS, COLLABORATIONS, AND CONTINUOUS LEARNING
+                Open to internships, collaborations, and continuous learning
                 <span className="opacity-50">•</span>
               </span>
             ))}

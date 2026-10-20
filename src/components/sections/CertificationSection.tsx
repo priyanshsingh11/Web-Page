@@ -29,9 +29,9 @@ const CertificationSection = () => {
 
         {/* Header Bar */}
         <div className="border-b-[2px] border-[#FF5A2E] bg-black/90 text-white p-2 flex justify-between items-center">
-          <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
+          <div className="flex gap-2 items-center font-body text-sm md:text-lg tracking-wide px-2">
             <FileText size={14} className="text-[#FF5A2E]" />
-            <span>ACHIEVEMENTS_LOG.DAT</span>
+            <span>achievements_log.dat</span>
           </div>
           <div className="flex gap-1 pr-2">
             <div className="w-2 h-2 border border-[#FF5A2E]"></div>
@@ -82,8 +82,8 @@ const CertificationSection = () => {
 
         {/* Footer info */}
         <div className="mt-4 p-4 border-t border-[#FF5A2E]/10 bg-black/40 text-center">
-          <p className="font-pixel text-[8px] text-[#FF5A2E]/30 tracking-[0.4em] uppercase">
-            LOG_ENTRY_VALIDATED // SESSION_2026
+          <p className="font-body text-xs text-[#FF5A2E]/30 tracking-wide">
+            log_entry_validated // session_2026
           </p>
         </div>
       </div>

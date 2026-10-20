@@ -3,7 +3,7 @@ import { Code2, FileText, Github, Linkedin, Mail, User } from 'lucide-react';
 
 const faqs = [
   {
-    q: "Behind the machine? PRIYANSH SINGH",
+    q: "Behind the machine? Priyansh Singh",
   },
   {
     q: "What I do?",
@@ -61,9 +61,9 @@ const FAQSection = () => {
 
         {/* Header */}
         <div className="border-b-[2px] border-[#FF5A2E] bg-black/90 p-2 flex justify-between items-center">
-          <div className="flex gap-2 items-center font-pixel text-[10px] md:text-xs tracking-widest px-2">
+          <div className="flex gap-2 items-center font-body text-sm md:text-lg tracking-wide px-2">
             <User size={14} className="text-[#FF5A2E]" />
-            <span>SYS.PROFILE // [DEV_PRIYANSH]</span>
+            <span>sys.profile // [dev_priyansh]</span>
           </div>
           <div className="flex gap-1 pr-2">
             <div className="w-2 h-2 border border-[#FF5A2E]"></div>
@@ -76,7 +76,7 @@ const FAQSection = () => {
             Player Info
           </h2>
 
-          <p className="font-pixel text-xs md:text-sm tracking-widest text-[#FF5A2E] mb-8 uppercase">
+          <p className="font-body text-base md:text-xl tracking-wide text-[#FF5A2E] mb-8">
             {mainTitle.q}
           </p>
 
@@ -90,11 +90,11 @@ const FAQSection = () => {
                 viewport={{ once: true }}
                 className="group flex gap-4 md:gap-6 items-start border-[1px] border-[#FF5A2E]/40 bg-white/5 p-3 md:p-5 hover:border-[#FF5A2E] transition-colors"
               >
-                <span className="font-pixel text-lg md:text-2xl text-[#FF5A2E] leading-none pt-1">
+                <span className="font-body text-2xl md:text-2xl text-[#FF5A2E] leading-none pt-1">
                   {String(index + 1).padStart(2, '0')}
                 </span>
                 <div>
-                  <h3 className="font-pixel text-xs md:text-base text-[#FF5A2E] uppercase tracking-widest mb-1.5">
+                  <h3 className="font-body text-base md:text-2xl text-[#FF5A2E] tracking-wide mb-1.5">
                     {faq.q}
                   </h3>
                   <p className="font-body text-base md:text-xl leading-relaxed text-white/95 group-hover:text-white transition-colors">
@@ -107,9 +107,9 @@ const FAQSection = () => {
 
           {/* Find me on */}
           <div className="mt-10 border-t-[2px] border-[#FF5A2E] pt-5 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-            <div className="flex items-center gap-2 flex-shrink-0 font-pixel text-sm md:text-base tracking-widest text-[#FF5A2E]">
+            <div className="flex items-center gap-2 flex-shrink-0 font-body text-lg md:text-2xl tracking-wide text-[#FF5A2E]">
               <span className="w-2.5 h-2.5 bg-[#FF5A2E]"></span>
-              FIND ME ON:
+              Find me on:
             </div>
             <nav aria-label="Social links" className="flex flex-wrap md:flex-nowrap flex-1 gap-3 md:gap-5">
               {socials.map(({ icon: Icon, label, href }) => (
@@ -118,7 +118,7 @@ const FAQSection = () => {
                   href={href}
                   target={href.startsWith('mailto:') ? undefined : '_blank'}
                   rel="noopener noreferrer"
-                  className="flex-1 basis-[calc(50%-0.375rem)] md:basis-auto flex items-center justify-center gap-2.5 px-3 py-2.5 border-[2px] border-[#FF5A2E] bg-[#0D0B0A] text-white font-pixel text-xs md:text-sm tracking-widest uppercase shadow-[3px_3px_0_0_#000] hover:bg-[#FF5A2E] transition-colors"
+                  className="flex-1 basis-[calc(50%-0.375rem)] md:basis-auto flex items-center justify-center gap-2.5 px-3 py-2.5 border-[2px] border-[#FF5A2E] bg-[#0D0B0A] text-white font-body text-base md:text-xl tracking-wide shadow-[3px_3px_0_0_#000] hover:bg-[#FF5A2E] transition-colors"
                 >
                   <Icon size={18} strokeWidth={1.75} />
                   {label}

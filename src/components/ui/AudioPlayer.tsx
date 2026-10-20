@@ -44,13 +44,13 @@ const AudioPlayer = () => {
     return (
         <button
             onClick={togglePlay}
-            className={`flex items-center gap-1.5 md:gap-2 px-3 py-2 md:px-5 md:py-3 text-[8px] md:text-xs font-pixel tracking-widest transition-all ${isPlaying
+            className={`flex items-center gap-2 md:gap-3 px-4 py-1.5 md:px-8 md:py-2 text-sm md:text-lg font-body tracking-wide transition-all ${isPlaying
                     ? 'bg-[#FF5A2E] text-white shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] border-[1px] md:border-[2px] border-dashed border-black/50'
                     : 'text-white/90 hover:text-white hover:bg-white/5 border-[1px] md:border-[2px] border-transparent'
                 }`}
         >
-            <Music className={`w-2.5 h-2.5 md:w-3 md:h-3 ${isPlaying ? 'animate-spin-slow' : 'opacity-70'}`} />
-            <span>{isPlaying ? 'PLAYING' : 'MUSIC'}</span>
+            <Music className={`w-3 h-3 md:w-3.5 md:h-3.5 ${isPlaying ? 'animate-spin-slow' : 'opacity-70'}`} />
+            <span>{isPlaying ? 'Playing' : 'Music'}</span>
         </button>
     );
 };

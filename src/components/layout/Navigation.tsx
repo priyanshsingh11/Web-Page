@@ -4,13 +4,13 @@ import AudioPlayer from '../ui/AudioPlayer';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { label: 'HOME', href: '#hero' },
-  { label: 'ABOUT', href: '#about' },
-  { label: 'EXPERIENCE', href: '#experience' },
-  { label: 'SKILLS', href: '#skills' },
-  { label: 'PROJECTS', href: '#projects' },
-  { label: 'CERTIFICATIONS', href: '#certifications' },
-  { label: 'TERMINAL', href: '#terminal' },
+  { label: 'Home', href: '#hero' },
+  { label: 'About', href: '#about' },
+  { label: 'Experience', href: '#experience' },
+  { label: 'Skills', href: '#skills' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Certifications', href: '#certifications' },
+  { label: 'Terminal', href: '#terminal' },
 ];
 
 const Navigation = () => {
@@ -45,7 +45,7 @@ const Navigation = () => {
     setIsMenuOpen(false);
     const el = document.querySelector(href);
     if (el) {
-      const offset = 100;
+      const offset = 80;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = el.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -60,7 +60,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/95 backdrop-blur-md">
-      <div className="flex items-center px-4 md:px-16 py-3 md:py-5 pointer-events-auto gap-3 md:gap-4">
+      <div className="flex items-center px-4 md:px-16 py-2 md:py-3 pointer-events-auto gap-3 md:gap-4">
 
         {/* Mobile Menu Toggle */}
         <button
@@ -71,7 +71,7 @@ const Navigation = () => {
         </button>
 
         {/* Mobile: current section name */}
-        <span className="md:hidden px-3 py-1.5 text-[9px] font-pixel tracking-widest bg-[#FF5A2E] text-white border-[1px] border-dashed border-black/50">
+        <span className="md:hidden px-3 py-1.5 text-sm font-body tracking-wide bg-[#FF5A2E] text-white border-[1px] border-dashed border-black/50">
           {navItems.find((item) => item.href === activeSection)?.label}
         </span>
 
@@ -91,7 +91,7 @@ const Navigation = () => {
                 transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                 className={
                   isActive
-                    ? 'flex items-center px-5 py-3 text-xs font-pixel tracking-widest bg-[#FF5A2E] text-white shadow-[4px_4px_0_0_#000] border-[2px] border-dashed border-black/50'
+                    ? 'flex items-center px-4 py-2 text-xs font-pixel tracking-widest bg-[#FF5A2E] text-white shadow-[4px_4px_0_0_#000] border-[2px] border-dashed border-black/50'
                     : 'w-4 h-4 border-[1px] border-[#FF5A2E]/50 bg-black/40 flex items-center justify-center hover:border-[#FF5A2E] transition-colors'
                 }
               >
@@ -106,19 +106,19 @@ const Navigation = () => {
         </div>
 
         {/* Action Buttons (Always Visible) */}
-        <div className="flex items-center ml-auto gap-3 md:gap-8">
+        <div className="flex items-center ml-auto gap-4 md:gap-10">
           {/* Highlighted Resume Link */}
           <a
             href="https://drive.google.com/file/d/1PdfnHvgsal54m0gCk5yVpDvlkkngLqVW/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 flex items-center gap-1 md:gap-2 px-3 py-2 md:px-5 md:py-3 text-[8px] md:text-xs font-pixel tracking-widest text-[#FF5A2E] border-[1px] md:border-[2px] border-[#FF5A2E] hover:bg-[#FF5A2E] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"
+            className="flex-shrink-0 flex items-center gap-2 md:gap-3 px-4 py-1.5 md:px-8 md:py-2 text-sm md:text-lg font-body tracking-wide text-[#FF5A2E] border-[1px] md:border-[2px] border-[#FF5A2E] hover:bg-[#FF5A2E] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"
           >
-            <FileText size={10} className="hidden sm:block" />
-            RESUME
+            <FileText size={12} className="hidden sm:block" />
+            Resume
           </a>
 
-          <div className="flex items-center border-l border-white/10 pl-2 md:pl-4">
+          <div className="flex items-center border-l border-white/10 pl-3 md:pl-8">
             <AudioPlayer />
           </div>
         </div>
@@ -138,7 +138,7 @@ const Navigation = () => {
                 key={item.href}
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
-                className={`flex items-center justify-center py-4 text-[10px] font-pixel tracking-[0.2em] transition-all border border-[#FF5A2E]/20 ${activeSection === item.href
+                className={`flex items-center justify-center py-4 text-sm font-body tracking-wide transition-all border border-[#FF5A2E]/20 ${activeSection === item.href
                   ? 'bg-[#FF5A2E] text-white'
                   : 'text-white/90 hover:bg-white/5'
                   }`}
