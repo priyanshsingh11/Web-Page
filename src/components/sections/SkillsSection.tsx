@@ -1,109 +1,159 @@
-import { Shield } from 'lucide-react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import {
+  Shield,
+  Globe,
+  Smartphone,
+  Server,
+  Brain,
+  BarChart3,
+  Cloud,
+  Code2,
+  Workflow,
+  Sparkles,
+  Bot,
+  Database,
+  Users,
+  type LucideIcon,
+} from 'lucide-react';
 
-const skillCategories = [
+interface SkillCard {
+  id: string;
+  title: string;
+  rank: string;
+  suit: string;
+  icon: LucideIcon;
+  skills: string[];
+}
+
+const skillCards: SkillCard[] = [
   {
-    id: 'programming',
-    title: 'PROGRAMMING',
-    skills: [
-      'PYTHON',
-      'C++',
-      'JAVASCRIPT',
-      'TYPESCRIPT',
-      'HTML5',
-      'SQL',
-    ],
+    id: 'web',
+    title: 'WEB',
+    rank: 'A',
+    suit: '♠',
+    icon: Globe,
+    skills: ['REACT.JS', 'NEXT.JS (SSR, ISR)', 'VITE', 'FRAMER MOTION', 'TAILWIND CSS', 'EJS', 'HTML5'],
   },
   {
-    id: 'frontend',
-    title: 'FRONTEND',
-    skills: [
-      'REACT',
-      'NEXT.JS',
-      'VITE',
-      'FRAMER MOTION',
-      'TAILWINDCSS',
-      'EJS',
-    ],
+    id: 'mobile',
+    title: 'MOBILE',
+    rank: 'Q',
+    suit: '♥',
+    icon: Smartphone,
+    skills: ['REACT NATIVE', 'EXPO', 'FLUTTER', 'DART', 'FIREBASE', 'ANDROID STUDIO'],
   },
   {
     id: 'backend',
     title: 'BACKEND',
+    rank: 'K',
+    suit: '♦',
+    icon: Server,
     skills: [
-      'NODE.JS',
-      'EXPRESS.JS',
-      'FASTAPI',
-      'WEBSOCKETS',
+      'NODE.JS', 'EXPRESS.JS', 'FLASK', 'FASTAPI',
+      'REST APIS', 'WEBSOCKETS', 'JWT', 'RBAC',
     ],
   },
   {
     id: 'databases',
     title: 'DATABASES',
+    rank: 'K',
+    suit: '♣',
+    icon: Database,
     skills: [
-      'MYSQL',
-      'MONGODB',
-      'POSTGRESQL',
-      'SQLITE',
+      'MONGODB', 'POSTGRESQL', 'MYSQL', 'SQLITE', 'SUPABASE', 'REDIS',
+      'CHROMADB', 'DB INDEXING', 'AGGREGATION PIPELINES',
     ],
   },
   {
-    id: 'ai_ml',
+    id: 'ai',
     title: 'AI & ML',
-    skills: [
-      'PYTORCH',
-      'TENSORFLOW',
-      'KERAS',
-      'SCIKIT-LEARN',
-      'TRANSFORMERS',
-      'HUGGING FACE',
-    ],
+    rank: 'A',
+    suit: '♥',
+    icon: Brain,
+    skills: ['PYTORCH', 'TENSORFLOW', 'KERAS', 'SCIKIT-LEARN', 'TRANSFORMERS', 'HUGGING FACE'],
   },
   {
     id: 'genai',
     title: 'GENERATIVE AI',
+    rank: 'A',
+    suit: '♦',
+    icon: Sparkles,
     skills: [
-      'LANGCHAIN',
-      'LANGGRAPH',
-      'RAG',
-      'OLLAMA',
+      'LLM APPLICATIONS', 'RAG', 'LANGCHAIN', 'OLLAMA',
+      'LLM EVALUATION', 'PROMPT-INJECTION DEFENSE',
     ],
+  },
+  {
+    id: 'agentic',
+    title: 'AGENTIC AI',
+    rank: 'A',
+    suit: '♠',
+    icon: Bot,
+    skills: ['AI AGENTS', 'LANGGRAPH', 'MCP', 'N8N'],
   },
   {
     id: 'data',
-    title: 'DATA ANALYTICS',
-    skills: [
-      'NUMPY',
-      'PANDAS',
-      'MATPLOTLIB',
-      'POWER BI',
-      'EXCEL',
-      'TABLEAU',
-    ],
+    title: 'DATA',
+    rank: 'J',
+    suit: '♣',
+    icon: BarChart3,
+    skills: ['NUMPY', 'PANDAS', 'MATPLOTLIB', 'POWER BI', 'EXCEL', 'TABLEAU'],
   },
   {
-    id: 'cloud_mlops',
-    title: 'CLOUD & MLOPS',
+    id: 'cloud',
+    title: 'CLOUD & DEVOPS',
+    rank: 'K',
+    suit: '♠',
+    icon: Cloud,
     skills: [
-      'DOCKER',
-      'AWS',
-      'VERCEL',
-      'STREAMLIT',
-      'MLFLOW',
-      'DVC',
+      'DOCKER', 'AWS', 'GCP (CLOUD RUN)', 'GITHUB ACTIONS', 'CI/CD',
+      'VERCEL', 'STREAMLIT', 'MLFLOW', 'DVC',
     ],
   },
   {
     id: 'tools',
-    title: 'TOOLS',
+    title: 'AUTOMATION & TOOLS',
+    rank: 'A',
+    suit: '♣',
+    icon: Workflow,
     skills: [
-      'GIT',
-      'GITHUB',
-      'REDIS',
-      'POSTMAN',
+      'PLAYWRIGHT', 'PUPPETEER', 'SELENIUM', 'SCRAPY', 'BEAUTIFULSOUP', 'N8N',
+      'CRON JOBS', 'GIT', 'GITHUB', 'POSTMAN',
     ],
+  },
+  {
+    id: 'languages',
+    title: 'LANGUAGES & CS',
+    rank: 'JOKER',
+    suit: '★',
+    icon: Code2,
+    skills: [
+      'PYTHON', 'JAVASCRIPT', 'TYPESCRIPT', 'C++', 'SQL', 'DART',
+      'OOP', 'DSA', 'SYSTEM DESIGN', 'DBMS', 'OPERATING SYSTEMS',
+    ],
+  },
+  {
+    id: 'soft',
+    title: 'SOFT SKILLS',
+    rank: 'J',
+    suit: '♦',
+    icon: Users,
+    skills: ['OWNERSHIP', 'REQUIREMENTS ANALYSIS', 'STAKEHOLDER COMMUNICATION', 'PROBLEM SOLVING'],
   },
 ];
 
 const SkillsSection = () => {
+  const [flipped, setFlipped] = useState<Set<string>>(new Set());
+
+  const toggle = (id: string) =>
+    setFlipped((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+
   return (
     <section id="skills" className="py-12 md:py-20 px-3 md:px-16 bg-transparent">
       <div className="relative z-10 max-w-7xl mx-auto border-[2px] border-[#853A17] bg-black/85 backdrop-blur-md text-white shadow-[8px_8px_0_0_#000] md:shadow-[12px_12px_0_0_#000]">
@@ -122,38 +172,95 @@ const SkillsSection = () => {
 
         <div className="p-4 md:p-12">
 
-          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 mb-8 md:mb-10 text-white uppercase tracking-tight">
+          <h2 className="font-extended text-xl md:text-3xl border-b-[2px] border-[#853A17] pb-4 mb-2 text-white uppercase tracking-tight">
             Inventory Deck
           </h2>
+          <p className="font-pixel text-[9px] md:text-xs tracking-widest text-white/60 mb-8 md:mb-10">
+            CLICK A CARD TO FLIP IT AND REVEAL ITS SKILLS
+          </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 max-w-lg lg:max-w-none mx-auto gap-4 md:gap-6">
+            {skillCards.map((card) => {
+              const Icon = card.icon;
+              const isFlipped = flipped.has(card.id);
+              const isRed = card.suit === '♥' || card.suit === '♦';
+              const cornerColor = isRed ? 'text-[#e0623a]' : 'text-white';
+              return (
+                <motion.div
+                  key={card.id}
+                  role="button"
+                  tabIndex={0}
+                  aria-pressed={isFlipped}
+                  aria-label={`${card.title} card, ${isFlipped ? 'showing skills' : 'click to reveal skills'}`}
+                  onClick={() => toggle(card.id)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      toggle(card.id);
+                    }
+                  }}
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+                  className="relative aspect-[5/7] lg:aspect-[5/7] w-full cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white [perspective:1000px]"
+                >
+                  <motion.div
+                    animate={{ rotateY: isFlipped ? 180 : 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                    style={{ transformStyle: 'preserve-3d' }}
+                    className="absolute inset-0"
+                  >
+                    {/* Front */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] bg-[#4d2312] border-[2px] border-[#853A17] text-white p-2 md:p-3 flex flex-col justify-between shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
+                      <div className={`font-pixel leading-none text-xs md:text-base ${cornerColor}`}>
+                        <div>{card.rank}</div>
+                        <div>{card.suit}</div>
+                      </div>
 
-            {skillCategories.map((category) => (
-              <div
-                key={category.id}
-                className="border-[1px] border-[#853A17] p-5 md:p-6 bg-white/5 hover:bg-white/[0.08] transition-colors cursor-default group flex flex-col relative overflow-hidden"
-              >
+                      <div className="flex flex-col items-center gap-2 md:gap-3">
+                        <Icon className="w-8 h-8 md:w-14 md:h-14 text-[#c4622d]" strokeWidth={1.5} />
+                        <span className="font-pixel text-[9px] md:text-xs tracking-widest text-center leading-tight">
+                          {card.title}
+                        </span>
+                        <span className="font-pixel text-[8px] md:text-[10px] tracking-widest text-white/50">
+                          {card.skills.length} SKILLS
+                        </span>
+                      </div>
 
-                <div className="border-b-[1px] border-[#853A17]/30 pb-3 mb-4 md:mb-5 flex justify-between items-center">
-                  <h3 className="font-pixel text-sm md:text-base tracking-widest text-[#853A17] group-hover:text-white transition-colors">
-                    {category.title}
-                  </h3>
-                  <div className="w-2 h-2 bg-[#853A17]/20 group-hover:bg-[#853A17] transition-colors"></div>
-                </div>
+                      <div className={`self-end rotate-180 font-pixel leading-none text-xs md:text-base ${cornerColor}`}>
+                        <div>{card.rank}</div>
+                        <div>{card.suit}</div>
+                      </div>
+                    </div>
 
-                <div className="grid grid-cols-2 gap-2">
-                  {category.skills.map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-2 py-2 text-[9px] md:text-xs border-[1px] border-[#853A17]/40 bg-black/40 font-pixel tracking-widest uppercase transition-all duration-200 flex items-center justify-center text-center cursor-crosshair hover:bg-[#853A17] hover:text-white"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-
+                    {/* Back */}
+                    <div className="absolute inset-0 [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[#853A17] border-[2px] border-white text-white p-2 md:p-3 flex flex-col shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]">
+                      <div className="flex items-center gap-1.5 border-b border-white/40 pb-1.5 mb-2">
+                        <Icon className="w-3 h-3 md:w-4 md:h-4 shrink-0" />
+                        <span className="font-pixel text-[9px] md:text-xs tracking-widest truncate">
+                          {card.title}
+                        </span>
+                        <span className="ml-auto font-pixel text-[8px] md:text-[10px]">
+                          {card.rank}{card.suit}
+                        </span>
+                      </div>
+                      <div className={`flex-1 min-h-0 grid auto-rows-fr gap-1.5 ${card.skills.length <= 4 ? 'grid-cols-1' : 'grid-cols-2'}`}>
+                        {card.skills.map((skill, i) => (
+                          <span
+                            key={skill}
+                            className={`px-1 flex items-center justify-center text-center leading-tight break-words text-[9px] md:text-[11px] border border-white/50 bg-black/30 font-pixel tracking-wider uppercase ${
+                              card.skills.length > 4 && card.skills.length % 2 === 1 && i === card.skills.length - 1 ? 'col-span-2' : ''
+                            }`}
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 

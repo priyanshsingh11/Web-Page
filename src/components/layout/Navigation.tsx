@@ -59,9 +59,9 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/95 backdrop-blur-md">
       <div className="flex items-center px-4 md:px-16 py-2 md:py-3 pointer-events-auto gap-3 md:gap-4">
-        
+
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden flex items-center justify-center p-2 text-[#853A17] border border-[#853A17]/30 bg-black/40 shadow-[2px_2px_0_0_#000]"
         >
@@ -89,7 +89,7 @@ const Navigation = () => {
         <div className="flex items-center ml-auto gap-3 md:gap-8">
           {/* Highlighted Resume Link */}
           <a
-            href="https://drive.google.com/file/d/1TFWOIzQZNMV5Rt3KieD7KKLbTaGf-P66/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1PdfnHvgsal54m0gCk5yVpDvlkkngLqVW/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 flex items-center gap-1 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 text-[8px] md:text-xs font-pixel tracking-widest text-[#853A17] border-[1px] md:border-[2px] border-[#853A17] hover:bg-[#853A17] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"

@@ -3,65 +3,35 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
-    level: 'LEVEL 4',
+    level: 'LEVEL 5',
     role: 'FULL STACK AI ENGINEER',
     company: 'AJAIA AI',
     date: 'JUN 2026 - PRESENT',
-    description: [
-      'Applying creative expertise to help organizations "win the AI moment" through innovative AI solutions.',
-      'Collaborating with engineering leadership to build and deploy advanced AI models and workflows.'
-    ],
-    tech: [
-      'AI AGENTS',
-      'LLM',
-      'FULL STACK',
-      'PYTHON',
-      'AUTOMATIONS'
-    ]
   },
   {
-    level: 'LEVEL 3',
+    level: 'LEVEL 4',
     role: 'AI WEB DEVELOPER',
     company: 'LEARN WITH FRATERNITY PVT. LTD',
     date: 'MAY 2026 - JUN 2026',
-    description: [
-      'Developed and integrated AI-driven features into web applications.',
-      'Collaborated on modern web development practices and workflows.'
-    ],
-    tech: [
-      'WEB DEVELOPMENT',
-      'AI INTEGRATION',
-      'INTERNSHIP'
-    ]
   },
   {
-    level: 'LEVEL 2',
+    level: 'LEVEL 3',
     role: 'CO-FOUNDER & FULL-STACK ENGINEER',
     company: 'TUNED SOCIETY',
     date: 'FEB 2026 - PRESENT',
-    description: [
-      'Built a car modification marketplace connecting users with verified garages.',
-      'Developed scalable backend systems, booking workflows, and location-based search.'
-    ],
-    tech: [
-      'NODE.JS',
-      'EXPRESS.JS',
-      'MONGODB',
-      'REST_API',
-      'SYSTEM_DESIGN'
-    ]
+  },
+  {
+    level: 'LEVEL 2',
+    role: 'FULL-STACK ENGINEER',
+    company: 'PLYPICKER',
+    date: 'JAN 2025 - JAN 2026',
   },
   {
     level: 'LEVEL 1',
     role: 'FREELANCE DEVELOPER',
     company: 'INDEPENDENT',
     date: '2024 - PRESENT',
-    description: [
-      'Building custom AI solutions and full-stack applications for global clients.',
-      'Specializing in rapid prototyping and autonomous agentic workflows.'
-    ],
-    tech: ['FULL STACK ENGINEER', 'AI ENGINEER', 'SOFTWARE ENGINNER', 'MLOPS', 'A2O']
-  }
+  },
 ];
 
 const ExperienceSection = () => {
@@ -101,7 +71,7 @@ const ExperienceSection = () => {
                 {/* Content Card */}
                 <div className="flex-1 border-[1px] border-[#853A17] bg-black/85 backdrop-blur-md p-5 md:p-8 shadow-[4px_4px_0_0_#000] md:shadow-[8px_8px_0_0_#000] relative overflow-hidden ml-10 md:ml-0">
 
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4 md:mb-6 gap-2">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
                     <div>
                       <h3 className="font-extended text-base md:text-2xl text-white mb-1.5 leading-tight">
                         {exp.role}
@@ -113,26 +83,6 @@ const ExperienceSection = () => {
                     <div className="font-pixel text-[8px] md:text-[10px] tracking-widest text-[#853A17]/60">
                       {exp.date}
                     </div>
-                  </div>
-
-                  <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
-                    {exp.description.map((item, i) => (
-                      <li key={i} className="font-pixel text-[11px] md:text-sm text-white/70 flex gap-3 leading-relaxed">
-                        <span className="text-[#853A17] mt-1.5 flex-shrink-0">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="flex flex-wrap gap-2">
-                    {exp.tech.map(tech => (
-                      <span
-                        key={tech}
-                        className="font-pixel text-[8px] md:text-[9px] bg-[#853A17] text-white px-2 py-1 md:px-3 md:py-1.5 tracking-wider"
-                      >
-                        {tech}
-                      </span>
-                    ))}
                   </div>
                 </div>
               </motion.div>

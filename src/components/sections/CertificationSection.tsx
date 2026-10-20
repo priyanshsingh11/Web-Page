@@ -15,10 +15,10 @@ const certifications = [
     type: 'SPECIALIZATION',
   },
   {
-    title: 'ADVANCED LEARNING ALGORITHMS',
-    issuer: 'STANFORD ONLINE // COURSERA',
-    date: '2024',
-    type: 'SPECIALIZATION',
+    title: 'CLAUDE CERTIFIED ARCHITECT - FOUNDATIONS',
+    issuer: 'ANTHROPIC EDUCATION',
+    date: '2026',
+    type: 'CERTIFICATION',
   }
 ];
 
