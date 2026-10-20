@@ -47,7 +47,7 @@ const socials = [
   { icon: Github, label: 'GitHub', href: 'https://github.com/priyanshsingh11' },
   { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/priyansh-singh-575a57289/' },
   { icon: Code2, label: 'LeetCode', href: 'https://leetcode.com/u/priyanshsingh11/' },
-  { icon: FileText, label: 'Resume', href: 'https://drive.google.com/file/d/1TFWOIzQZNMV5Rt3KieD7KKLbTaGf-P66/view?usp=drive_link' },
+  { icon: FileText, label: 'Resume', href: 'https://drive.google.com/file/d/1PdfnHvgsal54m0gCk5yVpDvlkkngLqVW/view' },
   { icon: Mail, label: 'Email', href: 'mailto:priyanshsingh855@gmail.com' },
 ];
 

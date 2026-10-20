@@ -10,6 +10,7 @@ const navItems = [
   { label: 'SKILLS', href: '#skills' },
   { label: 'PROJECTS', href: '#projects' },
   { label: 'CERTIFICATIONS', href: '#certifications' },
+  { label: 'TERMINAL', href: '#terminal' },
 ];
 
 const Navigation = () => {
@@ -108,7 +109,7 @@ const Navigation = () => {
         <div className="flex items-center ml-auto gap-3 md:gap-8">
           {/* Highlighted Resume Link */}
           <a
-            href="https://drive.google.com/file/d/1PdfnHvgsal54m0gCk5yVpDvlkkngLqVW/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1PdfnHvgsal54m0gCk5yVpDvlkkngLqVW/view"
             target="_blank"
             rel="noopener noreferrer"
             className="flex-shrink-0 flex items-center gap-1 md:gap-2 px-3 py-2 md:px-5 md:py-3 text-[8px] md:text-xs font-pixel tracking-widest text-[#FF5A2E] border-[1px] md:border-[2px] border-[#FF5A2E] hover:bg-[#FF5A2E] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"
