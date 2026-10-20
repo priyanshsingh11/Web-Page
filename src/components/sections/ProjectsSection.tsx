@@ -3,39 +3,39 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     id: 'rag',
-    title: 'ADVANCED RAG',
+    title: 'Advanced RAG',
     description: 'Advanced Retrieval-Augmented Generation system with intelligent retrieval pipelines and optimized contextual response generation.',
-    tech: ['LANGCHAIN', 'OLLAMA', 'RAGAS', 'FASTAPI', 'QDRANT']
+    tech: ['LangChain', 'Ollama', 'RAGAS', 'FastAPI', 'Qdrant']
   },
   {
     id: 'trustgraph',
-    title: 'TRUSTGRAPH AI',
+    title: 'TrustGraph AI',
     description: 'Precision evaluation engine designed to automate government and corporate tender compliance using explainable AI.',
-    tech: ['LLMS', 'GROQ', 'FASTAPI', 'RAG', 'REACT']
+    tech: ['LLMs', 'Groq', 'FastAPI', 'RAG', 'React']
   },
   {
     id: 'agentforge',
-    title: 'AGENTFORGE',
+    title: 'AgentForge',
     description: 'Autonomous AI workflow system for orchestrating intelligent agents and scalable task execution.',
-    tech: ['LANGGRAPH', 'NEXTJS', 'FASTAPI', 'REDIS']
+    tech: ['LangGraph', 'Next.js', 'FastAPI', 'Redis']
   },
   {
     id: 'Lumen AI',
-    title: 'LUMEN AI',
-    description: 'AI customer support orchestration system using LLMs, RAG, SUPABASE, ChromaDB, and deterministic workflow routing.',
-    tech: ['LLMS', 'RAG', 'SUPABASE', 'HITL', 'OLLAMA']
+    title: 'Lumen AI',
+    description: 'AI customer support orchestration system using LLMs, RAG, Supabase, ChromaDB, and deterministic workflow routing.',
+    tech: ['LLMs', 'RAG', 'Supabase', 'HITL', 'Ollama']
   },
   {
     id: 'winkwear',
-    title: 'WINK & WEAR',
+    title: 'Wink & Wear',
     description: 'Modern fashion e-commerce platform with a premium dark aesthetic and responsive shopping experience.',
-    tech: ['MERN', 'AWS', 'RENDER', 'GOOGLE GEMINI KIT']
+    tech: ['MERN', 'AWS', 'Render', 'Google Gemini Kit']
   },
   {
     id: 'virtual-pandit',
-    title: 'VIRTUAL PANDIT',
+    title: 'Virtual Pandit',
     description: 'AI-powered virtual assistant designed for intelligent conversations, contextual responses, and real-time interaction.',
-    tech: ['NEXTJS', 'TYPESCRIPT', 'LANGCHAIN', 'FASTAPI']
+    tech: ['Next.js', 'TypeScript', 'LangChain', 'FastAPI']
   },
 ];
 
@@ -44,8 +44,8 @@ const ProjectsSection = () => {
     <section id="projects" className="py-12 md:py-20 px-4 md:px-16 bg-transparent">
       <div className="max-w-5xl mx-auto">
 
-        <h2 className="font-extended text-xl md:text-3xl text-center mb-10 md:mb-16 text-[#CF492C] tracking-tight uppercase">
-          WHERE DID MY SKILLS GO?
+        <h2 className="font-extended text-xl md:text-3xl text-center mb-10 md:mb-16 text-[#CF492C] tracking-tight">
+          Where Did My Skills Go?
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -58,13 +58,13 @@ const ProjectsSection = () => {
                 {project.title}
               </h3>
 
-              <p className="font-pixel text-[10px] md:text-sm text-white/60 mb-6 md:mb-8 leading-relaxed line-clamp-3">
+              <p className="font-body text-base md:text-xl text-white/60 mb-6 md:mb-8 leading-relaxed line-clamp-3">
                 {project.description}
               </p>
 
               <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 mb-6 md:mb-8">
                 {project.tech.map(t => (
-                  <span key={t} className="text-[8px] md:text-[9px] font-pixel text-[#CF492C]/70 border-[1px] border-[#CF492C]/30 px-1.5 py-0.5 group-hover:border-[#CF492C] group-hover:text-[#CF492C] transition-colors">
+                  <span key={t} className="text-sm md:text-base font-body text-[#CF492C]/70 border-[1px] border-[#CF492C]/30 px-1.5 py-0.5 group-hover:border-[#CF492C] group-hover:text-[#CF492C] transition-colors">
                     {t}
                   </span>
                 ))}
@@ -75,9 +75,9 @@ const ProjectsSection = () => {
                   href={`https://github.com/priyanshsingh11/${project.id === 'trustgraph' ? 'AI-for-bharat' : project.id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block w-full px-4 py-2.5 bg-[#CF492C] text-white font-pixel text-[9px] md:text-[10px] tracking-widest hover:bg-white hover:text-black transition-all shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] active:shadow-none active:translate-x-[3px] active:translate-y-[3px] text-center"
+                  className="inline-block w-full px-4 py-2.5 bg-[#CF492C] text-white font-body text-base md:text-lg tracking-wider hover:bg-white hover:text-black transition-all shadow-[3px_3px_0_0_#000] md:shadow-[4px_4px_0_0_#000] active:shadow-none active:translate-x-[3px] active:translate-y-[3px] text-center"
                 >
-                  VIEW DETAILS
+                  View Details
                 </a>
               </div>
             </motion.div>
@@ -89,9 +89,9 @@ const ProjectsSection = () => {
             href="https://github.com/priyanshsingh11"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block w-full sm:w-auto px-8 py-3 bg-[#1a1a1a] border-[1px] border-[#CF492C] font-pixel text-[9px] md:text-[10px] tracking-widest text-white/70 hover:bg-[#CF492C] hover:text-white transition-all shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]"
+            className="inline-block w-full sm:w-auto px-8 py-3 bg-[#1a1a1a] border-[1px] border-[#CF492C] font-body text-base md:text-lg tracking-wider text-white/70 hover:bg-[#CF492C] hover:text-white transition-all shadow-[4px_4px_0_0_#000] md:shadow-[6px_6px_0_0_#000]"
           >
-            SHOW ALL PROJECTS (30+)
+            Show All Projects (30+)
           </a>
         </div>
       </div>

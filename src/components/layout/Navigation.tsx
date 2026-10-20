@@ -43,7 +43,7 @@ const Navigation = () => {
     setIsMenuOpen(false);
     const el = document.querySelector(href);
     if (el) {
-      const offset = 80;
+      const offset = 56;
       const bodyRect = document.body.getBoundingClientRect().top;
       const elementRect = el.getBoundingClientRect().top;
       const elementPosition = elementRect - bodyRect;
@@ -58,12 +58,12 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex flex-col pointer-events-none bg-black/95 backdrop-blur-md">
-      <div className="flex items-center px-4 md:px-16 py-2 md:py-3 pointer-events-auto gap-3 md:gap-4">
+      <div className="flex items-center px-4 md:px-16 py-1 md:py-1.5 pointer-events-auto gap-3 md:gap-4">
 
         {/* Mobile Menu Toggle */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden flex items-center justify-center p-2 text-[#CF492C] border border-[#CF492C]/30 bg-black/40 shadow-[2px_2px_0_0_#000]"
+          className="md:hidden flex items-center justify-center p-1.5 text-[#CF492C] border border-[#CF492C]/30 bg-black/40 shadow-[2px_2px_0_0_#000]"
         >
           {isMenuOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
@@ -75,9 +75,9 @@ const Navigation = () => {
               key={item.href}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href)}
-              className={`flex-shrink-0 flex items-center gap-1 px-4 py-2 text-xs font-pixel tracking-widest transition-all ${activeSection === item.href
-                ? 'bg-[#CF492C] text-white shadow-[4px_4px_0_0_#000] border-[2px] border-dashed border-black/50'
-                : 'text-white/70 hover:text-white hover:bg-white/5 border-[2px] border-transparent'
+              className={`flex-shrink-0 flex items-center gap-1 px-3 py-1 text-[11px] font-pixel tracking-widest transition-all ${activeSection === item.href
+                ? 'bg-[#CF492C] text-white shadow-[3px_3px_0_0_#000] border-[1px] border-dashed border-black/50'
+                : 'text-white/70 hover:text-white hover:bg-white/5 border-[1px] border-transparent'
                 }`}
             >
               {item.label}
@@ -92,7 +92,7 @@ const Navigation = () => {
             href="https://drive.google.com/file/d/1PdfnHvgsal54m0gCk5yVpDvlkkngLqVW/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 flex items-center gap-1 md:gap-2 px-2.5 py-1.5 md:px-4 md:py-2 text-[8px] md:text-xs font-pixel tracking-widest text-[#CF492C] border-[1px] md:border-[2px] border-[#CF492C] hover:bg-[#CF492C] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000]"
+            className="flex-shrink-0 flex items-center gap-1 md:gap-2 px-2 py-1 md:px-3 md:py-1 text-[8px] md:text-[11px] font-pixel tracking-widest text-[#CF492C] border-[1px] border-[#CF492C] hover:bg-[#CF492C] hover:text-white transition-all shadow-[2px_2px_0_0_#000] md:shadow-[3px_3px_0_0_#000]"
           >
             <FileText size={10} className="hidden sm:block" />
             RESUME
@@ -140,7 +140,7 @@ const Navigation = () => {
             animation: 'dash-scroll 1.5s linear infinite'
           }}
         />
-        <div className="absolute inset-0 shadow-[0_0_15px_rgba(207, 73, 44,0.4)]"></div>
+        <div className="absolute inset-0 shadow-[0_0_15px_rgba(207,73,44,0.4)]"></div>
       </div>
     </nav>
   );

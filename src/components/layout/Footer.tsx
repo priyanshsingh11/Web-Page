@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import {
   FileText,
   Github,
@@ -17,39 +16,39 @@ const footerLinks = [
   { icon: Mail, label: 'Email', href: 'mailto:priyanshsingh855@gmail.com' },
 ];
 
+const monoStack = "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-black py-6 md:py-8">
-      {/* Full Width Top Border */}
-      <div className="w-full h-[1px] bg-[#CF492C] mb-6 md:mb-8 opacity-70 shadow-[0_0_10px_#CF492C]"></div>
+    <footer
+      className="w-full bg-[#121110] border-t-[3px] border-[#CF492C] pt-12 md:pt-[68px] pb-8 md:pb-10"
+      style={{ fontFamily: monoStack }}
+    >
+      {/* Links row */}
+      <nav
+        aria-label="Social links"
+        className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-10 gap-y-4 px-4"
+      >
+        {footerLinks.map((link) => (
+          <a
+            key={link.label}
+            href={link.href}
+            target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 text-[14px] md:text-[15px] text-white/90 hover:text-[#CF492C] transition-colors"
+          >
+            <link.icon size={17} strokeWidth={1.75} />
+            <span>{link.label}</span>
+          </a>
+        ))}
+      </nav>
 
-      <div className="max-w-5xl mx-auto flex flex-col items-center px-4">
-        {/* Links Row */}
-        <div className="flex flex-wrap justify-center items-center gap-x-6 md:gap-x-12 gap-y-4 mb-6 px-4">
-          {footerLinks.map((link, i) => (
-            <motion.a
-              key={link.label}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 5 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.03 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.05 }}
-              className="flex items-center gap-3 px-3 py-1 border-[1px] border-transparent hover:border-[#CF492C] text-white/60 hover:text-[#CF492C] transition-all duration-300 group"
-            >
-              <link.icon size={18} className="text-[#CF492C]/70 group-hover:text-[#CF492C] transition-colors" />
-              <span className="font-pixel text-[11px] md:text-[13px] tracking-widest uppercase">{link.label}</span>
-            </motion.a>
-          ))}
-        </div>
-
-        {/* Copyright */}
-        <p className="font-pixel text-[8px] md:text-[9px] text-white/20 tracking-[0.2em] text-center uppercase leading-relaxed mt-2">
-          © {currentYear} Priyansh Singh. Built with React & Tokens.
+      {/* Divider + copyright */}
+      <div className="w-[82%] max-w-[1200px] mx-auto mt-10 md:mt-[52px] border-t border-white/15 pt-6 md:pt-8">
+        <p className="text-center text-[12px] md:text-[13px] text-white/35 tracking-wide">
+          © {currentYear} Priyansh Singh. Built with React &amp; Tokens.
         </p>
       </div>
     </footer>

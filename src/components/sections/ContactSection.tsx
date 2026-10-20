@@ -13,17 +13,17 @@ import {
 } from 'lucide-react';
 
 const socialLinks = [
-  { icon: FileText, label: 'RESUME', href: 'https://drive.google.com/file/d/1TFWOIzQZNMV5Rt3KieD7KKLbTaGf-P66/view?usp=drive_link' },
-  { icon: Github, label: 'GITHUB', href: 'https://github.com/priyanshsingh11' },
-  { icon: Linkedin, label: 'LINKEDIN', href: 'https://www.linkedin.com/in/priyansh-singh-575a57289/' },
-  { icon: Code2, label: 'LEETCODE', href: 'https://leetcode.com/u/priyanshsingh11/' },
+  { icon: FileText, label: 'Resume', href: 'https://drive.google.com/file/d/1TFWOIzQZNMV5Rt3KieD7KKLbTaGf-P66/view?usp=drive_link' },
+  { icon: Github, label: 'GitHub', href: 'https://github.com/priyanshsingh11' },
+  { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/priyansh-singh-575a57289/' },
+  { icon: Code2, label: 'LeetCode', href: 'https://leetcode.com/u/priyanshsingh11/' },
 ];
 
 const promptLines = [
   { type: 'prompt', text: '>' },
   { type: 'prompt', text: '>' },
   { type: 'prompt', text: '>' },
-  { type: 'action', text: "$ DROP A MESSAGE. I'LL RESPOND BEFORE THE NEXT COMMIT." }
+  { type: 'action', text: "$ Drop a message. I'll respond before the next commit." }
 ];
 
 const ContactSection = () => {
@@ -73,13 +73,13 @@ const ContactSection = () => {
         <div className="bg-[#1a1a1a] border-x-[2px] border-t-[2px] border-[#CF492C] p-3 flex flex-col sm:flex-row justify-between items-center rounded-t-sm shadow-[4px_0_0_0_#000] md:shadow-[6px_0_0_0_#000] gap-2">
           <div className="flex items-center gap-4">
             <Terminal size={18} className="text-[#CF492C]" />
-            <span className="font-pixel text-[11px] md:text-xs tracking-[0.3em] text-[#CF492C] uppercase font-bold">
-              {">_"} CONTACT_TERMINAL.EXE
+            <span className="font-body text-base md:text-lg tracking-[0.3em] text-[#CF492C] font-bold">
+              {">_"} contact_terminal.exe
             </span>
           </div>
           <div className="flex items-center gap-3">
             <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-[#CF492C] rounded-full animate-pulse shadow-[0_0_12px_#CF492C]"></div>
-            <span className="font-pixel text-[9px] md:text-[11px] text-[#CF492C] tracking-[0.2em] uppercase font-bold">ENCRYPTED_CONNECTION</span>
+            <span className="font-body text-sm md:text-lg text-[#CF492C] tracking-[0.2em] font-bold">encrypted_connection</span>
           </div>
         </div>
 
@@ -104,7 +104,7 @@ const ContactSection = () => {
                     initial={{ opacity: 0, x: -15 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.1 }}
-                    className={`font-pixel text-xs md:text-base tracking-widest ${line.type === 'action' ? 'text-white' : 'text-[#CF492C]/80'} flex gap-3 leading-relaxed`}
+                    className={`font-body text-base md:text-xl tracking-widest ${line.type === 'action' ? 'text-white' : 'text-[#CF492C]/80'} flex gap-3 leading-relaxed`}
                   >
                     <span className="font-bold">{line.text}</span>
                   </motion.div>
@@ -112,7 +112,7 @@ const ContactSection = () => {
               </div>
 
               <div className="mt-auto pt-6 md:pt-8 border-t-[2px] border-[#CF492C]/30">
-                <p className="font-pixel text-[10px] md:text-xs text-[#CF492C] mb-4 md:mb-6 tracking-[0.3em] uppercase font-bold">Communication Channels</p>
+                <p className="font-body text-sm md:text-lg text-[#CF492C] mb-4 md:mb-6 tracking-[0.3em] font-bold">Communication Channels</p>
                 <div className="flex flex-wrap gap-3 md:gap-6">
                   {socialLinks.map((social) => (
                     <a
@@ -126,7 +126,7 @@ const ContactSection = () => {
                       <social.icon size={18} className="text-[#CF492C] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
                     </a>
                   ))}
-                  <a href="mailto:priyanshsingh855@gmail.com" className="p-2 md:p-3 border-[2px] border-[#CF492C]/40 hover:border-[#CF492C] hover:bg-[#CF492C]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]" title="EMAIL">
+                  <a href="mailto:priyanshsingh855@gmail.com" className="p-2 md:p-3 border-[2px] border-[#CF492C]/40 hover:border-[#CF492C] hover:bg-[#CF492C]/20 transition-all group shadow-[2px_2px_0_0_#000] md:shadow-[4px_4px_0_0_#000] hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px]" title="Email">
                     <Mail size={18} className="text-[#CF492C] group-hover:scale-110 transition-transform md:w-[20px] md:h-[20px]" />
                   </a>
                 </div>
@@ -137,57 +137,57 @@ const ContactSection = () => {
             <div className="lg:w-1/2">
               <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#CF492C] uppercase tracking-[0.2em] font-bold">YOUR NAME</label>
+                  <label className="font-body text-sm md:text-lg text-[#CF492C] tracking-[0.2em] font-bold">Your Name</label>
                   <input
                     type="text"
                     required
-                    placeholder="ENTER NAME..."
+                    placeholder="Enter name..."
                     value={formState.name}
                     onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5"
+                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-body text-base md:text-xl text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#CF492C] uppercase tracking-[0.2em] font-bold">YOUR EMAIL</label>
+                  <label className="font-body text-sm md:text-lg text-[#CF492C] tracking-[0.2em] font-bold">Your Email</label>
                   <input
                     type="email"
                     required
-                    placeholder="ENTER EMAIL..."
+                    placeholder="Enter email..."
                     value={formState.email}
                     onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5"
+                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-body text-base md:text-xl text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <label className="font-pixel text-[10px] md:text-xs text-[#CF492C] uppercase tracking-[0.2em] font-bold">YOUR WISH</label>
+                  <label className="font-body text-sm md:text-lg text-[#CF492C] tracking-[0.2em] font-bold">Your Wish</label>
                   <textarea
                     required
                     rows={3}
-                    placeholder="COMPOSE MESSAGE..."
+                    placeholder="Compose message..."
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-pixel text-xs md:text-sm text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5 resize-none"
+                    className="w-full bg-transparent border-b-[2px] border-[#CF492C]/30 p-2 font-body text-base md:text-xl text-white focus:outline-none focus:border-[#CF492C] transition-all placeholder:text-white/20 focus:bg-white/5 resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'sending'}
-                  className="w-full bg-[#CF492C] text-white p-2.5 md:p-3 font-pixel text-xs md:text-base tracking-[0.3em] md:tracking-[0.4em] uppercase hover:bg-white hover:text-[#CF492C] transition-all disabled:opacity-50 flex items-center justify-center gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[10px_10px_0_0_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] font-bold"
+                  className="w-full bg-[#CF492C] text-white p-2.5 md:p-3 font-body text-base md:text-2xl tracking-[0.3em] md:tracking-[0.4em] hover:bg-white hover:text-[#CF492C] transition-all disabled:opacity-50 flex items-center justify-center gap-4 shadow-[6px_6px_0_0_#000] md:shadow-[10px_10px_0_0_#000] active:shadow-none active:translate-x-[4px] active:translate-y-[4px] font-bold"
                 >
                   {status === 'sending' ? (
                     <div className="flex items-center gap-3">
-                      ENCRYPTING... <Loader2 size={18} className="animate-spin" />
+                      Encrypting... <Loader2 size={18} className="animate-spin" />
                     </div>
                   ) : status === 'success' ? (
-                    "✓ PACKET_SENT"
+                    "✓ Packet sent"
                   ) : status === 'error' ? (
-                    "⚠ RETRY_LATER"
+                    "⚠ Retry later"
                   ) : (
                     <>
-                      TRANSMIT_DATA <Send size={12} />
+                      Transmit data <Send size={12} />
                     </>
                   )}
                 </button>
@@ -196,8 +196,8 @@ const ContactSection = () => {
           </div>
 
           <div className="mt-auto p-4 border-t-[2px] border-[#CF492C]/20 bg-black/60 text-center">
-            <p className="font-pixel text-[8px] md:text-[10px] text-[#CF492C]/50 tracking-[0.4em] md:tracking-[0.6em] uppercase font-bold">
-              SECURE_TRANSMISSION_PROTOCOL_V4.2.0 // ENCRYPTION_ACTIVE
+            <p className="font-body text-sm md:text-lg text-[#CF492C]/50 tracking-[0.4em] md:tracking-[0.6em] font-bold">
+              secure_transmission_protocol_v4.2.0 // encryption_active
             </p>
           </div>
         </div>
